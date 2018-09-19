@@ -89,14 +89,31 @@
 			}
 
 			.logo{
-				margin: 8px 0 0 10px;
+                margin: 8px 0 0 10px;
+
+                //  @media only screen and (max-width : 768px) {
+                //      &:after {
+                //          content: '';
+                //          top: 0;
+                //          position: absolute;
+                //          left: 0;
+                //          width: 80px;
+                //          height: 60px;
+                //          background: #230cea;
+                //          z-index: -1;
+                //      }
+                //  }
 
 				&__link{
 					background: url(../img/logo_b.svg) 0 0 no-repeat;
 					background-size: 40px 42px;
 					font-size: 0;
 					padding: 10px 0 0 80px; 
-					font-size: 14px;
+                    font-size: 14px;
+                    
+                    // @media only screen and (max-width : 768px) {
+                    //     background: url(../img/logo_whitenew.svg) 0 0 no-repeat;
+                    // }
 				}
 			}
 
@@ -292,7 +309,7 @@
 	&__link {
 		display: block;
 		height: 100%;
-		background: url(../img/logo_b.svg) no-repeat;
+		background: url(../img/logo_blue.svg) no-repeat;
 		transition: none;
 		padding: 22px 0 0 80px;
 		font-size: 16px;
@@ -331,7 +348,8 @@
 .h-right{
 	display: flex;
 	align-items: center;
-	padding: 10px 0 0;
+    padding: 10px 0 0;
+    margin-right: -10px;
 }
 
 .h-tickets{
@@ -341,7 +359,7 @@
 .socials-wrap{
 	display: flex;
 	position: relative;
-	margin: 0 15px;
+	margin: 0;
 
 	.socials{
 		margin: 0;

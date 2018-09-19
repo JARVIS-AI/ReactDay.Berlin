@@ -1,0 +1,249 @@
+.roadmap {
+    position: relative;
+    padding: 140px 0;
+    padding-bottom: 70px;
+}
+
+    .roadmap__box-1 {
+        width: 445px;
+        height: 590px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-720px);
+        top: 130px;
+        background: #230cea;
+        z-index: 0;
+    }
+
+    .roadmap__box-2 {
+        width: 1000px;
+        height: 674px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-27%);
+        bottom: 0;
+        background: #230cea;
+        z-index: 0;
+    }
+
+
+.roadmap__wrapper {
+    position: relative;
+    padding-bottom: 20px;
+    z-index: 1;
+    width: 1120px;
+    margin-top: 30px;
+    background-color: #fff;
+}
+
+
+.roadmap__head {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 120px;
+     z-index: -1;
+    // background-image: linear-gradient(to left, #f6f7f9 87.5%, #230cea 87.5%);
+
+    //  &:after {
+    //      content: '';
+    //      top: 0;
+    //      left: -100%;
+    //      position: absolute;
+    //      width: 100%;
+    //      height: 100%;
+    //      background: #230cea;
+    //  }
+}
+
+.roadmap__title {
+    position: absolute;
+    width: 510px;
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 1.41;
+    color: #023753;
+    margin: 0;
+    margin-left: -5px;
+    
+    z-index: 10;
+    font-weight: 700;
+
+    &.clipthru {
+        color: #fff;
+    }
+
+    @media only screen and (max-width : 768px) {}
+}
+
+.roadmap__title--footer {
+    width: 810px;
+    margin-left: 17px;
+
+    &.clipthru {
+        color: #fff;
+    }
+}
+
+.roadmap__tabs {
+    display: flex;
+    justify-content: center;
+    padding-left: 210px;
+    padding-right: 260px;
+}
+
+.roadmap__tab {
+    width: 50%;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 28px;
+    font-weight: 400;
+    line-height: 20px;
+    opacity: 0.6;
+    color: #050d31;
+    text-align: center;
+    border-bottom: 1px solid #c8c8c8;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &--active {
+        color: #2700c3;
+        border-bottom: 2px solid #2700c3;
+        opacity: 1;
+
+        &:hover {
+            opacity: 1;
+            cursor: auto;
+        }
+    }
+}
+
+
+.roadmap__content {
+    padding-left: 210px;
+    padding-right: 260px;
+}
+
+.roadmap__content--hide {
+    display: none;
+}
+
+.roadmap__content--show {
+    display: block;
+}
+
+.roadmap__slide {
+    padding-top: 60px;
+}
+
+.road-slide__block {
+    display: none;
+}
+
+.road-slide__block--show {
+    display: block;
+}
+
+.road-slide__time {
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0 0 20px;
+    opacity: 0.6;
+    color: #023753;
+}
+
+.road-slide__time--active {
+    opacity: 1;
+}
+
+.road-slide__title {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #023753;
+    margin: 0 0 14px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.road-slide__title--active {
+    font-size: 36px;
+    opacity: 1;
+}
+
+
+.road-slide__name {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #023753;
+    margin: 10px 0;
+}
+
+
+.road-slide__company {
+    font-size: 16px;
+    line-height: 1.25;
+    color: #999999;
+    margin: 10px 0;
+}
+
+.road-slide__desc {
+    font-size: 16px;
+    line-height: 1.88;
+    color: #023753;
+    margin: 10px 0 16px;
+}
+
+.roadmap__footer {
+    width: 1100px;
+    margin-top: -130px;
+    position: relative;
+    padding-top: 244px;
+    padding-bottom: 90px;
+    // background-image: linear-gradient(to right, #f6f7f9 18.5%, #230cea 18.5%);
+
+    // &:after {
+    //     content: '';
+    //     top: 0;
+    //     right: -100%;
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: #230cea;
+    // }
+}
+
+.roadmap__footer-wrapper {
+    width: 1000px;
+      margin-left: 450px;
+  
+
+}
+
+
+.roadmap__text {
+    margin: 0;
+    margin-top: 120px;
+    color: #f5f7f9;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 2;
+    width: 658px;
+
+}
+
+.roadmap__path {
+    display: inline-flex;
+    margin-top: 10px;
+      margin-left: auto;
+    color: #f5f7f9;
+    font-size: 26px;
+    font-weight: 00;
+    line-height: 40px;
+    text-decoration: underline;
+    width: 658px;
+}
