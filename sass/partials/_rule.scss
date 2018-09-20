@@ -2,10 +2,46 @@
     position: relative;
     margin-top: 80px;
 
-        .container {
-            max-width: 790px;
+    &__container {
+        max-width: 790px;
+
+        @media only screen and (max-width: 1024px) {
+            padding-left: 40px;
+            padding-right: 40px;
         }
- }
+
+        @media only screen and (max-width : 480px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+.rule__title {
+    &:after {
+        top: 18px;
+        right: 0;
+
+
+        @media only screen and (max-width: 1024px) {
+            top: 18px;
+            right: -120px;
+            left: auto;
+            bottom: auto;
+        }
+
+
+        @media only screen and (max-width : 768px) {
+            top: auto;
+            left: 170px;
+            bottom: 13px;
+        }
+
+        @media only screen and (max-width : 480px) {
+            left: 150px;
+        }
+    }
+}
 
 .rule__paragraph {
     width: 500px;
@@ -14,11 +50,15 @@
     color: #023753;
     font-size: 16px;
     line-height: 40px;
+
+    @media only screen and (max-width: 480px) {
+        width: 100%;
+    }
 }
 
 .rule__italic {
     margin: 0;
-     font-style: italic;
+    font-style: italic;
     color: #023753;
     font-size: 18px;
     // font-size: 20px;
@@ -41,28 +81,82 @@
     padding-top: 40px;
     min-height: 290px;
 
-        &--big {
+    @media only screen and (max-width: 1024px) {
+        width: 330px;
+        min-height: 280px;
+    }
+
+    @media only screen and (max-width : 768px) {
+
+        position: relative;
+        margin: 0 auto;
+        min-height: auto;
+        padding-top: 0;
+        width: 100%;
+     }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: -25px;
+        top: 15px;
+        width: 103px;
+        height: 103px;
+        background-image: url(../img/dots_dark.svg);
+        z-index: -1;
+
+        @media only screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &--big {
+        width: 770px;
+        height: 500px;
+
+        @media only screen and (max-width: 768px) {
             width: 100%;
+            height: auto;
+            padding-top: 40px;
         }
 
-         &:after {
-             content: '';
-             position: absolute;
-             right: -25px;
-             top: 17px;
-             width: 103px;
-             height: 103px;
-             background-image: url(../img/dots_dark.svg);
-             z-index: -1;
+        &:after {
+            top: auto;
+            bottom: -65px;
 
-         }
+            @media only screen and (max-width: 1024px) {
+                bottom: -25px;
+            }
 
+            @media only screen and (max-width : 768px) {
+                display: none;
+            }
+        }
+    }
+
+    &--text {
+
+        @media only screen and (max-width: 1024px) {
+            padding: 20px 0;
+        }
+
+        &:after {
+            display: none;
+        }
+    }
 }
+
+
+.rule__image {
+    width: 100%;
+    height: auto;
+}
+
 
 .rule__note {
     position: absolute;
     margin: 0;
-    margin-top: -7px;
+    margin-top: -13px;
     width: 370px;
     color: #023753;
     font-size: 20px;
@@ -73,21 +167,40 @@
     left: 50%;
     transform: translateX(-50%);
 
-     &--top {
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        position: static;
+         margin-top: -13px;
+        transform: translateX(0);
+        font-size: 16px;
+
+    }
+
+    &--top {
         margin: 0;
-        top: 5px;
-     }
-}
+        top: 7px;
 
-
-.rule__image {
-   
+        @media only screen and (max-width: 768px) {
+            position: static;
+            margin: 0;
+            margin-bottom: -7px;
+        }
+    }
 }
 
 .rule__text {
     margin: 0;
     color: #023753;
-     font-size: 20px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 40px;
+
+    @media only screen and (max-width: 1024px) {
+        font-size: 16px;
+        line-height: 32px;
+    }
+
+    @media only screen and (max-width : 1024px) {
+        bottom: 45px;
+    }
 }

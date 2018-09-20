@@ -1,4 +1,7 @@
 .template__title {
+    position: relative;
+    display: inline-block;
+    width: 100%;
     margin: 0;
     margin-bottom: 40px;
     color: #023753;
@@ -6,22 +9,50 @@
     line-height: 54px;
     font-weight: 600;
 
-     &:after {
-         content: '';
-         position: absolute;
-         right: 0;
-         top: 18px;
-         width: 103px;
-         height: 23px;
-         background-image: url(../img/dots_template.svg);
-         z-index: 2;
-     }
+    @media only screen and (max-width: 1024px) {
+        max-width: 600px;
+    }
+
+    @media only screen and (max-width : 768px) {
+        max-width: 480px;
+    }
+
+    @media only screen and (max-width : 480px) {
+        width: 284px;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 18px;
+        width: 103px;
+        height: 23px;
+        background-image: url(../img/dots_template.svg);
+        z-index: 2;
+
+        @media only screen and (max-width: 1024px) {
+            top: auto;
+            left: 100px;
+            bottom: 13px;
+        }
+
+
+        @media only screen and (max-width : 768px) {
+            top: auto;
+            left: 225px;
+            bottom: 13px;
+        }
+
+        @media only screen and (max-width : 480px) {
+            left: 100px;
+        }
+    }
 }
 
 .template__slogan {
     position: absolute;
-    top: 0;
-    left: -185px;
+    left: -160px;
+    top: 5px;
     width: 150px;
     margin: 0;
     font-size: 16px;
@@ -29,6 +60,10 @@
     line-height: 37px;
     color: #0024ff;
     z-index: 1;
+
+    @media only screen and (max-width: 1200px) {
+        display: none;
+    }
 
     &:before {
         content: '';
@@ -48,6 +83,16 @@
 
     .container {
         max-width: 790px;
+
+        @media only screen and (max-width: 1024px) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        @media only screen and (max-width : 768px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 }
 
@@ -57,6 +102,8 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 40px;
+
+    @media only screen and (max-width: 768px) {}
 }
 
 .our-speakers__small {
@@ -66,6 +113,8 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
+
+    @media only screen and (max-width: 768px) {}
 }
 
 .our-speakers__textlist {
@@ -74,17 +123,21 @@
     margin-bottom: 40px;
     padding: 0;
 
+    @media only screen and (max-width: 768px) {}
+
 
 }
 
 .our-speakers__decoration {
     margin-bottom: 20px;
-     margin-left: 20px;
-     padding-left: 10px;
+    margin-left: 20px;
+    padding-left: 10px;
     color: #023753;
     font-size: 20px;
     font-weight: 500;
     line-height: 40px;
+
+    @media only screen and (max-width: 768px) {}
 
     span {
         font-weight: 700;
@@ -101,6 +154,8 @@
     font-style: italic;
     line-height: 40px;
 
+    @media only screen and (max-width: 768px) {}
+
 }
 
 .our-speakers__quote {
@@ -111,6 +166,8 @@
     font-weight: 500;
     font-style: italic;
     line-height: 40px;
+
+    @media only screen and (max-width: 768px) {}
 }
 
 .our-speakers__bold {
@@ -121,10 +178,14 @@
     font-weight: 700;
     line-height: 40px;
 
+    @media only screen and (max-width: 768px) {}
+
 }
 
 .our-speakers__subtitle {
     position: relative;
+    width: auto;
+    display: inline-block;
     margin: 0;
     margin-bottom: 20px;
     color: #023753;
@@ -132,11 +193,13 @@
     font-weight: 700;
     line-height: 40px;
 
+    @media only screen and (max-width: 768px) {}
+
     &:after {
         content: '';
         position: absolute;
-        right: 0;
-        top: 18px;
+        right: -120px;
+        top: 10px;
         width: 103px;
         height: 23px;
         background-image: url(../img/dots_template.svg);
@@ -149,6 +212,8 @@
     margin-top: 40px;
     padding: 0;
 
+    @media only screen and (max-width: 768px) {}
+
 }
 
 .our-speakers__item {
@@ -159,5 +224,7 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 40px;
+
+    @media only screen and (max-width: 768px) {}
 
 }
