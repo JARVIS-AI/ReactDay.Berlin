@@ -24,24 +24,37 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-805657772"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-	   function gtag(){dataLayer.push(arguments);}
-	   gtag('js', new Date());
-	   gtag('config', 'AW-805657772');
-	</script>
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'AW-805657772');
+    </script>
 
     <!-- Facebook Pixel Code -->
     <script>
-        !function(f,b,e,v,n,t,s)
-	  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-	  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-	  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-	  n.queue=[];t=b.createElement(e);t.async=!0;
-	  t.src=v;s=b.getElementsByTagName(e)[0];
-	  s.parentNode.insertBefore(t,s)}(window, document,'script',
-	  'https://connect.facebook.net/en_US/fbevents.js');
-	  fbq('init', '1374905195888955');
-	  fbq('track', 'PageView');
-	</script>
+        ! function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1374905195888955');
+        fbq('track', 'PageView');
+    </script>
     <!-- <noscript><img alt="Facebook" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1374905195888955&ev=PageView&noscript=1" />
     </noscript> -->
     <!-- End Facebook Pixel Code -->
@@ -142,10 +155,10 @@
 
         <main class="content">
 
-<section class="section head-block" id="head-block">
-    <div class="container">
-    </div>
-</section>
+            <section class="section head-block" id="head-block">
+                <div class="container">
+                </div>
+            </section>
 
             <section class="section workshops" id="workshops">
                 <div class="container">
@@ -156,13 +169,17 @@
                         </div>
 
                         <div class="workshops__content">
-                             <p class="workshops__slogan">Code of conduct Workshops<br/> etc</p>
-                            <p class="workshops__title">React Day Berlin is a one-day conference dedicated to the exploration of React (Native). Focusing on in-depth talks, hands-on workshops, and finding new job opportunities, we provide space for everyone to make friends and develop stellar apps together</p>
+                            <p class="workshops__slogan">Code of conduct Workshops<br /> etc</p>
+                            <p class="workshops__title">React Day Berlin is a one-day conference dedicated to the
+                                exploration of React (Native). Focusing on in-depth talks, hands-on workshops, and
+                                finding new job opportunities, we provide space for everyone to make friends and
+                                develop stellar apps together</p>
 
                             <img class="workshops__pic" src="img/workshops-pic.jpg" height="210" width="350" />
 
 
-                            <p class="workshops__desc">Last November React Day brough 350 attendees from all over the world
+                            <p class="workshops__desc">Last November React Day brough 350 attendees from all over the
+                                world
                                 to Berlin and since then the crowd was gathering at React Open Source meetups tailored
                                 for most passionated part of the development community. 2018 will see the conf on full
                                 blast – join us and you’re in for a ride.</p>
@@ -179,6 +196,49 @@
                 </div>
             </section>
 
+            <section class="section our-speakers" id="our-speakers">
+                <h2 class="template-title our-speakers__title">Our speakers’ guns are set on stun</h2>
+                <p class="our-speakers__paragraph">Diversity, sharing of ideas, and critical thinking are the core
+                    values when it comes to selection of our speakers. Both React’s pros and its rising stars will take
+                    over two stages at React Day Berlin and deliver stunning presentations. They’ll shed light on all
+                    things puzzling your mind, be it architecture, Design Systems, GraphQL, Reason or other hot topics</p>
+                <p class="our-speakers__small">Take buttons. Even with this relatively “flat” button, there are still a
+                    handful of light-related details</p>
+                <p class="our-speakers__paragraph">OK, first things first. This guide is not for everyone. Who is this
+                    guide for?</p>
+
+                <ul class="our-speakers__textlist">
+                    <li class="our-speakers__decoration"><span>Developers</span> who want to be able to design their
+                        own good-looking UI in a pinch.</li>
+                    <li class="our-speakers__decoration"><span>UX designers</span> who want their portfolio to look
+                        better than a Pentagon PowerPoint. Or UX designers who know they can sell an awesome UX better
+                        in a pretty UI package.</li>
+                </ul>
+                <p class="our-speakers__italic">OK, first things first. This guide is not for everyone. Who is this
+                    guide for?</p>
+
+                <p class="our-speakers__quote">“I majored in engineering — it’s almost a badge of pride to build
+                    something that looks awful.”</p>
+
+                <p class="our-speakers__bold">So word to the nerds: if I’m any good at designing UI now, it’s because
+                    I’ve analyzed stuff — not because I came out the chute with an intuitive understanding of beauty
+                    and balance.</p>
+
+                <h3 class="our-speakers__subtitle">The Rules</h3>
+
+                <p class="our-speakers__paragraph">Here they are:</p>
+
+                <ol class="our-speakers__numlist">
+                    <li class="our-speakers__item">Light comes from the sky</li>
+                    <li class="our-speakers__item">Black and white first</li>
+                    <li class="our-speakers__item">Double your whitespace</li>
+                    <li class="our-speakers__item">Learn the methods of overlaying text on images (see Part 2)</li>
+                    <li class="our-speakers__item">Make text pop— and un-pop (see Part 2)</li>
+                    <li class="our-speakers__item">Only use good fonts (see Part 2)</li>
+                    <li class="our-speakers__item">Steal like an artist (see Part 2)</li>
+                </ol>
+
+            </section>
 
             <section class="section past" id="past">
                 <div class="container">
