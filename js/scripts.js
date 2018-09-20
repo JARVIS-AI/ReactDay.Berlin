@@ -203,12 +203,14 @@ $(function() {
      let acc = document.querySelectorAll('.road-slide__title');
      let time = document.querySelectorAll('.road-slide__time');
      let text = document.querySelectorAll('.road-slide__block');
+     let slide = document.querySelectorAll('.roadmap__slide');
 
-     for (let i = 0; i < acc.length; i++) {
-         acc[i].onclick = function () {
+     for (let i = 0; i < slide.length; i++) {
+         slide[i].onclick = function () {
              acc[i].classList.toggle('road-slide__title--active');
              time[i].classList.toggle('road-slide__time--active');
              text[i].classList.toggle('road-slide__block--show');
+             slide[i].classList.toggle('roadmap__slide--active');
          }
      }
 
