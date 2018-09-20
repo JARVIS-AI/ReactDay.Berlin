@@ -4,6 +4,10 @@
     margin-bottom: 100px;
     padding-top: 140px;
 
+     @media only screen and (max-width : 480px) {
+         padding-top: 40px;
+     }
+
 
     .roadmap__box-1 {
         position: absolute;
@@ -27,7 +31,7 @@
         }
 
         @media only screen and (max-width : 480px) {
-            top: 180px;
+            top: 100px;
             transform: translateX(3%);
         }
     }

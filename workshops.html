@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>React Day Berlin, November 30, 2018</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="react, javascript, conference, reactjs, react native, graphql, berlin" />
+    <meta name="description" content="Fully packed day of your favorite React content, covering most up-to-date insights from the community." />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.min.css?08082018" />
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
+
+    <meta property="og:url" content="https://reactday.berlin" />
+    <meta property="og:title" content="React Day Berlin, November 30, 2018" />
+    <meta property="og:description" content="Fully packed day of your favorite React content, covering most up-to-date insights from the community." />
+    <meta property="og:image" content="https://reactday.berlin/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@reactdayberlin">
+    <meta name="theme-color" content="#230cea" />
+
+    <!-- Global site tag (gtag.js) - AdWords: 805657772 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-805657772"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+	   function gtag(){dataLayer.push(arguments);}
+	   gtag('js', new Date());
+	   gtag('config', 'AW-805657772');
+	</script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+	  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	  n.queue=[];t=b.createElement(e);t.async=!0;
+	  t.src=v;s=b.getElementsByTagName(e)[0];
+	  s.parentNode.insertBefore(t,s)}(window, document,'script',
+	  'https://connect.facebook.net/en_US/fbevents.js');
+	  fbq('init', '1374905195888955');
+	  fbq('track', 'PageView');
+	</script>
+    <!-- <noscript><img alt="Facebook" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1374905195888955&ev=PageView&noscript=1" />
+    </noscript> -->
+    <!-- End Facebook Pixel Code -->
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header class="header header--workshops">
+            <div class="container">
+
+                <div class="logo">
+                    <a href="#" class="logo__link logo__link--workshops">React Day Berlin</a>
+                </div>
+
+                <nav class="main-nav">
+                    <ul class="main-menu">
+                        <!-- <li class="main-menu__item"><a class="main-menu__link" href=""></a></li> -->
+                        <li class="main-menu__item"><a class="main-menu__link" href="#event">Event</a></li>
+                        <li class="main-menu__item active"><a class="main-menu__link" href="#speakers">Speakers</a></li>
+                        <li class="main-menu__item"><a class="main-menu__link" href="#talks">Talks & Shedule</a></li>
+                        <li class="main-menu__item"><a class="main-menu__link" href="#location">Location</a></li>
+                        <li class="main-menu__item"><a class="main-menu__link" href="#sponsors">Sponsors</a></li>
+                        <li class="main-menu__item"><a class="main-menu__link" href="#past">2017</a></li>
+                    </ul>
+                </nav>
+
+                <div class="h-right">
+
+                    <div class="socials-wrap">
+                        <ul class="socials">
+                            <!-- <li class="socials__item">
+                                <a class="socials__link" href="https://bit.ly/rdb-slack">
+                                    <svg class="socials__img" role="img" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#socials_sl"></use>
+                                    </svg>
+                                </a>
+                            </li> -->
+
+                            <li class="socials__item">
+                                <a class="socials__link" href="https://twitter.com/reactdayberlin">
+                                    <svg class="socials__img" role="img" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#socials_tw"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="socials__item">
+                                <a class="socials__link" href="https://www.facebook.com/reactdayberlin">
+                                    <svg class="socials__img" role="img" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#socials_fb"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="socials__item">
+                                <a class="socials__link" href="https://instagram.com/@reactdayberlin">
+                                    <svg class="socials__img" role="img" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#socials_ins"></use>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <!-- <li class="socials__item">
+                                <a class="socials__link" href="https://medium.com/@reactdayberlin">
+                                    <svg class="socials__img" role="img" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#socials_med"></use>
+                                    </svg>
+                                </a>
+                            </li> -->
+
+                            <!-- <li class="socials__item">
+                                <a class="socials__link" href="https://www.youtube.com/reactdayberlin">
+                                    <svg class="socials__img" role="img" aria-hidden="true">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#socials_yt"></use>
+                                    </svg>
+                                </a>
+                            </li> -->
+                        </ul>
+                    </div>
+
+                    <a class="h-tickets basic-btn" href="https://www.eventbrite.com/e/react-day-berlin-2018-tickets-46481540539">Tickets</a>
+
+                    <div class="menu-toggle">
+                        <svg class="menu-toggle__img" role="img" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#menu-toggle"></use>
+                        </svg>
+                        <svg class="menu-toggle__img close" role="img" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-inline.svg#menu-toggle_close"></use>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </header><!-- .header -->
+
+        <main class="content">
+
+<section class="section head-block" id="head-block">
+    <div class="container">
+    </div>
+</section>
+
+            <section class="section workshops" id="workshops">
+                <div class="container">
+
+                    <div class="workshops__wrap">
+                        <div class="section__head">
+                            <h3 class="c-title c-title--workshops js-clipthru">Workshops</h3>
+                        </div>
+
+                        <div class="workshops__content">
+                             <p class="workshops__slogan">Code of conduct Workshops<br/> etc</p>
+                            <p class="workshops__title">React Day Berlin is a one-day conference dedicated to the exploration of React (Native). Focusing on in-depth talks, hands-on workshops, and finding new job opportunities, we provide space for everyone to make friends and develop stellar apps together</p>
+
+                            <img class="workshops__pic" src="img/workshops-pic.jpg" height="210" width="350" />
+
+
+                            <p class="workshops__desc">Last November React Day brough 350 attendees from all over the world
+                                to Berlin and since then the crowd was gathering at React Open Source meetups tailored
+                                for most passionated part of the development community. 2018 will see the conf on full
+                                blast – join us and you’re in for a ride.</p>
+
+                            <div class="workshops__photo">
+                                <img class="workshops__image" src="img/meetup.jpg" height="655" width="393" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="workshops__box-1" data-jq-clipthru="clipthru"></div>
+                    <div class="workshops__box-2"></div>
+                    <div class="workshops__dots-1"></div>
+                </div>
+            </section>
+
+
+            <section class="section past" id="past">
+                <div class="container">
+
+                    <div class="block-head">
+                        <h3 class="block-head__title js-clipthru">We’re no strangers to Berlin’s scene</h3>
+                        <p class="block-head__text">Fun is relative, but there’s no chance to be bored in Berlin, one
+                            of the party capitals of the world. Our afterparty and comedy show will make React Day
+                            Berlin the tech event of the year!</p>
+                    </div>
+
+
+                </div>
+
+                <div class="past__box-1" data-jq-clipthru="clipthru"></div>
+
+            </section>
+
+        </main><!-- .content -->
+
+        <footer class="footer">
+
+            <div class="container">
+                <ul class="f-menu">
+                    <li class="f-menu__item"><a class="f-menu__link" href="https://reactday.berlin/sponsors/">Sponsorship
+                            opportunities</a></li>
+                    <li class="f-menu__item"><a class="f-menu__link" href="http://berlincodeofconduct.org/">Code of
+                            conduct</a></li>
+                    <li class="f-memore speakersnu__item"><a class="f-menu__link" href="mailto:hi@reactday.berlin">Email
+                            us!</a></li>
+                </ul>
+
+                <div class="f-logo">
+                    <a href="https://gitnation.org" class="f-logo__link"></a>
+                </div>
+            </div>
+
+            <div class="f-bg-1"></div>
+
+        </footer><!-- .footer -->
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/scripts.js?03082018"></script>
+
+    <script type="text/javascript">
+        var _gauges = _gauges || [];
+        (function () {
+            var t = document.createElement('script');
+            t.type = 'text/javascript';
+            t.async = true;
+            t.id = 'gauges-tracker';
+            t.setAttribute('data-site-id', '5996fae24b9eb70be0346ef3');
+            t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+            t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(t, s);
+        })();
+    </script>
+
+    <div style="display: none;">
+        <script type="text/javascript">
+            document.write("<a href='//www.liveinternet.ru/click' " +
+                "target=_blank><img src='//counter.yadro.ru/hit?t38.6;r" +
+                escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+                    ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+                        screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+                ";h" + escape(document.title.substring(0, 150)) + ";" + Math.random() +
+                "' alt='' title='LiveInternet' " +
+                "border='0' width='31' height='31'><\/a>")
+        </script>
+    </div>
+
+</body>
+
+</html>
