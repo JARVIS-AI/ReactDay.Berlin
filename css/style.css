@@ -4263,11 +4263,11 @@ a.sp-video:after {
         left: 50px;
         z-index: 0;
         width: 900px;
-        height: 340px;
+        height: 300px;
         transform: translateX(0); } }
     @media only screen and (max-width: 480px) {
       .roadmap .roadmap__box-2 {
-        height: 290px; } }
+        height: 360px; } }
   .roadmap .roadmap__wrapper {
     position: relative;
     z-index: 1;
