@@ -1,18 +1,19 @@
 .rule {
     position: relative;
+
     margin-top: 80px;
 
     &__container {
         max-width: 790px;
 
         @media only screen and (max-width: 1024px) {
-            padding-left: 40px;
             padding-right: 40px;
+            padding-left: 40px;
         }
 
         @media only screen and (max-width : 480px) {
-            padding-left: 20px;
             padding-right: 20px;
+            padding-left: 20px;
         }
     }
 }
@@ -26,15 +27,15 @@
         @media only screen and (max-width: 1024px) {
             top: 18px;
             right: -120px;
-            left: auto;
             bottom: auto;
+            left: auto;
         }
 
 
         @media only screen and (max-width : 768px) {
             top: auto;
-            left: 170px;
             bottom: 13px;
+            left: 170px;
         }
 
         @media only screen and (max-width : 480px) {
@@ -47,9 +48,10 @@
     width: 500px;
     margin: 0;
     margin-bottom: 40px;
-    color: #023753;
+
     font-size: 16px;
     line-height: 40px;
+    color: #023753;
 
     @media only screen and (max-width: 480px) {
         width: 100%;
@@ -58,28 +60,30 @@
 
 .rule__italic {
     margin: 0;
-    font-style: italic;
-    color: #023753;
+
     font-size: 18px;
+
     // font-size: 20px;
     line-height: 40px;
+    color: #023753;
+    font-style: italic;
 }
 
 
 .rule__grid {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding-top: 40px;
-
 }
 
 
 .rule__block {
     position: relative;
+
     width: 370px;
-    padding-top: 40px;
     min-height: 290px;
+    padding-top: 40px;
 
     @media only screen and (max-width: 1024px) {
         width: 330px;
@@ -87,23 +91,25 @@
     }
 
     @media only screen and (max-width : 768px) {
-
         position: relative;
-        margin: 0 auto;
-        min-height: auto;
-        padding-top: 0;
+
         width: 100%;
-     }
+        min-height: auto;
+        margin: 0 auto;
+        padding-top: 0;
+    }
 
     &:after {
-        content: '';
+        content: "";
         position: absolute;
-        right: -25px;
         top: 15px;
+        right: -25px;
+        z-index: -1;
+
         width: 103px;
         height: 103px;
+
         background-image: url(../img/dots_dark.svg);
-        z-index: -1;
 
         @media only screen and (max-width: 768px) {
             display: none;
@@ -135,7 +141,6 @@
     }
 
     &--text {
-
         @media only screen and (max-width: 1024px) {
             padding: 20px 0;
         }
@@ -155,33 +160,40 @@
 
 .rule__note {
     position: absolute;
+    left: 50%;
+
+    width: 370px;
+    min-height: 40px;
     margin: 0;
     margin-top: -13px;
-    width: 370px;
-    color: #023753;
-    font-size: 20px;
+
     font-weight: 400;
+    font-size: 20px;
     line-height: 40px;
-    min-height: 40px;
     text-align: center;
-    left: 50%;
+    color: #023753;
+
     transform: translateX(-50%);
 
     @media only screen and (max-width: 768px) {
-        width: 100%;
         position: static;
-         margin-top: -13px;
-        transform: translateX(0);
+
+        width: 100%;
+        margin-top: -13px;
+
         font-size: 16px;
 
+        transform: translateX(0);
     }
 
     &--top {
-        margin: 0;
         top: 7px;
+
+        margin: 0;
 
         @media only screen and (max-width: 768px) {
             position: static;
+
             margin: 0;
             margin-bottom: -7px;
         }
@@ -190,10 +202,11 @@
 
 .rule__text {
     margin: 0;
-    color: #023753;
-    font-size: 20px;
+
     font-weight: 500;
+    font-size: 20px;
     line-height: 40px;
+    color: #023753;
 
     @media only screen and (max-width: 1024px) {
         font-size: 16px;

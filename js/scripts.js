@@ -200,6 +200,9 @@ $(function() {
     }
     
      /*---------------------------------------------------*/
+    // TASKS & SHEDULE: ACCORDION
+     (function () {
+    
      let acc = document.querySelectorAll('.road-slide__title');
      let time = document.querySelectorAll('.road-slide__time');
      let text = document.querySelectorAll('.road-slide__block');
@@ -214,9 +217,11 @@ $(function() {
          }
      }
 
+    })();
+
 
     /*---------------------------------------------------*/
-
+    // TASKS & SHEDULE: TAB
     (function () {
         var wrapperClass = "roadmap__wrapper";
         var tabContainerClass = "roadmap__tabs";
@@ -267,9 +272,8 @@ $(function() {
     })();
 
     /*---------------------------------------------------*/
-
+    // CITY SLIDER
     (function () {
-
         var sliderClass = "slider-photo";
         var slideClass = "slider-photo__item";
         var slideActiveClass = "slider-photo__item--active";

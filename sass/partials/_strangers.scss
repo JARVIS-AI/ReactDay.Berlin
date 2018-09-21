@@ -1,5 +1,6 @@
 .strangers {
     position: relative;
+
     margin-top: 140px;
     margin-bottom: 250px;
 }
@@ -7,50 +8,54 @@
 
 .strangers__head {
     position: relative;
+
     display: flex;
-    padding-top: 120px;
     height: 500px;
+    padding-top: 120px;
 
-    @media only screen and (max-width : 768px) {
+    @media only screen and (max-width: 768px) {
+        height: 300px;
         padding-top: 70px;
-      height: 300px;
     }
-
 }
 
 .strangers__title {
     position: absolute;
-    width: 510px;
-    font-size: 64px;
-    font-weight: bold;
-    line-height: 1.41;
-    color: #023753;
-    margin: 0;
     z-index: 10;
 
+    width: 510px;
+    margin: 0;
+
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 1.41;
+    color: #023753;
+
     &.clipthru {
-        color: #fff;
+        color: #ffffff;
     }
 
     @media only screen and (max-width : 1024px) {
         margin-left: 40px;
     }
 
-      @media only screen and (max-width : 768px) {
-          margin-left: 20px;
-          width: 62.5%;
-          font-size: 28px;
-          line-height: 1.07;
-      }
+    @media only screen and (max-width : 768px) {
+        width: 62.5%;
+        margin-left: 20px;
+
+        font-size: 28px;
+        line-height: 1.07;
+    }
 }
 
 .strangers__text {
     width: 550px;
     margin: 0;
     margin-left: 600px;
-    color: #023753;
+
     font-size: 16px;
     line-height: 30px;
+    color: #023753;
 }
 
 
@@ -58,53 +63,57 @@
     position: absolute;
     top: 0;
     right: 50%;
-    width: 600px;
-    height: 653px;
-    transform: translateX(-35%);
-    background-color: #230cea;
     z-index: 0;
 
-      @media only screen and (max-width: 1200px) {
-     
-           transform: translateX(-35%);
-      }
+    width: 600px;
+    height: 653px;
 
-      @media only screen and (max-width: 768px) {
+    background-color: #230cea;
+    transform: translateX(-35%);
+
+    @media only screen and (max-width: 1200px) {
+        transform: translateX(-35%);
+    }
+
+    @media only screen and (max-width: 768px) {
         height: 400px;
-        transform: translateX(-120px);
-      }
 
-       @media only screen and (max-width: 480px) {
-            height: 300px;
-            transform: translateX(-80px);
-       }
+        transform: translateX(-120px);
+    }
+
+    @media only screen and (max-width: 480px) {
+        height: 300px;
+
+        transform: translateX(-80px);
+    }
 }
 
 .strangers__video {
     position: relative;
-    margin: 0 auto;
+
     width: 1149px;
-    margin-top: -20px;
     height: 643px;
-  
-      @media only screen and (max-width : 1439px) {
+    margin: 0 auto;
+    margin-top: -20px;
+
+    @media only screen and (max-width: 1439px) {
         width: 95%;
         height: auto;
         padding-top: 56.25%;
-      }
+    }
 
-       @media only screen and (max-width : 480px) {
-           margin-top: -90px;
-       }
+    @media only screen and (max-width : 480px) {
+        margin-top: -90px;
+    }
 }
 
 .strangers__frame {
     position: absolute;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
-
 }
 
 .strangers__container {

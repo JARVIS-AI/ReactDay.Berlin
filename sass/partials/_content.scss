@@ -102,7 +102,7 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        z-index: 10px;
+        z-index: 10;
         padding: 0 10px;
         height: 100px;
 
@@ -1083,6 +1083,8 @@
 
 
 .speakers {
+    padding-top: 50px;
+
     &__more {
         position: relative;
         align-items: center;
@@ -1156,7 +1158,7 @@
     }
 
     @media only screen and (max-width : 1200px) {
-
+    
         &__box-1 {
             height: 660px;
             transform: translate(-20%);
@@ -1164,6 +1166,8 @@
     }
 
     @media only screen and (max-width : 992px) {
+        padding-top: 50px;
+
         &__box-1 {
             transform: translate(-15%);
         }
@@ -1216,6 +1220,29 @@
     align-items: flex-start;
     flex-wrap: wrap;
     z-index: 1;
+
+      &:before {
+          content: '';
+          position: absolute;
+          left: -130px;
+          top: 50.5%;
+          width: 203px;
+          height: 223px;
+          background-image: url(../img/dots_speaker.svg);
+          z-index: 20;
+          transform: rotate(180deg);
+      }
+
+      &:after {
+          content: '';
+          position: absolute;
+          right: -180px;
+          top: 34%;
+           width: 203px;
+           height: 223px;
+          background-image: url(../img/dots_speaker.svg);
+          z-index: 20;
+      }
 
     &__item {
         position: relative;
@@ -1805,7 +1832,8 @@
 
 .location {
     background: #f5f7f9;
-    margin-bottom: 50px;
+    margin-bottom: -80px;
+    padding-top: 50px;
     padding-bottom: 50px;
 
     &__intro {
@@ -1975,16 +2003,19 @@
     }
 
     @media only screen and (max-width : 768px) {
+        padding: 0;
+        margin-bottom: 0;
 
         &__content {
-            padding: 4px 0;
+            margin-top: 40px;
+            padding: 10px 0;
             min-height: 580px;
         }
 
         &__map {
 
             left: 0;
-            top: 320px;
+            top: 360px;
             z-index: 1;
 
             #map {
@@ -2031,7 +2062,7 @@
 
         &__photo {
             width: 100%;
-            padding-top: 81%;
+            padding-top: 90%;
             margin: 0;
             transform: translateX(0);
 
@@ -2059,8 +2090,7 @@
         &__box-1 {
             transform: translateX(0);
             left: 90px;
-            top: 0;
-            height: 320px;
+            height: 360px;
             width: 900px;
             z-index: 1;
         }
@@ -2135,6 +2165,7 @@
 
 .sponsors {
     background: #f4f4f4;
+    margin-bottom: 70px;
 
     &__intro {
         position: relative;
@@ -2260,6 +2291,8 @@
     }
 
     @media only screen and (max-width : 768px) {
+        margin-bottom: 30px;
+        padding-top: 80px;
 
         &__intro {
             display: none;
@@ -2287,8 +2320,8 @@
         &__box-1 {
             transform: translateX(0);
             left: 0;
-            top: 0;
-            height: 160px;
+            top: 60px;
+            height: 200px;
             width: 90px;
         }
 
@@ -2397,6 +2430,7 @@
               @media only screen and (max-width: 768px) {
                   width: 50%;
                   margin-top: -30px;
+                  margin-left: 20px;
               }
         }
 
@@ -2427,6 +2461,8 @@
     }
 
     @media only screen and (max-width : 768px) {
+
+        padding-top: 30px;
 
         &__intro {
             display: none;

@@ -1,8 +1,13 @@
 .roadmap {
     position: relative;
 
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     padding-top: 140px;
+
+    @media only screen and (max-width: 768px) {
+        padding-top: 80px;
+    }
+
 
     @media only screen and (max-width: 480px) {
         padding-top: 40px;
@@ -11,7 +16,7 @@
 
     .roadmap__box-1 {
         position: absolute;
-        top: 130px;
+        top: 70px;
         right: 63%;
         z-index: 0;
 
@@ -23,6 +28,7 @@
 
         @media only screen and (max-width: 1200px) {
             height: 390px;
+
             transform: translateX(-10%);
         }
 
@@ -31,39 +37,44 @@
         }
 
         @media only screen and (max-width : 480px) {
-            top: 100px;
             transform: translateX(3%);
         }
     }
 
     .roadmap__box-2 {
-        width: 1800px;
-        height: 580px;
         position: absolute;
-        left: 37%;
-        transform: translateX(0);
         bottom: 0;
-        background: #230cea;
+        left: 37%;
         z-index: 0;
 
+        width: 1800px;
+        height: 580px;
+
+        background: #230cea;
+        transform: translateX(0);
+
         @media only screen and (max-width: 1200px) {
-            width: 800px;
-            transform: translateX(0);
-            left: 325px;
             bottom: 0;
-            height: 580px;
-            width: 900px;
+            left: 325px;
             z-index: 0;
+
+            width: 800px;
+            width: 900px;
+            height: 580px;
+
+            transform: translateX(0);
         }
 
 
         @media only screen and (max-width : 768px) {
-            transform: translateX(0);
-            left: 50px;
             bottom: 0;
-            height: 340px;
-            width: 900px;
+            left: 50px;
             z-index: 0;
+
+            width: 900px;
+            height: 340px;
+
+            transform: translateX(0);
         }
 
         @media only screen and (max-width : 480px) {
@@ -348,9 +359,9 @@
         margin-left: 420px;
 
         @media only screen and (max-width: 1200px) {
-            margin-left: 48%;
-            margin-right: 5%;
             width: 50%;
+            margin-right: 5%;
+            margin-left: 48%;
         }
 
         @media only screen and (max-width : 1024px) {
@@ -359,9 +370,9 @@
 
 
         @media only screen and (max-width : 768px) {
-            margin-left: 25%;
             width: 60%;
             max-width: auto;
+            margin-left: 25%;
         }
     }
 
@@ -380,7 +391,6 @@
 
         @media only screen and (max-width : 1024px) {
             max-width: 700px;
-
         }
 
         @media only screen and (max-width : 768px) {
@@ -411,9 +421,9 @@
         }
 
         @media only screen and (max-width : 768px) {
+            margin: 0;
             // width: 48%;
             margin-top: 50px;
-            margin: 0;
             // padding-right: 12%;
 
             font-size: 10px;
