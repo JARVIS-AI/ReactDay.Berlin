@@ -2477,6 +2477,9 @@ a.sp-video:after {
 
 .speakers .c-title {
   margin-left: 120px; }
+  @media only screen and (max-width: 768px) {
+    .speakers .c-title {
+      margin-left: 20px; } }
 
 .speakers .c-tagline {
   max-width: 670px; }
@@ -2506,7 +2509,8 @@ a.sp-video:after {
   .speakers .container {
     padding: 30px 10px 30px 10px; }
   .speakers__box-1 {
-    transform: translate(-6.5%);
+    transform: translate(0);
+    left: 100px;
     height: 210px; }
   .speakers__box-2 {
     display: none; } }
@@ -2890,18 +2894,27 @@ a.sp-video:after {
 
 .location {
   background: #f5f7f9;
-  margin-bottom: 100px;
-  padding-bottom: 150px; }
+  margin-bottom: 50px;
+  padding-bottom: 50px; }
   .location__intro {
-    width: 914px;
-    margin-left: 250px; }
+    width: 75%;
+    margin-left: 23%;
+    padding-bottom: 10px; }
+    @media only screen and (max-width: 1024px) {
+      .location__intro {
+        margin-left: 25%; } }
+    @media only screen and (max-width: 860px) {
+      .location__intro {
+        margin-left: 21%; } }
   .location__subtitle {
     margin: 0;
+    margin-bottom: 10px;
     color: #023753;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.25; }
   .location__desc {
+    margin: 0;
     color: #023753;
     font-size: 16px;
     font-weight: 500;
@@ -2915,34 +2928,42 @@ a.sp-video:after {
     z-index: 1; }
     .location__map #map {
       width: 100%;
-      height: 95%; }
+      height: 82.2%; }
   .location__content {
     position: relative;
     padding-top: 22px;
-    padding-bottom: 500px;
     min-height: 588px;
     width: 100%;
     z-index: 2; }
-    .location__content:before {
-      content: '';
-      position: absolute;
-      left: -140px;
-      top: 370px;
-      width: 1092px;
-      height: 534px;
-      background-image: url(../img/kosmos.png); }
+  .location__photo {
+    position: relative;
+    padding-top: 40px;
+    width: 93.42%;
+    height: auto;
+    transform: translateX(-220px); }
+  .location__image {
+    width: 100%;
+    height: auto; }
   .location__address {
     position: absolute;
     z-index: 10;
-    width: 310px;
-    top: 340px;
-    right: 50px;
+    width: 28.362%;
+    top: 0;
+    right: -150px;
     font-size: 20px;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 40px;
     color: #023753;
-    padding: 32px 40px 28px;
+    padding: 2.75% 40px 2.75%;
     background: #fff; }
+    @media only screen and (max-width: 1200px) {
+      .location__address {
+        width: 30%;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 32px;
+        padding: 2.75% 20px 2.75%;
+        right: -110px; } }
     .location__address a {
       font-weight: 500;
       color: #023753;
@@ -2955,29 +2976,38 @@ a.sp-video:after {
     text-decoration: none;
     font-family: "Poppins", sans-serif; }
   .location__follow-us {
-    width: 100%;
-    max-width: 580px;
-    position: absolute;
-    left: 56px;
-    bottom: -130px;
+    width: 49.573%;
+    transform: translateY(-120px);
     background: #fff; }
+    @media only screen and (max-width: 1200px) {
+      .location__follow-us {
+        transform: translate(47px, -5px);
+        width: 540px; } }
     .location__follow-us .socials {
       margin: 0;
       margin-bottom: 15px; }
   .location__box-1 {
     width: 800px;
-    height: 580px;
+    height: 82.2%;
     position: absolute;
     left: 50%;
-    transform: translateX(-144%);
+    transform: translateX(-141.5%);
     top: 0;
     background: #230cea;
     z-index: 2; }
+    @media only screen and (max-width: 1024px) {
+      .location__box-1 {
+        transform: translateX(-1060px); } }
   .location .section__head {
     position: relative;
     max-width: 954px;
     margin: 65px auto 15px;
     z-index: 1; }
+    .location .section__head .c-title {
+      margin-left: 0; }
+      @media only screen and (max-width: 1024px) {
+        .location .section__head .c-title {
+          margin-left: 8%; } }
   .location .container {
     position: relative;
     max-width: 1190px;
@@ -2987,14 +3017,50 @@ a.sp-video:after {
       padding: 4px 0;
       min-height: 580px; }
     .location__map {
-      top: 90px;
+      left: 0;
+      top: 320px;
       z-index: 1; }
       .location__map #map {
-        height: 240px; }
+        height: 40%; }
     .location__address {
       display: none; }
     .location__follow-us {
-      left: 0; }
+      left: 0;
+      position: static; }
+    .location__intro {
+      margin-left: auto;
+      margin-right: 5%;
+      width: 70%; } }
+  @media only screen and (max-width: 768px) and (max-width: 480px) {
+    .location__intro {
+      margin-right: 0;
+      width: 65%; } }
+  @media only screen and (max-width: 768px) {
+    .location__subtitle {
+      color: #f5f7f9;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 25px; }
+    .location__desc {
+      padding-bottom: 13px;
+      color: #f5f7f9;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 20px; }
+    .location__photo {
+      width: 100%;
+      padding-top: 81%;
+      margin: 0;
+      transform: translateX(0); } }
+  @media only screen and (max-width: 768px) and (max-width: 480px) {
+    .location__photo {
+      padding-left: 0;
+      padding-right: 0; } }
+  @media only screen and (max-width: 768px) {
+    .location__image {
+      display: block;
+      width: 100%;
+      height: auto; }
     .location .section__head {
       margin: 0 0 0;
       min-height: 48px; }
@@ -3004,7 +3070,7 @@ a.sp-video:after {
       transform: translateX(0);
       left: 90px;
       top: 0;
-      height: 300px;
+      height: 320px;
       width: 900px;
       z-index: 1; }
     .location__box-2 {
@@ -3023,12 +3089,12 @@ a.sp-video:after {
     transform: scale(1.2); }
   @media only screen and (max-width: 768px) {
     .follow-us {
+      width: 100%;
       min-height: 320px;
       padding: 18px 20px;
       margin: 0 auto;
       max-width: 380px;
-      left: 50%;
-      transform: translateX(-50%); }
+      transform: translate(0, 0); }
       .follow-us__title {
         font-size: 20px;
         font-weight: 600;
@@ -4112,17 +4178,34 @@ a.sp-video:after {
         top: 100px;
         transform: translateX(3%); } }
   .roadmap .roadmap__box-2 {
+    width: 1800px;
+    height: 580px;
     position: absolute;
+    left: 37%;
+    transform: translateX(0);
     bottom: 0;
-    left: 30%;
-    z-index: 0;
-    width: 1445px;
-    height: 674px;
-    background: #230cea; }
+    background: #230cea;
+    z-index: 0; }
+    @media only screen and (max-width: 1200px) {
+      .roadmap .roadmap__box-2 {
+        width: 800px;
+        transform: translateX(0);
+        left: 325px;
+        bottom: 0;
+        height: 580px;
+        width: 900px;
+        z-index: 0; } }
+    @media only screen and (max-width: 768px) {
+      .roadmap .roadmap__box-2 {
+        transform: translateX(0);
+        left: 50px;
+        bottom: 0;
+        height: 340px;
+        width: 900px;
+        z-index: 0; } }
     @media only screen and (max-width: 480px) {
       .roadmap .roadmap__box-2 {
-        left: 21%;
-        height: 270px; } }
+        height: 290px; } }
   .roadmap .roadmap__wrapper {
     position: relative;
     z-index: 1;
@@ -4154,11 +4237,6 @@ a.sp-video:after {
     font-weight: 700;
     color: #023753; }
     .roadmap .c-title.clipthru {
-      color: #ffffff; }
-  .roadmap .roadmap__title--footer {
-    width: 810px;
-    margin-left: 17px; }
-    .roadmap .roadmap__title--footer.clipthru {
       color: #ffffff; }
   .roadmap .roadmap__tabs {
     display: flex;
@@ -4309,24 +4387,30 @@ a.sp-video:after {
     margin-left: 420px; }
     @media only screen and (max-width: 1200px) {
       .roadmap .roadmap__footer-wrapper {
-        margin-left: 380px; } }
-    @media only screen and (max-width: 992px) {
+        margin-left: 48%;
+        margin-right: 5%;
+        width: 50%; } }
+    @media only screen and (max-width: 1024px) {
       .roadmap .roadmap__footer-wrapper {
-        margin-left: 37%; } }
-    @media only screen and (max-width: 480px) {
+        max-width: 350px; } }
+    @media only screen and (max-width: 768px) {
       .roadmap .roadmap__footer-wrapper {
-        margin-left: 25%; } }
+        margin-left: 25%;
+        width: 60%;
+        max-width: auto; } }
   .roadmap .roadmap__title--footer {
     width: 100%; }
+    .roadmap .roadmap__title--footer.clipthru {
+      color: #ffffff; }
     @media only screen and (max-width: 1200px) {
       .roadmap .roadmap__title--footer {
         margin-left: 50px; } }
-    @media only screen and (max-width: 992px) {
+    @media only screen and (max-width: 1024px) {
       .roadmap .roadmap__title--footer {
-        width: 90%; } }
-    @media only screen and (max-width: 480px) {
+        max-width: 700px; } }
+    @media only screen and (max-width: 768px) {
       .roadmap .roadmap__title--footer {
-        margin-left: 20px; } }
+        margin-left: 0; } }
   .roadmap .roadmap__text {
     width: 100%;
     margin: 0;
@@ -4335,21 +4419,19 @@ a.sp-video:after {
     font-size: 20px;
     line-height: 2;
     color: #f5f7f9; }
-    @media only screen and (max-width: 1300px) {
-      .roadmap .roadmap__text {
-        width: 80%; } }
     @media only screen and (max-width: 992px) {
       .roadmap .roadmap__text {
-        width: 70%;
         padding-top: 50px;
         font-size: 18px; } }
     @media only screen and (max-width: 768px) {
       .roadmap .roadmap__text {
-        width: 35%;
         margin-top: 50px;
-        padding-top: 20px;
+        margin: 0;
         font-size: 10px;
         line-height: 20px; } }
+    @media only screen and (max-width: 480px) {
+      .roadmap .roadmap__text {
+        padding-top: 70px; } }
   .roadmap .roadmap__path {
     display: inline-flex;
     width: 658px;
