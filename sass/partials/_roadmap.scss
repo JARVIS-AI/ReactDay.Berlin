@@ -17,34 +17,33 @@
     .roadmap__box-1 {
         position: absolute;
         top: 70px;
-        right: 63%;
+        // right: 63%;
+        left: 50%;
         z-index: 0;
 
-        width: 1445px;
+        width: 900px;
         height: 590px;
 
         background: #230cea;
         transform: translateX(0);
+        transform: translateX(-1175px);
 
         @media only screen and (max-width: 1200px) {
             height: 390px;
-
-            transform: translateX(-10%);
         }
 
         @media only screen and (max-width : 768px) {
-            transform: translateX(-7%);
-        }
-
-        @media only screen and (max-width : 480px) {
-            transform: translateX(3%);
+            height: 360px;
+            width: 90px;
+            transform: translateX(0);
+            left: 0;
         }
     }
 
     .roadmap__box-2 {
         position: absolute;
         bottom: 0;
-        left: 37%;
+        left: 29.5%;
         z-index: 0;
 
         width: 1800px;

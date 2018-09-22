@@ -1,6 +1,6 @@
 .city {
     position: relative;
-    z-index: 100;
+    z-index: 1;
 
     margin-bottom: 60px;
 
@@ -19,7 +19,7 @@
     }
 
     .c-title {
-        top: 25px;
+        top: 40px;
 
         margin-left: 0;
 
@@ -72,17 +72,18 @@
         }
 
         @media only screen and (max-width: 768px) {
-            width: 60%;
-            max-width: 350px;
+            width: 70%;
+            max-width: 500px;
             padding-top: 130px;
-
+            padding-bottom: 20px;
             font-size: 14px;
         }
 
         @media only screen and (max-width: 480px) {
-            width: 70%;
-            max-width: 250px;
+            width: 75%;
+            max-width: 320px;
             padding-right: 20px;
+            padding-bottom: 10px;
 
             font-size: 10px;
             line-height: 20px;
@@ -92,20 +93,27 @@
     &__box {
         position: absolute;
         top: 0;
-        left: 50%;
+        left: 52%;
         z-index: 0;
 
-        width: 1435px;
+        width: 1455px;
         height: 590px;
 
         background: #230cea;
         transform: translateX(-1175px);
 
         @media only screen and (max-width: 1200px) {
+            left: 50%;
             width: 1000px;
-            height: 390px;
+            height: 400px;
 
             transform: translateX(-1075px);
+        }
+
+        @media only screen and (max-width: 768px) {
+            transform: translateX(0);
+            left: 0;
+            width: 25%;
         }
     }
 }
@@ -113,12 +121,6 @@
 .slider-photo {
     position: relative;
     z-index: 11;
-
-    padding-left: 40px;
-
-    @media only screen and (max-width: 768px) {
-        padding: 0;
-    }
 }
 
 .slider-photo__slides {
@@ -136,8 +138,8 @@
 
 .slider-photo__toogles {
     position: absolute;
-    top: 40px;
-    right: 250px;
+    top: 55px;
+    right: 200px;
     z-index: 20;
 
     display: flex;
@@ -145,7 +147,7 @@
     width: 180px;
 
     @media only screen and (max-width: 1200px) {
-        top: 40px;
+        top: 35px;
         right: 40px;
 
         width: 120px;
@@ -222,8 +224,8 @@
 
     margin: 0;
     margin-bottom: 20px;
-    padding-top: 390px;
-    padding-left: 23%;
+    padding-top: 480px;
+    padding-left: 25%;
 
     font-weight: 500;
     font-size: 20px;
@@ -263,7 +265,7 @@
 
     max-width: 880px;
     margin: 0;
-    padding-left: 23%;
+    padding-left: 25%;
 
     font-weight: 400;
     font-size: 16px;
@@ -302,7 +304,7 @@
 .slider-photo__image {
     position: absolute;
 
-    width: 75%;
+    width: 100%;
     max-width: 1050px;
     height: auto;
     margin-top: 40px;
@@ -310,6 +312,7 @@
     transform: translateX(25%);
 
     @media only screen and (max-width: 1200px) {
+        width: 75%;
         max-width: 800px;
     }
 
