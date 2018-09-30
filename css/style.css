@@ -1462,7 +1462,7 @@ a.sp-video:after {
 	cursor: pointer;
 	outline: none;
 	display: none;
-			
+
 	&:after{
 		content: '';
 		transition: all ease-out 0.1s;
@@ -1507,7 +1507,7 @@ a.sp-video:after {
 	}
 
 	@media only screen and (max-width : 680px) {
-		
+
 		&:after{
 			background: transparent;
 			box-shadow: none;
@@ -1640,7 +1640,7 @@ a.sp-video:after {
 	}*/ }
   .main-menu__item {
     position: relative;
-    margin: 0 8px;
+    margin: 0 4px;
     line-height: 1.43; }
     .main-menu__item.active .main-menu__link {
       color: #230cea; }
@@ -1705,7 +1705,7 @@ a.sp-video:after {
           margin-left: 7.5%; } }
       @media only screen and (max-width: 768px) {
         .section__head .c-title {
-          width: 62.5%;
+          width: 80%;
           margin-left: 20px; } }
 
 .c-title {
@@ -4306,7 +4306,6 @@ a.sp-video:after {
   .roadmap .c-title {
     position: absolute;
     z-index: 10;
-    width: 510px;
     margin: 0;
     margin-left: -5px;
     font-weight: 700;

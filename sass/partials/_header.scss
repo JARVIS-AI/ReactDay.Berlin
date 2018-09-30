@@ -389,7 +389,7 @@
 	cursor: pointer;
 	outline: none;
 	display: none;
-			
+
 	&:after{
 		content: '';
 		transition: all ease-out 0.1s;
@@ -434,7 +434,7 @@
 	}
 
 	@media only screen and (max-width : 680px) {
-		
+
 		&:after{
 			background: transparent;
 			box-shadow: none;
@@ -610,7 +610,7 @@
 
     &__item {
         position: relative;
-        margin: 0 8px;
+        margin: 0 4px;
         line-height: 1.43;
 
         &.active {
