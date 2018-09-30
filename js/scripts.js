@@ -197,9 +197,130 @@ $(function() {
 				}
 			}
 		}
-	}
+    }
+    
+     /*---------------------------------------------------*/
+    // TASKS & SHEDULE: ACCORDION
+     (function () {
+    
+     let acc = document.querySelectorAll('.road-slide__title');
+     let time = document.querySelectorAll('.road-slide__time');
+     let text = document.querySelectorAll('.road-slide__block');
+     let slide = document.querySelectorAll('.roadmap__slide');
 
-	/*---------------------------------------------------*/
+     for (let i = 0; i < slide.length; i++) {
+         slide[i].onclick = function () {
+             acc[i].classList.toggle('road-slide__title--active');
+             time[i].classList.toggle('road-slide__time--active');
+             text[i].classList.toggle('road-slide__block--show');
+             slide[i].classList.toggle('roadmap__slide--active');
+         }
+     }
+
+    })();
+
+
+    /*---------------------------------------------------*/
+    // TASKS & SHEDULE: TAB
+    (function () {
+        var wrapperClass = "roadmap__wrapper";
+        var tabContainerClass = "roadmap__tabs";
+        var tabClass = "roadmap__tab";
+        var tabActiveClass = "roadmap__tab--active";
+        var contentClass = "roadmap__content";
+        var contentShowClass = "roadmap__content--show";
+        var contentHideClass = "roadmap__content--hide";
+
+        var wrapper = document.querySelector("." + wrapperClass);
+        var tab = wrapper.getElementsByClassName(tabClass);
+        var tabContent = wrapper.getElementsByClassName(contentClass);
+        var tabContainer = wrapper.getElementsByClassName(tabContainerClass)[0];
+        var showTabIndex = 1;
+        var hideTabIndex = 0;
+
+        var hideTabContent = function (item) {
+            for (var i = item; i < tabContent.length; i++) {
+                tabContent[i].classList.remove(contentShowClass);
+                tabContent[i].classList.add(contentHideClass);
+                tab[i].classList.remove(tabActiveClass);
+            }
+        };
+
+        hideTabContent(showTabIndex);
+
+        var showTabContent = function (item) {
+             if (tabContent[item].classList.contains(contentHideClass)) {
+                hideTabContent(hideTabIndex);
+                tabContent[item].classList.remove(contentHideClass);
+                tabContent[item].classList.add(contentShowClass);
+                tab[item].classList.add(tabActiveClass);
+            }
+        };
+
+        tabContainer.addEventListener("click", function (event) {
+            var target = event.target;
+            if (target.className == tabClass) {
+                for (var i = 0; i < tab.length; i++) {
+                    if (target == tab[i]) {
+                        showTabContent(i);
+                        break;
+                    }
+                }
+            }
+        });
+
+    })();
+
+    /*---------------------------------------------------*/
+    // CITY SLIDER
+    (function () {
+        var sliderClass = "slider-photo";
+        var slideClass = "slider-photo__item";
+        var slideActiveClass = "slider-photo__item--active";
+        var prevButtonClass = "slider-photo__button--prev";
+        var nextButtonClass = "slider-photo__button--next";
+        var slideIndex = 1;
+  
+
+        var slider = document.querySelector("." + sliderClass);
+        var slides = slider.getElementsByClassName(slideClass);
+        var prevButton = slider.querySelector("." + prevButtonClass);
+        var nextButton = slider.querySelector("." + nextButtonClass);
+
+
+        var showSlides = function (n) {
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].classList.remove(slideActiveClass);
+            }
+
+            slides[slideIndex - 1].classList.add(slideActiveClass);
+        };
+
+        var plusSlides = function (n) {
+            showSlides((slideIndex += n));
+        };
+
+        prevButton.addEventListener("click", function () {
+            plusSlides(-1);
+        });
+
+        nextButton.addEventListener("click", function () {
+            plusSlides(1);
+        });
+
+
+        showSlides(slideIndex);
+    })();
+
+     /*---------------------------------------------------*/
 
 	$('input[placeholder], textarea[placeholder]').placeholder();
 	
