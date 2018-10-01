@@ -4376,16 +4376,16 @@ a.sp-video:after {
   .roadmap .roadmap__content--show {
     display: block; }
   .roadmap .roadmap__slide {
-    padding-top: 60px;
-    cursor: pointer; }
-  .roadmap .roadmap__slide--active {
     margin: 0 -20px;
     padding: 40px;
-    background-color: #ffffff;
     cursor: pointer; }
     @media only screen and (max-width: 480px) {
-      .roadmap .roadmap__slide--active {
-        padding: 20px; } }
+      .roadmap .roadmap__slide {
+        padding: 20px;
+        padding-top: 30px; } }
+  .roadmap .roadmap__slide--active {
+    background-color: #ffffff;
+    cursor: pointer; }
   .roadmap .road-slide__block {
     display: none; }
   .roadmap .road-slide__block--show {

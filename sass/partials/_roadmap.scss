@@ -17,7 +17,6 @@
     .roadmap__box-1 {
         position: absolute;
         top: 70px;
-        // right: 63%;
         left: 50%;
         z-index: 0;
 
@@ -119,8 +118,6 @@
     .c-title {
         position: absolute;
         z-index: 10;
-
-        //width: 510px;
         margin: 0;
         margin-left: -5px;
 
@@ -230,22 +227,20 @@
     }
 
     .roadmap__slide {
-        padding-top: 60px;
-
-        cursor: pointer;
-    }
-
-
-    .roadmap__slide--active {
         margin: 0 -20px;
         padding: 40px;
-
-        background-color: #ffffff;
         cursor: pointer;
 
         @media only screen and (max-width: 480px) {
             padding: 20px;
+            padding-top: 30px;
         }
+    }
+
+
+    .roadmap__slide--active {
+        background-color: #ffffff;
+        cursor: pointer;
     }
 
     .road-slide__block {
