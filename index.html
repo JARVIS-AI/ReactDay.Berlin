@@ -1657,7 +1657,7 @@
 						<img class="location__image" src="img/kosmos.png" height="1092" width="534"
 							 alt="Location photo"/>
 						<div class="location__address">
-							<a href="https://goo.gl/maps/qDn5vDcgr1D2" target="_blank"><span class="location__place">КOSMOS</span>
+							<a class="location__link" href="https://goo.gl/maps/qDn5vDcgr1D2" target="_blank"><span class="location__place">КOSMOS</span>
 								<br/>Karl-Marx-Allee 131A, <br/>10243 Berlin</a>
 						</div>
 					</div>
@@ -1918,10 +1918,17 @@
 					];
 
 					var marker = new google.maps.Marker({
-					  position: new google.maps.LatLng(52.517161, 13.44998),
+					  position: new google.maps.LatLng(52.516761, 13.44998),
 					  map: map,
 					  title: 'Kosmos',
-					  icon: 'img/marker_new.png'
+					  icon: 'img/marker.svg'
+					});
+
+					var marker = new google.maps.Marker({
+					  position: new google.maps.LatLng(52.51805, 13.45083),
+					  map: map,
+					  title: 'Place',
+					  icon: 'img/map_dots.svg'
 					});
 
 					map.setOptions({
