@@ -179,8 +179,9 @@
         }
 
 
-        &:hover {
-            opacity: 1;
+        &:hover,
+        &:focus {
+            opacity: 0.6;
         }
 
         &--active {
@@ -231,6 +232,11 @@
         padding: 40px;
         cursor: pointer;
 
+        &:hover,
+        &:focus {
+            opacity: 0.6;
+        }
+
         @media only screen and (max-width: 480px) {
             padding: 20px;
             padding-top: 30px;
@@ -241,6 +247,11 @@
     .roadmap__slide--active {
         background-color: #ffffff;
         cursor: pointer;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
     }
 
     .road-slide__block {
