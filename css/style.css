@@ -4206,30 +4206,45 @@ a.sp-video:after {
       padding-right: 20px;
       font-size: 10px; } }
 
-.slider-photo__image {
+.slider-photo__picture {
   position: absolute;
   width: 100%;
   max-width: 1050px;
   height: auto;
   margin-top: 40px;
   transform: translateX(25%); }
+  .slider-photo__picture::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 240px;
+    background-image: linear-gradient(180deg, rgba(35, 12, 234, 0) 0%, #230cea 100%);
+    opacity: 0.6; }
   @media only screen and (max-width: 1200px) {
-    .slider-photo__image {
+    .slider-photo__picture {
       width: 75%;
       max-width: 800px; } }
   @media only screen and (max-width: 1024px) {
-    .slider-photo__image {
+    .slider-photo__picture {
       position: relative;
       width: 90%;
       margin-top: 30px;
       transform: translateX(8%); } }
   @media only screen and (max-width: 768px) {
-    .slider-photo__image {
+    .slider-photo__picture {
       width: 93.335%;
       max-width: 100%;
       margin-top: 10px;
       margin-left: 0;
       transform: translateX(5%); } }
+
+.slider-photo__image {
+  display: block;
+  width: 100%;
+  height: 100%; }
 
 .roadmap {
   position: relative;
