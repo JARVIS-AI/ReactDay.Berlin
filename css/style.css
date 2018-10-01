@@ -2194,13 +2194,11 @@ a.sp-video:after {
 .event {
   position: relative;
   margin: 0;
-  margin-top: 100px;
   margin-bottom: 40px; }
   .event__wrap {
     position: relative;
     z-index: 2;
-    margin: 0 0 0 auto;
-    padding-top: 40px; }
+    margin: 0 0 0 auto; }
   .event__slogan {
     width: 180px;
     opacity: 0.6;
@@ -2272,7 +2270,7 @@ a.sp-video:after {
     background: #230cea;
     left: 50%;
     transform: translateX(-1171px);
-    top: 140px;
+    top: 100px;
     z-index: 1; }
   .event__box-2 {
     position: absolute;
@@ -2288,7 +2286,7 @@ a.sp-video:after {
     width: 163px;
     height: 63px;
     left: 96%;
-    top: 140px;
+    top: 100px;
     z-index: 1;
     width: 163px;
     height: 63px;
