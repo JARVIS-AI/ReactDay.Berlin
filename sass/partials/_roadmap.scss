@@ -66,10 +66,10 @@
 
         @media only screen and (max-width : 768px) {
             bottom: 0;
-            left: 50px;
+            left: 90px;
             z-index: 0;
 
-            width: 900px;
+            width: 700px;
             height: 300px;
 
             transform: translateX(0);
@@ -102,17 +102,14 @@
         }
 
         @media only screen and (max-width : 768px) {
+            width: 100%;
             background-color: #f5f7f9;
         }
     }
 
 
     .roadmap__head {
-        position: relative;
-        z-index: -1;
-
-        padding-top: 80px;
-        padding-bottom: 120px;
+        margin-top: 50px;
     }
 
     .c-title {
@@ -126,6 +123,10 @@
 
         &.clipthru {
             color: #ffffff;
+        }
+
+        @media only screen and (max-width : 768px) {
+            margin-left: 0;
         }
     }
 
@@ -375,9 +376,9 @@
 
 
         @media only screen and (max-width : 768px) {
-            width: 60%;
-            max-width: auto;
-            margin-left: 25%;
+            width: 68%;
+            max-width: none;
+            margin-left: 110px;
         }
     }
 
@@ -413,32 +414,18 @@
         line-height: 2;
         color: #f5f7f9;
 
-        @media only screen and (max-width: 1300px) {
-            // width: 80%;
-        }
-
-        @media only screen and (max-width : 992px) {
-            // width: 70%;
-            // max-width: 350px;
+        @media only screen and (max-width: 992px) {
             padding-top: 50px;
-
             font-size: 18px;
         }
 
         @media only screen and (max-width : 768px) {
             margin: 0;
-            // width: 48%;
             margin-top: 50px;
-            // padding-right: 12%;
+            padding-top: 10px;
 
             font-size: 10px;
             line-height: 20px;
-        }
-
-        @media only screen and (max-width : 480px) {
-            //    width: 200px;
-            padding-top: 70px;
-            // padding-right: 0;
         }
     }
 

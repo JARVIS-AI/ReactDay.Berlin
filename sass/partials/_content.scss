@@ -998,6 +998,10 @@
             min-height: 48px;
         }
 
+        .c-title {
+            margin-left: 20px;
+        }
+
         &__wrap {
             position: relative;
             z-index: 2;
@@ -1144,7 +1148,7 @@
         margin-left: 122px;
 
         @media only screen and (max-width: 768px) {
-            margin-left: 20px;
+            margin-left: 0;
         }
     }
 
@@ -1457,7 +1461,7 @@
     }
 
     @media only screen and (max-width : 768px) {
-        margin: 80px 0 10px;
+        margin: 60px 0 10px;
 
         &__item {
             width: 100%;
@@ -2005,7 +2009,9 @@
                 margin-left: 8%;
             }
 
-            @media only screen and (max-width : 860px) {}
+            @media only screen and (max-width : 860px) {
+                margin-left: 0;
+            }
         }
     }
 
@@ -2017,6 +2023,7 @@
 
     @media only screen and (max-width : 768px) {
         padding: 0;
+        padding-top: 30px;
         margin-bottom: 0;
 
         &__content {
@@ -2255,6 +2262,9 @@
             width: 90%;
             margin: 0 auto;
         }
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     .c-title {
@@ -2336,6 +2346,10 @@
         .section__head {
             margin: 4px 0 8px;
             min-height: 48px;
+        }
+
+        .c-title {
+            margin-left: 0;
         }
 
         .container {
@@ -2452,9 +2466,10 @@
             }
 
             @media only screen and (max-width: 768px) {
-                width: 50%;
+                width: 100%;
+                max-width: 290px;
                 margin-top: -30px;
-                margin-left: 20px;
+                margin-left: 0;
             }
         }
 
@@ -2471,23 +2486,12 @@
                 margin-left: 100px;
                 font-size: 12px;
             }
-
-            @media only screen and (max-width: 560px) {
-                padding-top: 80px;
-            }
-
-            @media only screen and (max-width: 410px) {
-                padding-top: 100px;
-            }
         }
-
     }
 
     .strangers__box {
-
         @media only screen and (max-width: 768px) {
             height: 600px;
-
         }
 
     }
