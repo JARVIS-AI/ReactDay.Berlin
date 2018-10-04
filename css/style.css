@@ -4185,13 +4185,15 @@ a.sp-video:after {
   z-index: 1;
   margin: 0;
   margin-bottom: 20px;
-  padding-top: 480px;
+  padding-top: 550px;
   padding-left: 25%;
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
   text-align: left;
   color: #ffffff; }
+  .slider-photo__subtitle.single {
+    padding-top: 660px; }
   @media only screen and (max-width: 1200px) {
     .slider-photo__subtitle {
       margin-bottom: 10px;
@@ -4201,13 +4203,13 @@ a.sp-video:after {
   @media only screen and (max-width: 1024px) {
     .slider-photo__subtitle {
       margin-left: 18px;
-      padding-top: 0;
+      padding-top: 0 !important;
       padding-left: 0;
       color: #023753;
       transform: translateX(5%); } }
   @media only screen and (max-width: 768px) {
     .slider-photo__subtitle {
-      padding-top: 10px; } }
+      padding-top: 10px !important; } }
   @media only screen and (max-width: 480px) {
     .slider-photo__subtitle {
       margin-left: 0;
@@ -4444,8 +4446,9 @@ a.sp-video:after {
     margin: 0 -20px;
     padding: 40px;
     cursor: pointer; }
-    .roadmap .roadmap__slide:hover, .roadmap .roadmap__slide:focus {
-      opacity: 0.6; }
+    .roadmap .roadmap__slide:hover .road-slide__title, .roadmap .roadmap__slide:focus .road-slide__title {
+      color: #230cea;
+      opacity: 1; }
     @media only screen and (max-width: 480px) {
       .roadmap .roadmap__slide {
         padding: 20px;
