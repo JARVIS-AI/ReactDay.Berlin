@@ -1612,7 +1612,7 @@ a.sp-video:after {
 
 .main-nav {
   position: absolute;
-  left: 50%;
+  left: 45%;
   top: 36px;
   transform: translateX(-50%); }
   @media only screen and (max-width: 1024px) {
