@@ -7,7 +7,7 @@
 	<meta name="keywords" content="react, javascript, conference, reactjs, react native, graphql, berlin" />
 	<meta name="description" content="Fully packed day of your favorite React content, covering most up-to-date insights from the community." />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="stylesheet" href="css/style.min.css?30092018" />
+	<link rel="stylesheet" href="css/style.min.css?11102018" />
 	<link rel="shortcut icon" href="img/favicon.png" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600">
 
@@ -60,11 +60,12 @@
 
 			<nav class="main-nav">
 				<ul class="main-menu">
-					<li class="main-menu__item"><a class="main-menu__link" href="#event">Event</a></li>
-					<li class="main-menu__item active"><a class="main-menu__link" href="#speakers">Speakers</a></li>
+					<!--<li class="main-menu__item"><a class="main-menu__link" href="#event">Event</a></li>-->
+					<li class="main-menu__item"><a class="main-menu__link" href="#speakers">Speakers</a></li>
 					<li class="main-menu__item"><a class="main-menu__link" href="#schedule">Talks<!-- & Shedule--></a></li>
 					<li class="main-menu__item"><a class="main-menu__link" href="#location">Location</a></li>
 					<li class="main-menu__item"><a class="main-menu__link" href="#sponsors">Sponsors</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="/workshops">Workshops</a></li>
 					<li class="main-menu__item"><a class="main-menu__link" href="#past">2017</a></li>
 				</ul>
 			</nav>
@@ -141,11 +142,12 @@
 
 				<div class="main-nav">
 					<ul class="main-menu">
-						<li class="main-menu__item"><a class="main-menu__link" href="#event">Event</a></li>
+						<!--<li class="main-menu__item"><a class="main-menu__link" href="#event">Event</a></li>-->
 						<li class="main-menu__item"><a class="main-menu__link" href="#speakers">Speakers</a></li>
 						<li class="main-menu__item"><a class="main-menu__link" href="#schedule">Talks<!-- & Shedule--></a></li>
 						<li class="main-menu__item"><a class="main-menu__link" href="#location">Location</a></li>
 						<li class="main-menu__item"><a class="main-menu__link" href="#sponsors">Sponsors</a></li>
+						<li class="main-menu__item"><a class="main-menu__link" href="/workshops">Workshops</a></li>
 						<li class="main-menu__item"><a class="main-menu__link" href="#past">2017</a></li>
 					</ul>
 				</div>
@@ -1340,7 +1342,7 @@
 					</li>
 				</ul>
 
-				<a class="speakers__more">More Speakers</a>
+				<!--<a class="speakers__more">More Speakers</a>-->
 
 				<!--<div class="cfp">-->
 				<!--<p class="cfp__title">Call for Papers is open</p>-->
@@ -1580,7 +1582,11 @@ Combining the context API and render props lets gives you unprecedented power to
 							<div class="road-slide__block">
 								<p class="road-slide__name">Nik Graf</p>
 								<p class="road-slide__company">Freelance, Austria</p>
-								<p class="road-slide__desc"></p>
+								<p class="road-slide__desc">
+									Badly designed props can lead to components that are frustrating to use. While there are a couple patterns to make components more pleasant to use, ultimately it needs a type system in combination with a good editor integration for an even better developer experience. Yet not all type systems are the same. They offer different features and therefore lead to different experiences.<br>
+
+									In this talk we explore and compare PropTypes, TypeScript, Flow & Reason to cover use-cases like enums or tagged unions for component props.
+								</p>
 
 								<div class="tags-wrap">
 									<div class="tag red">Reason</div>
@@ -1606,7 +1612,9 @@ Combining the context API and render props lets gives you unprecedented power to
 							<div class="road-slide__block">
 								<p class="road-slide__name">Artem Riasnianskyi</p>
 								<p class="road-slide__company">Framer X, The Netherlands</p>
-								<p class="road-slide__desc"></p>
+								<p class="road-slide__desc">
+									Framer X is an advanced interactive design tool, powered by React. In Framer X, you can use actual React components in your design, bringing Code and Design together in a completely new way. We’ll talk about the challenges we encountered while creating Framer X. From how to make a performant graphics editor to building a dynamic component loader.
+								</p>
 
 								<div class="tags-wrap">
 									<div class="tag red">Case studies</div>
@@ -1887,7 +1895,10 @@ This will be a practical guide about tools that can help you identify bottleneck
 						<p class="roadmap__text">Do you see yourself leading amazing projects? Then you’d better
 							not miss our workshops. Our instructors will help boost up your skills and show you new
 							dimensions of JavaScript problem-solving.</p>
-						<a class="roadmap__path" href="https://www.eventbrite.com/e/react-day-berlin-2018-tickets-46481540539#tickets">More details</a>
+						<p class="roadmap__text" style="margin-top: 10px; margin-bottom: 10px;">Workshops are happening on November 28 and 29, at <a href="https://goo.gl/maps/cdda8t6fVgt" style="color: white" target="_blank">SRH Hochschule Berlin</a>.</p>
+						<p class="roadmap__path" style="text-decoration: none;">
+							<a href="/workshops" style="color: white; display: inline-block;">Workshop programmes</a>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -2219,7 +2230,7 @@ This will be a practical guide about tools that can help you identify bottleneck
 							<!--supporters in Berlin?</p>-->
 
 						<!--<p class="sponsors__desc"><a href="https://reactday.berlin/react-jobs/">Check out the React job offers form our partners.</a></p>-->
-						<p class="sponsors__info">Support the local React community</p>
+						<p class="sponsors__info">Support local React community</p>
 
 						<p class="sponsors__desc"><a href="https://reactday.berlin/sponsors/">Check our partnership proposal</a></p>
 					</div>
@@ -2255,6 +2266,10 @@ This will be a practical guide about tools that can help you identify bottleneck
 
 							<a class="sponsors-list__link" href="https://www.messagebird.com/">
 								<img class="sponsors-list__img" src="pic/sponsors/silver/mb.png" alt="MessageBird" width="250">
+							</a>
+
+							<a class="sponsors-list__link" href="https://www.newstore.com/">
+								<img class="sponsors-list__img" src="pic/sponsors/silver/newstore.png" alt="Newstore" width="250">
 							</a>
 
 							<a class="sponsors-list__link" href="https://formidable.com/">
@@ -2480,7 +2495,7 @@ This will be a practical guide about tools that can help you identify bottleneck
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="js/scripts.js?30092018"></script>
+<script src="js/scripts.js?11102018"></script>
 
 <script type="text/javascript">
     var _gauges = _gauges || [];

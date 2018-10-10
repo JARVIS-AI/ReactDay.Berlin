@@ -93,6 +93,12 @@
     background: #230cea;
     z-index: 20;
 
+    @media only screen and (min-width: 769px) {
+        &.slim {
+            display: none;
+        }
+    }
+
     &__head {
         position: absolute;
         left: 0;
@@ -459,7 +465,15 @@
         display: flex;
         justify-content: space-between;
         z-index: 4;
+    }
 
+    &.slim .container {
+        min-height: auto;
+        padding-bottom: 30px;
+    }
+
+    &.slim .intro__left {
+        min-height: auto;
     }
 
     @media only screen and (max-height : 800px) {

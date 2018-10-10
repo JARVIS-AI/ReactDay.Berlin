@@ -120,21 +120,27 @@ $(function() {
 	topMenuHeight = topMenu.outerHeight()+15,
 	menuItems = topMenu.find("a"),
 	scrollItems = menuItems.map(function(){
-		var item = $($(this).attr("href"));
+		var href = $(this).attr("href");
+
+		if (href[0] !== '#') {
+			return;
+		}
+
+		var item = $(href);
 		if (item.length) { return item; }
 	});
 
 	// Bind to scroll
 	$(window).scroll(function(){
 		var fromTop = $(this).scrollTop()+topMenuHeight;
-		
+
 		var cur = scrollItems.map(function(){
 			if ($(this).offset().top < fromTop)
 			return this;
 		});
 		cur = cur[cur.length-1];
 		var id = cur && cur.length ? cur[0].id : "";
-		
+
 		if (lastId !== id) {
 			lastId = id;
 			menuItems
@@ -163,14 +169,14 @@ $(function() {
 	});
 
 	/*---------------------------------------------------*/
-	
-	$('body').click(function() {		
+
+	$('body').click(function() {
 		$('#flashOfTheHorns').attr('class', '');
-			
+
 		setTimeout(function() {
 			$('#flashOfTheHorns').attr('class', 'blum-blum');
 		}, 0);
-		
+
 	});
 
 	/*---------------------------------------------------*/
@@ -198,11 +204,11 @@ $(function() {
 			}
 		}
     }
-    
+
      /*---------------------------------------------------*/
     // TASKS & SHEDULE: ACCORDION
      (function () {
-    
+
      let acc = document.querySelectorAll('.road-slide__title');
      let time = document.querySelectorAll('.road-slide__time');
      let text = document.querySelectorAll('.road-slide__block');
@@ -232,6 +238,11 @@ $(function() {
         var contentHideClass = "roadmap__content--hide";
 
         var wrapper = document.querySelector("." + wrapperClass);
+
+        if (!wrapper) {
+        	return;
+		}
+
         var tab = wrapper.getElementsByClassName(tabClass);
         var tabContent = wrapper.getElementsByClassName(contentClass);
         var tabContainer = wrapper.getElementsByClassName(tabContainerClass)[0];
@@ -280,9 +291,14 @@ $(function() {
         var prevButtonClass = "slider-photo__button--prev";
         var nextButtonClass = "slider-photo__button--next";
         var slideIndex = 1;
-  
+
 
         var slider = document.querySelector("." + sliderClass);
+
+        if (!slider) {
+        	return;
+		}
+
         var slides = slider.getElementsByClassName(slideClass);
         var prevButton = slider.querySelector("." + prevButtonClass);
         var nextButton = slider.querySelector("." + nextButtonClass);
@@ -323,6 +339,6 @@ $(function() {
      /*---------------------------------------------------*/
 
 	$('input[placeholder], textarea[placeholder]').placeholder();
-	
+
 
 });

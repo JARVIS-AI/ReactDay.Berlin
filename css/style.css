@@ -1754,6 +1754,9 @@ a.sp-video:after {
   display: flex;
   background: #230cea;
   z-index: 20; }
+  @media only screen and (min-width: 769px) {
+    .intro.slim {
+      display: none; } }
   .intro__head {
     position: absolute;
     left: 0;
@@ -2009,6 +2012,11 @@ a.sp-video:after {
     display: flex;
     justify-content: space-between;
     z-index: 4; }
+  .intro.slim .container {
+    min-height: auto;
+    padding-bottom: 30px; }
+  .intro.slim .intro__left {
+    min-height: auto; }
   @media only screen and (max-height: 800px) {
     .intro {
       min-height: 650px; }
@@ -3885,11 +3893,7 @@ a.sp-video:after {
 /* Custom, iPhone Retina */
 .strangers {
   position: relative;
-  margin-top: 140px;
-  margin-bottom: 250px; }
-  @media only screen and (max-width: 768px) {
-    .strangers {
-      margin-bottom: 60px; } }
+  margin-top: 140px; }
 
 .strangers__head {
   position: relative;
@@ -3902,7 +3906,7 @@ a.sp-video:after {
       padding-top: 80px; } }
   @media only screen and (max-width: 480px) {
     .strangers__head {
-      min-height: 250px;
+      min-height: 100px;
       padding-top: 50px; } }
 
 .strangers__title {
@@ -3951,7 +3955,7 @@ a.sp-video:after {
       height: 320px;
       transform: translateX(0);
       left: 0;
-      width: 90px; } }
+      width: 118px; } }
   @media only screen and (max-width: 480px) {
     .strangers__box {
       height: 300px; } }
@@ -3967,9 +3971,6 @@ a.sp-video:after {
       width: 95%;
       height: auto;
       padding-top: 56.25%; } }
-  @media only screen and (max-width: 480px) {
-    .strangers__video {
-      margin-top: -60px; } }
 
 .strangers__frame {
   position: absolute;
@@ -3980,6 +3981,7 @@ a.sp-video:after {
   height: 100%; }
 
 .strangers__container {
+  margin-top: 100px;
   max-width: 1149px; }
 
 .welcome {
@@ -4594,11 +4596,7 @@ a.sp-video:after {
         line-height: 20px; } }
 
 .workshops {
-  position: relative;
-  margin: 0;
-  margin-top: 0;
-  margin-bottom: 40px;
-  padding-bottom: 50px; }
+  position: relative; }
   @media only screen and (max-width: 1200px) {
     .workshops .c-title {
       max-width: 700px; } }
@@ -4671,8 +4669,7 @@ a.sp-video:after {
     margin-top: 60px;
     margin-left: 0; }
   .workshops__image {
-    width: 655px;
-    height: 393px; }
+    width: 655px; }
   .workshops__desc {
     max-width: 580px;
     margin-top: 25px;
@@ -4733,8 +4730,7 @@ a.sp-video:after {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%; }
+      width: 100%; }
     .workshops__box-1 {
       transform: translateX(-1110px); }
     .workshops .container {
@@ -4749,7 +4745,7 @@ a.sp-video:after {
         position: relative;
         z-index: 2;
         margin: 0 0 0 auto;
-        padding-top: 60px; }
+        padding-top: 40px; }
       .workshops__title {
         max-width: 620px;
         margin-bottom: 20px;
@@ -4820,24 +4816,19 @@ a.sp-video:after {
     content: "";
     position: absolute;
     top: 18px;
-    right: -10px;
+    right: -100px;
     z-index: 2;
     width: 103px;
     height: 23px;
     background-image: url(../img/dots_template.svg); }
-    @media only screen and (max-width: 1024px) {
-      .template__title:after {
-        top: auto;
-        bottom: 13px;
-        left: 100px; } }
     @media only screen and (max-width: 768px) {
       .template__title:after {
-        top: auto;
-        bottom: 13px;
-        left: 225px; } }
+        left: auto;
+        right: -30px; } }
     @media only screen and (max-width: 480px) {
       .template__title:after {
-        left: 100px; } }
+        left: auto;
+        right: -30px; } }
 
 .template__slogan {
   position: absolute;
@@ -4882,6 +4873,10 @@ a.sp-video:after {
   font-size: 20px;
   line-height: 40px;
   color: #023753; }
+  @media only screen and (max-width: 768px) {
+    .our-speakers__paragraph {
+      font-size: 17px;
+      line-height: 1.8; } }
 
 .our-speakers__small {
   margin: 0;
@@ -4967,6 +4962,10 @@ a.sp-video:after {
   font-size: 20px;
   line-height: 40px;
   color: #023753; }
+  @media only screen and (max-width: 768px) {
+    .our-speakers__item {
+      font-size: 17px;
+      line-height: 1.8; } }
 
 .rule {
   position: relative;
