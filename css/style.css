@@ -2020,6 +2020,8 @@ a.sp-video:after {
   @media only screen and (max-height: 800px) {
     .intro {
       min-height: 650px; }
+      .intro.slim {
+        min-height: auto; }
       .intro .bg-hand {
         /*width: 38vh;
 			height: 86vh;*/

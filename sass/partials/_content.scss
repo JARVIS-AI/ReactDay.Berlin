@@ -480,6 +480,10 @@
 
         min-height: 650px;
 
+        &.slim {
+            min-height: auto;
+        }
+
         .bg-hand {
             /*width: 38vh;
 			height: 86vh;*/
