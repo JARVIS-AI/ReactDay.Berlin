@@ -417,6 +417,10 @@
         line-height: 2;
         color: #f5f7f9;
 
+        @media only screen and (max-width : 1024px) {
+            margin-top: 0;
+        }
+
         @media only screen and (max-width: 992px) {
             padding-top: 50px;
             font-size: 18px;

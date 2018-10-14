@@ -1702,7 +1702,7 @@ a.sp-video:after {
       margin-left: -95px; }
       @media only screen and (max-width: 1024px) {
         .section__head .c-title {
-          width: 600px;
+          width: 700px;
           margin-left: 7.5%; } }
       @media only screen and (max-width: 768px) {
         .section__head .c-title {
@@ -2537,6 +2537,9 @@ a.sp-video:after {
   align-items: flex-start;
   flex-wrap: wrap;
   z-index: 1; }
+  .speakers-list.speakers-list__mc {
+    margin-top: 100px;
+    margin-bottom: 20px; }
   .speakers-list:before {
     content: '';
     position: absolute;
@@ -2556,6 +2559,8 @@ a.sp-video:after {
     height: 223px;
     background-image: url(../img/dots_speaker.svg);
     z-index: 20; }
+  .speakers-list.speakers-list__mc:before, .speakers-list.speakers-list__mc:after {
+    display: none; }
   .speakers-list__item {
     position: relative;
     padding: 20px;
@@ -2681,6 +2686,9 @@ a.sp-video:after {
   @media only screen and (max-width: 768px) {
     .speakers-list {
       margin: 60px 0 10px; }
+      .speakers-list.speakers-list__mc {
+        margin-top: 0;
+        margin-bottom: 0; }
       .speakers-list__item {
         width: 100%;
         min-width: 0;
@@ -4070,7 +4078,7 @@ a.sp-video:after {
     @media only screen and (max-width: 1200px) {
       .city .c-tagline {
         width: 620px;
-        max-width: 59%;
+        max-width: 56%;
         margin-left: auto;
         padding-top: 120px;
         padding-right: 48px;
@@ -4207,7 +4215,7 @@ a.sp-video:after {
   @media only screen and (max-width: 1024px) {
     .slider-photo__subtitle {
       margin-left: 18px;
-      padding-top: 0 !important;
+      padding-top: 10px !important;
       padding-left: 0;
       color: #023753;
       transform: translateX(5%); } }
@@ -4567,6 +4575,9 @@ a.sp-video:after {
     font-size: 20px;
     line-height: 2;
     color: #f5f7f9; }
+    @media only screen and (max-width: 1024px) {
+      .roadmap .roadmap__text {
+        margin-top: 0; } }
     @media only screen and (max-width: 992px) {
       .roadmap .roadmap__text {
         padding-top: 50px;

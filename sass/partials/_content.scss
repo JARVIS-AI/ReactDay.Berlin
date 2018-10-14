@@ -24,7 +24,7 @@
             margin-left: -95px;
 
             @media only screen and (max-width: 1024px) {
-                width: 600px;
+                width: 700px;
                 margin-left: 7.5%;
             }
 
@@ -1244,6 +1244,11 @@
     flex-wrap: wrap;
     z-index: 1;
 
+    &.speakers-list__mc {
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
+
     &:before {
         content: '';
         position: absolute;
@@ -1265,6 +1270,11 @@
         height: 223px;
         background-image: url(../img/dots_speaker.svg);
         z-index: 20;
+    }
+
+    &.speakers-list__mc:before,
+    &.speakers-list__mc:after {
+        display: none;
     }
 
     &__item {
@@ -1446,6 +1456,8 @@
 
     @media only screen and (max-width : 1200px) {
         margin-top: 90px;
+
+
         justify-content: space-around;
 
         &__item {
@@ -1480,6 +1492,11 @@
 
     @media only screen and (max-width : 768px) {
         margin: 60px 0 10px;
+
+        &.speakers-list__mc {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
 
         &__item {
             width: 100%;
