@@ -13,6 +13,6 @@ jobs:
         - master
 
     steps:
-      - run: npm install
-      - run: gulp deploy --user $FTP_USER --password $FTP_PASSWORD
+      - run: yarn install
+      - run: yarn deploy --user $FTP_USER --password $FTP_PASSWORD
 

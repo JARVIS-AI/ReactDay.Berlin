@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "deploy": "gulp deploy",
     "build": "gulp build",
     "dev": "gulp watch",
     "test": "echo \"Success!\""
