@@ -2420,6 +2420,17 @@
         align-items: center;
         justify-content: center;
 
+
+        &.desktop-stub {
+            display: none;
+
+            @media only screen and (min-width : 1025px) {
+                display: block;
+            }
+        }
+
+
+
         &:hover {
             opacity: 0.8;
         }
@@ -2437,6 +2448,10 @@
                 max-width: 100%;
                 height: auto;
             }
+
+            .sponsors__block.gold & {
+                width: 50%;
+            }
         }
 
     }
@@ -2446,6 +2461,10 @@
         &__link {
             width: 50%;
             margin: 4px 0 0;
+
+            .sponsors__block.partner & {
+                width: 30%;
+            }
         }
     }
 }
