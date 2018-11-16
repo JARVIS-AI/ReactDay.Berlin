@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ReactDay.Berlin.iml" filepath="$PROJECT_DIR$/.idea/ReactDay.Berlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/react-berlin-day.iml" filepath="$PROJECT_DIR$/.idea/react-berlin-day.iml" />
     </modules>
   </component>
 </project>

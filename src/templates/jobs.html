@@ -1,0 +1,124 @@
+---
+title: Top React Jobs
+
+innerPage: true
+
+headerNav: [
+  {
+    title: 'Conference info',
+    link: '/'
+  },
+  {
+    title: 'Sponsors',
+    link: '#sponsors',
+    scroll: true
+  }
+]
+
+sponsors: [
+  {
+    title: 'Gold',
+    list: [
+      {
+        alt: 'Evolution Gaming',
+        img: 'gold1.png',
+        link: 'https://www.evolutiongaming.com/',
+        width: '300'
+      },{
+        alt: 'Lisk',
+        img: 'gold2.png',
+        link: 'https://lisk.io',
+        width: '300'
+      },{
+        alt: 'Crystallize',
+        img: 'gold3.png',
+        link: 'https://crystallize.com',
+        width: '350'
+      },{
+        alt: 'Futurice',
+        img: 'gold4.png',
+        link: 'https://www.futurice.com/',
+        width: '350'
+      }
+    ]
+  },{
+    title: 'Silver',
+    list: [
+      {
+        alt: 'Ebay Tech',
+        img: 'silver1.png',
+        link: 'https://ebaytech.berlin',
+        width: '250'
+      },{
+        alt: 'Message bird',
+        img: 'silver2.png',
+        link: 'https://www.messagebird.com/',
+        width: '261'
+      },{
+        alt: 'NewStore',
+        img: 'silver3.png',
+        link: 'https://www.newstore.com/',
+        width: '273'
+      },{
+        alt: 'Jobsens.ai',
+        img: 'silver4.png',
+        link: 'https://www.jobsens.ai',
+        width: '220'
+      },{
+        alt: 'Lieferando.de',
+        img: 'silver11.jpg',
+        link: 'https://www.takeaway.com/jobs',
+        width: '180'
+      },{
+        alt: 'Bonify',
+        img: 'silver7.png',
+        link: 'https://www.bonify.de/',
+        width: '200'
+      },{
+        alt: 'Honeypot',
+        img: 'silver8.png',
+        link: 'https://www.honeypot.io/',
+        width: '230'
+      },{
+        alt: 'Railslove',
+        img: 'silver9.png',
+        link: 'http://railslove.com',
+        width: '230'
+      },{
+        alt: 'Formidable',
+        img: 'silver6.png',
+        link: 'https://formidable.com/',
+        width: '250'
+      },{
+        alt: 'Wayfair',
+        img: 'silver10.png',
+        link: 'https://www.wayfair.com/',
+        width: '240'
+      }
+    ]
+  }
+]
+
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="inner-page">
+	{% include "partials/_header.html" %}
+	{% include "partials/_inner-jobs.html" %}
+  <section class="section section--inner">
+    <div class="section__content">
+	    {% include "partials/jobs/_lisk.html" %}
+	    {% include "partials/jobs/_evo-gaming.html" %}
+	    {% include "partials/jobs/_unicorn.html" %}
+	    {% include "partials/jobs/_futurice.html" %}
+	    {% include "partials/jobs/_message-bird.html" %}
+	    {% include "partials/jobs/_formidable.html" %}
+	    {% include "partials/jobs/_honeypot.html" %}
+	    {% include "partials/jobs/_ebay.html" %}
+    </div>
+  </section>
+	{% include "partials/_sponsors-jobs.html" %}
+	{% include "partials/_footer.html" %}
+</div>
+{% endblock %}
