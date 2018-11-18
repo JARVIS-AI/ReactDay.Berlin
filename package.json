@@ -11,9 +11,6 @@
     "lint-fix": "npm run lint -- --fix"
   },
   "lint-staged": {
-    "src/templates/**/*.html": [
-      "htmlhint --config .htmlhintrc"
-    ]
   },
   "authors": "Coderiver <html@coderiver.com.ua>",
   "devDependencies": {
