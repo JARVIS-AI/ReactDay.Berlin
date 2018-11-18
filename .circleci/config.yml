@@ -29,4 +29,4 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: yarn deploy --user $FTP_USER --password $FTP_PASSWORD
+      - run: yarn build && yarn run deploy --user $FTP_USER --password $FTP_PASSWORD
