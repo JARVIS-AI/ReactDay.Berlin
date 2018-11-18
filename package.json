@@ -4,15 +4,14 @@
   "scripts": {
     "ghpages": "git subtree push --prefix build origin gh-pages",
     "build": "gulp build --production",
-    "gulp": "./node_modules/.bin/gulp",
     "start": "gulp",
+    "deploy": "gulp deploy",
     "precommit": "lint-staged",
     "lint": "eslint --ignore-pattern 'src/js/lib/' --cache --format=node_modules/eslint-formatter-pretty src/js/",
     "lint-fix": "npm run lint -- --fix"
   },
   "lint-staged": {
   },
-  "authors": "Coderiver <html@coderiver.com.ua>",
   "devDependencies": {
     "autoprefixer": "^6.3.3",
     "babel-core": "^6.18.2",

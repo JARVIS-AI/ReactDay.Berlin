@@ -24,7 +24,7 @@
                 <div class="sitem">
                   <div class="sitem__time">{{time.time}}</div>
                   <div class="sitem__content">
-                    <div class="sitem__title">{{time.title}}</div>
+                    <div class="sitem__title">{{time.title | safe}}</div>
                     {% if time.speaker %}
                       <div class="sitem__speaker">{{time.speaker}}</div>
                     {% endif %}
