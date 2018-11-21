@@ -45,19 +45,44 @@
 			margin-right: 10px
 		+xs
 			margin-bottom: 8px
-	&__title
+	&__title, &__subtitle
 		font-size: 24px
+		margin-bottom: 10px
 		line-height: 1.25
+		cursor: pointer
+		transition: .3s ease
 		+bold
 		+sm
 			font-size: 16px
 		a
 		  text-decoration: underline
-
-		a:hover
-		  text-decoration: none
+		&:hover:not(.sitem__subtitle), &.is-active
+			color: #718E9D
 
 	&__speaker
 		font-size: 20px
 		+sm
 			font-size: 15px
+
+	&__about
+		display: none
+
+	&__from
+		font-size: 20px
+		margin-bottom: 30px
+		margin-top: 10px
+		+sm
+			font-size: 15px
+			margin-top: 0
+
+	&__text
+		font-size: 20px
+		line-height: 1.5
+		+sm
+			font-size: 15px
+
+	&__child
+		&:first-child
+			padding-top: 40px
+		&:not(:last-child)
+			margin-bottom: 30px
