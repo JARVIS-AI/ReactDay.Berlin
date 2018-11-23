@@ -4,6 +4,7 @@
 	//padding: 172px 0 348px
 	display: flex
 	align-items: center
+	overflow: hidden
 	padding: 122px 0 288px
 	min-height: 100vh
 	.container
@@ -161,13 +162,16 @@
 		position: absolute
 		bottom: 0
 		left: 50%
-		transform: translateX(-43%)
+		transform: translateX(-43%) translateY(10%)
 		width: 21%
 		z-index: 1
+		will-change: transform
 		overflow: hidden
 		+rh(780)
 			width: 18%
 		&.is-loaded
+			+rmin(768)
+				animation: handIn 1s linear both
 			.hero__hand-img
 				opacity: 1
 				transform: translate3d(0, 0, 0)
@@ -229,6 +233,17 @@
 	to
 		opacity: 0
 
+@keyframes handIn
+	0%
+		transform: translateX(-43%) translateY(10%)
+	25%
+		transform: translateX(-43%) translateY(7.5%)
+	50%
+		transform: translateX(-43%) translateY(5%)
+	75%
+		transform: translateX(-43%) translateY(2.5%)
+	100%
+		transform: translateX(-43%) translateY(0%)
 .hlist
 	+md
 		font-size: 14px

@@ -24,3 +24,14 @@ $('.js-hero').click(function() {
 });
 
 $('.js-cards') ? cardsPlay() : null;
+
+$('.js-schedule-handler').on('click', (e) => {
+  const that = $(e.currentTarget);
+  const parent = that.closest('.js-schedule-item');
+  const content = parent.find('.js-schedule-content');
+
+  if (content.length) {
+    that.toggleClass('is-active');
+    content.slideToggle();
+  }
+});
