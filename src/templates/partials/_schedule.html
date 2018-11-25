@@ -34,7 +34,7 @@
                         {{time.from}}
                       </div>
                       <div class="sitem__text">
-                        {{time.text}}
+                        {{time.text | safe}}
                       </div>
                     </div>
                     {% endif %}
@@ -47,7 +47,7 @@
                         <div class="sitem__speaker">{{talk.speaker}}</div>
                         <div class="sitem__from">{{talk.from}}</div>
                         <div class="sitem__text">
-                          {{talk.text}}
+                          {{talk.text | safe}}
                         </div>
                       </div>
                       {% endfor %}
