@@ -17,7 +17,6 @@ gulp.task('deploy', function() {
   gulp.src([
     './build/**/*.*'
   ])
-    .pipe(conn.newer(remotePath))
     .pipe(conn.dest(remotePath));
 
   // uncomment to deploy last year versions
