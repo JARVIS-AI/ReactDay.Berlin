@@ -10,7 +10,8 @@ gulp.task('deploy', function() {
     host: 'buff.elastictech.org',
     user: args.user,
     password: args.password,
-    log: gutil.log
+    log: gutil.log,
+    parallel: 10,
   });
 
   gulp.src([
@@ -19,9 +20,10 @@ gulp.task('deploy', function() {
     .pipe(conn.newer(remotePath))
     .pipe(conn.dest(remotePath));
 
-  gulp.src([
-    './2017/**/*.*'
-  ])
-    .pipe(conn.newer(`${remotePath}/2017`))
-    .pipe(conn.dest(`${remotePath}/2017`));
+  // uncomment to deploy last year versions
+  // gulp.src([
+  //   './2017/**/*.*'
+  // ])
+  //   .pipe(conn.newer(`${remotePath}/2017`))
+  //   .pipe(conn.dest(`${remotePath}/2017`));
 });
