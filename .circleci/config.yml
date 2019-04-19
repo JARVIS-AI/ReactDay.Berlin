@@ -32,6 +32,6 @@ jobs:
       - run: yarn build
 
       # Uncomment to build last year
-      - run: cd 2018 && yarn install && yarn build && cd ..
+      # - run: cd 2018 && yarn install && yarn build && cd ..
 
       - run: ./node_modules/.bin/gulp deploy --user $FTP_USER --password $FTP_PASSWORD

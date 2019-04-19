@@ -26,16 +26,16 @@ gulp.task('deploy', function() {
     .pipe(conn.dest(`${remotePath}/sponsors`));
 
   // uncomment to deploy last year versions
-  gulp.src([
-    './2017/**/*.*'
-  ])
-    .pipe(conn.newer(`${remotePath}/2017`))
-    .pipe(conn.dest(`${remotePath}/2017`));
-
-
-  gulp.src([
-    './2018/build/**/*.*'
-  ])
-    .pipe(conn.newer(`${remotePath}/2018`))
-    .pipe(conn.dest(`${remotePath}/2018`));
+  // gulp.src([
+  //   './2017/**/*.*'
+  // ])
+  //   .pipe(conn.newer(`${remotePath}/2017`))
+  //   .pipe(conn.dest(`${remotePath}/2017`));
+  //
+  //
+  // gulp.src([
+  //   './2018/build/**/*.*'
+  // ])
+  //   .pipe(conn.newer(`${remotePath}/2018`))
+  //   .pipe(conn.dest(`${remotePath}/2018`));
 });
