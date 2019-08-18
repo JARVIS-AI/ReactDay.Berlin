@@ -1,0 +1,187 @@
+---
+title: Code Of Conduct
+
+innerPage: true
+
+headerNav: [
+  {
+    title: 'Conference info',
+    link: '/'
+  }
+]
+
+sponsors: [
+  {
+    title: 'Gold',
+    list: [
+      {
+        alt: 'FocusReactive',
+        img: 'gold/focus-reactive.png',
+        link: 'https://focusreactive.com',
+        width: '300'
+      }
+    ]
+  },{
+    title: 'Silver',
+    list: [{
+        alt: 'Interlink',
+        img: 'silver/interlink.png',
+        link: 'https://www.interlink.paris/',
+        width: '280'
+      },
+      {
+        alt: 'Formidable',
+        img: 'silver/formidable.png',
+        link: 'https://formidable.com/',
+        width: '220'
+      },{
+        alt: 'Soshace',
+        img: 'silver/soshace.png',
+        link: 'https://soshace.com/',
+        width: '200'
+      },{
+        alt: 'Tylermcginnis',
+        img: 'silver/tylermcginnis.png',
+        link: 'https://tylermcginnis.com/',
+        width: '180'
+      }
+    ]
+  },{
+    title: 'Partners',
+    list: [
+      {
+        alt: 'Web Engineering Duesseldorf',
+        img: 'partner/wedusseldorf.png',
+        link: 'https://www.meetup.com/Web-Engineering-Duesseldorf/',
+        width: '220'
+      },{
+        alt: 'Framsia',
+        img: 'partner/Framsia.png',
+        link: 'https://www.meetup.com/framsia/',
+        width: '100'
+      },{
+        alt: 'React Finland',
+        img: 'partner/react-finland.png',
+        link: 'https://react-finland.fi/',
+        width: '200'
+      },{
+        alt: 'Hackages',
+        img: 'partner/hackages.png',
+        link: 'https://hackages.io/',
+        width: '240'
+      },{
+        alt: 'Workshop Summit',
+        img: 'partner/workshopsummit.png',
+        link: 'https://workshop-summit.com/',
+        width: '180'
+      },{
+        alt: 'Queerjs',
+        img: 'partner/queerjs.png',
+        link: 'https://queerjs.com/',
+        width: '100'
+      },{
+        alt: "Script'19",
+        img: 'partner/script19.png',
+        link: 'https://scriptconf.org/',
+        width: '250'
+      },{
+        alt: 'Krakow JS',
+        img: 'partner/krakowjs.png',
+        link: 'https://www.meetup.com/KrakowJS/',
+        width: '100'
+      },{
+        alt: 'Hamburg React',
+        img: 'partner/reacthh.png',
+        link: 'https://www.meetup.com/Hamburg-React-js-Meetup/',
+        width: '230'
+      },{
+        alt: 'Coding Berlin',
+        img: 'partner/codingberlin.png',
+        link: 'https://www.meetup.com/ru-RU/CODING-BERLIN/',
+        width: '120'
+      },{
+        alt: 'Piter JS',
+        img: 'partner/piterjs.png',
+        link: 'https://piterjs.org/',
+        width: '100'
+      },{
+        alt: 'MSK VUE JS',
+        img: 'partner/mskvuejs.png',
+        link: 'https://msk-vuejs.ru/',
+        width: '180'
+      },{
+        alt: 'Kitchen JS',
+        img: 'partner/kitchenjs.png',
+        link: 'https://t.me/js_kitchen',
+        width: '100'
+      },{
+        alt: 'Fullstack Cluj',
+        img: 'partner/fullstack.png',
+        link: 'https://www.meetup.com/fullstack-cluj',
+        width: '200'
+      },{
+        alt: 'React Cologne',
+        img: 'partner/reactcologne.png',
+        link: 'https://www.meetup.com/ru-RU/React-Cologne/',
+        width: '100'
+      },{
+        alt: 'Frontendisti',
+        img: 'partner/frontendisti.png',
+        link: 'https://frontendisti.cz',
+        width: '160'
+      },{
+        alt: 'React Sofia',
+        img: 'partner/reactsofia.png',
+        link: 'http://react-not-a-conf.com',
+        width: '120'
+      },{
+        alt: 'NišJS Meetup',
+        img: 'partner/nisjs.png',
+        link: 'https://www.meetup.com/NišJS-Meetup/',
+        width: '140'
+      },{
+        alt: 'Warsaw TypeScript',
+        img: 'partner/warsawts.png',
+        link: 'https://www.meetup.com/Warsaw-TypeScript/',
+        width: '100'
+      },{
+        alt: 'TimJS',
+        img: 'partner/timjs.png',
+        link: 'https://timjs.ro/',
+        width: '200'
+      },{
+        alt: 'meet.js',
+        img: 'partner/meetjs.png',
+        link: 'https://www.facebook.com/meetjspl/',
+        width: '200'
+      },{
+        alt: 'Istanbul Coders',
+        img: 'partner/istanbulcoders.png',
+        link: 'http://istanbulcoders.org/',
+        width: '200'
+      },{
+        alt: 'Prague FullStack',
+        img: 'partner/praguefullstack.png',
+        link: 'https://www.meetup.com/Prague-Full-stack-Developers-Meetup/messages/boards/thread/52383868',
+        width: '200'
+      }
+    ]
+  }
+]
+
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="inner-page react-jobs">
+	{% include "partials/_header.html" %}
+	{% include "partials/_coc-intro.html" %}
+  <section class="section section--inner">
+    <div class="section__content">
+	    {% include "partials/_coc-info.html" %}
+    </div>
+  </section>
+	{% include "partials/_sponsors-jobs.html" %}
+	{% include "partials/_footer.html" %}
+</div>
+{% endblock %}
