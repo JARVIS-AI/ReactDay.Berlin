@@ -16,9 +16,13 @@
           <a href="#" class="titem__title js-accordeon-link">{{item.title}}</a>
           <div class="titem__content js-accordeon-content">
             <div class="titem__name">{{item.name}}</div>
+            {% if item.place %}
             <div class="titem__place">{{item.place}}</div>
+            {% endif %}
             <div class="titem__text">{{item.text}}</div>
+            {% if item.label %}
             <div class="titem__label titem__label--{{item.labelColor}}">{{item.label}}</div>
+            {% endif %}
           </div>
         </div>
       {% endfor %}

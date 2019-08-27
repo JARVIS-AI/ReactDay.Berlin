@@ -1,7 +1,7 @@
 import './lib/jquery-ui-1.10.4.custom.min';
 import './lib/jq-clipthru.min';
 import './components/header';
-// import './components/accordeon';
+import './components/accordeon';
 import './components/tabs';
 import './components/slider';
 import './components/lazy-load';
