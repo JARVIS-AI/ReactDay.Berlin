@@ -20,14 +20,12 @@
         </div>
         <div class="text-lg">
           <p>
-            {{ welcome.welcome_bold }}
+            {{ welcome.welcome_bold | safe }}
           </p>
         </div>
         <div class="text">
           <p>
-            {{ welcome.welcome_info }}
-            {# Since 2017 we're running <a href="https://www.meetup.com/React-Open-Source/" target="_blank">Berlin based React community</a> of people passioned about Open Source and JavaScript engineering. Since then we have also landed 2 React conferences, with last one uniting 800 engineers from Germany and worldwide.<br>
-            Join or third edition in 2019 to celebrate all things React and meet engineers caring about their craft alike. #}
+            {{ welcome.welcome_info | safe }}
           </p>
         </div>
       </div>
