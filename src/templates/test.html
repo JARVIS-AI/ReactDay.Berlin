@@ -1,0 +1,18 @@
+---
+title: Test Page (Template)
+name: World
+description: Lorem ipsum
+
+---
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  <div>
+    Hello {{ name }}
+  </div>
+  <div>
+    {{ description }}
+  </div>
+{% endblock %}
