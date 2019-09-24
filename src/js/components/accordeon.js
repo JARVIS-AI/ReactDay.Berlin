@@ -1,3 +1,4 @@
+/* global $ */
 const accordeonLink = $('.js-accordeon-link');
 
 accordeonLink.on('click', function(e) {

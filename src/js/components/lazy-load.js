@@ -1,3 +1,4 @@
+/* global $ */
 const bgImages = $('.js-lazy-bg');
 const lazymages = $('.js-lazy-image');
 
