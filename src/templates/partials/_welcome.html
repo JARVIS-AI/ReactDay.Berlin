@@ -13,20 +13,16 @@
 
       <div class="section__container">
         <div class="welcome__addition">
-          Are you into React, React Native, GraphQL and hungry to learn from the best?
+          {{ pagesPieceOfTexts.welcome__addition | safe }}
         </div>
         <div class="section__title welcome__title">
-          <h2 class="section-title js-clip">Welcome to the Web of tomorrow</h2>
+          <h2 class="section-title js-clip">{{ pagesPieceOfTexts.welcome__title | safe }}</h2>
         </div>
         <div class="text-lg">
-          <p>
-            {{ welcome.welcome_bold | safe }}
-          </p>
+          {{ pagesPieceOfTexts.welcome__bold | safe }}
         </div>
         <div class="text">
-          <p>
-            {{ welcome.welcome_info | safe }}
-          </p>
+          {{ pagesPieceOfTexts.welcome__text | safe }}
         </div>
       </div>
     </div>

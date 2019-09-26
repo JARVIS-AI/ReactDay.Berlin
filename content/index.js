@@ -1,7 +1,8 @@
 const { GraphQLClient } = require('graphql-request');
 
-const { development } = require('./config');
-const { markdownToHtml } = require('./markdown');
+const { development, conferenceTitle, eventYear } = require('./config');
+const textContent = require('./fetch-text');
+// const eventContent = require('./fetch-event');
 
 const createClient = ({ endpoint, token }) => {
   return new GraphQLClient(endpoint, {
@@ -13,46 +14,24 @@ const createClient = ({ endpoint, token }) => {
 
 const client = createClient(development);
 
-const queryTexts = /* GraphQL */ `
-  query {
-    pieceOfTexts {
-      status
-      updatedAt
-      createdAt
-      id
-      markdown
-      key
-    }
-  }
-`;
-
-const fetchData = async() => {
-  const pieceOfTexts = await client
-    .request(queryTexts)
-    .then(res => res.pieceOfTexts);
-
-  const pieceOfHTMLs = await Promise.all(
-    pieceOfTexts.map(async item => ({
-      ...item,
-      html: await markdownToHtml(item.markdown),
-    }))
+/*
+TODO: Pass
+conferenceKey
+eventKey
+to queries
+*/
+const getContent = async() => {
+  const fetchAll = [textContent].map(
+    async content =>
+      await textContent.fetchData(client, { conferenceTitle, eventYear })
   );
 
-  const subContent = pieceOfHTMLs.reduce(
-    (obj, item) => ({
-      ...obj,
-      [item.key]: item.html,
-    }),
+  const contentArray = await Promise.all(fetchAll);
+  const contentMap = contentArray.reduce(
+    (content, piece) => ({ ...content, ...piece }),
     {}
   );
-  return {
-    welcome: subContent,
-  };
-};
-
-const getContent = async() => {
-  const content = await fetchData();
-  return content;
+  return contentMap;
 };
 
 module.exports = {
