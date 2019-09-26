@@ -1,3 +1,4 @@
+/* global $ */
 import 'slick-carousel';
 
 const prevBtn = $('.js-prev-slide');

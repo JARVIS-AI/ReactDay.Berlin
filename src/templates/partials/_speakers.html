@@ -5,14 +5,11 @@
     <div class="section__col-2 theme-bg" data-jq-clipthru="clipthru">
       <div class="section__container">
         <div class="section__title speakers__title">
-          <h2 class="section-title js-clip js-title" id="speakers">Our speakers’ guns are set on stun</h2>
+          <h2 class="section-title js-clip js-title" id="speakers">{{ pagesPieceOfTexts.speakers__title | safe }}</h2>
         </div>
         <div class="text-lg white-color">
           <p>
-            Diversity, sharing of ideas, and critical thinking are the core values when it comes to selection of our
-            speakers. Both React’s pros and its rising stars will take over two stages at React Day Berlin. <br>
-            They’ll shed light on all things puzzling your mind, be it architecture, Design Systems, GraphQL, Reason or
-            other.
+            {{ pagesPieceOfTexts.speakers__text | safe }}
           </p>
         </div>
       </div>
@@ -25,7 +22,7 @@
         <div class="speaker {{item.mod}}">
           <div class="speaker__header">
             <div class="speaker__avatar">
-              <img data-src="img/{{item.avatar}}" alt="{{item.name}}" class="js-lazy-image">
+              <img data-src="{{item.avatar}}" alt="{{item.name}}" class="js-lazy-image">
             </div>
             <div class="speaker__info">
               <div class="speaker__addition">
