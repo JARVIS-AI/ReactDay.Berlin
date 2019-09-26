@@ -29,7 +29,8 @@ const queryPages = /* GraphQL */ `
   }
 `;
 
-const overlay = str => `speaker--${str.toLowerCase()}`;
+const overlay = str =>
+  `speaker--${str.toLowerCase().replace('lightgreen', 'light-green')}`;
 
 const fetchData = async(client, vars) => {
   const data = await client
