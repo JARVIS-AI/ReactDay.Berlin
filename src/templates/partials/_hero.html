@@ -2,22 +2,22 @@
   <div class="container">
     <div class="hero__inner">
       <div class="hero__left">
-        <div class="hero__suptitle">Build code, not walls</div>
-        <h1 class="hero__title">React Day Berlin</h1>
+        <div class="hero__suptitle">{{ pages.main.pageSlogan }}</div>
+        <h1 class="hero__title">{{ pages.main.titlePage }}</h1>
         <div class="hero__list">
           <ul class="hlist">
-            <li class="hlist__item"><span>800</span>React fans and lovers</li>
-            <li class="hlist__item"><span>24+</span>Speakers</li>
-            <li class="hlist__item"><span>2</span>Tracks <br>(General + Native/Reason)</li>
+            <li class="hlist__item"><span>{{ pages.main.pageStatistics.visitors }}</span>{{ pages.main.pageStatistics.visitorsTitle }}</li>
+            <li class="hlist__item"><span>{{ pages.main.pageStatistics.speakers }}</span>{{ pages.main.pageStatistics.speakersTitle }}</li>
+            <li class="hlist__item"><span>{{ pages.main.pageStatistics.tracks }}</span>{{ pages.main.pageStatistics.tracksTitle }}</li>
           </ul>
         </div>
       </div>
       <div class="hero__right">
         <div class="hero__date">
-          December 6, 2019
+          {{ pages.main.description }}
         </div>
         <div class="hero__place">
-          Berlin, Germany
+          {{ pages.main.locationTitle }}
         </div>
         <div class="hero__btn">
           <a href="https://www.eventbrite.com/e/react-day-berlin-2019-tickets-61442110005#tickets" class="btn btn--hero">Reserve your spot</a>
