@@ -4,9 +4,9 @@
 #
 version: 2
 jobs:
-  build:
+  build-master:
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:10
 
     branches:
       only:
@@ -29,9 +29,40 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: yarn build
+      - run: CMS_ENDPOINT="$CMS_ENDPOINT/master" CMS_TOKEN=$CMS_TOKEN yarn build
 
       # Uncomment to build last year
       # - run: cd 2018 && yarn install && yarn build && cd ..
 
       - run: ./node_modules/.bin/gulp deploy --user $FTP_USER --password $FTP_PASSWORD
+  build-develop:
+    docker:
+      - image: circleci/node:10
+
+    branches:
+      only:
+        - develop
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run: CMS_ENDPOINT="$CMS_ENDPOINT/master" CMS_TOKEN=$CMS_TOKEN_DEV yarn build
+
+      # Uncomment to build last year
+      # - run: cd 2018 && yarn install && yarn build && cd ..
+
+      - run: ./node_modules/.bin/gulp deploy --user $FTP_USER_DEV --password $FTP_PASSWORD_DEV
