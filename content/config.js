@@ -1,3 +1,13 @@
+if (!process.env.CMS_ENDPOINT || !process.env.CMS_TOKEN) {
+  require('dotenv').config();
+}
+
+if (!process.env.CMS_ENDPOINT || !process.env.CMS_TOKEN) {
+  throw new Error(`Can't find environment variables: 'CMS_ENDPOINT' and 'CMS_TOKEN'.
+  Set them in .env file for local development or pass to env when running on CI.
+  `);
+}
+
 const conferenceTitle = 'React_Day_Berlin';
 const eventYear = 'Y2019';
 

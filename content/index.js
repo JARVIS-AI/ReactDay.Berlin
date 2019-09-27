@@ -5,6 +5,7 @@ const textContent = require('./fetch-text');
 const pageContent = require('./fetch-page');
 const brandContent = require('./fetch-brand');
 const speakerContent = require('./fetch-speaker');
+const sponsorContent = require('./fetch-sponsor');
 
 const createClient = ({ endpoint, token }) => {
   return new GraphQLClient(endpoint, {
@@ -17,7 +18,13 @@ const createClient = ({ endpoint, token }) => {
 const client = createClient(credentials);
 
 const getContent = async() => {
-  const fetchAll = [textContent, pageContent, brandContent, speakerContent].map(
+  const fetchAll = [
+    textContent,
+    pageContent,
+    brandContent,
+    speakerContent,
+    sponsorContent,
+  ].map(
     async content =>
       await content.fetchData(client, { conferenceTitle, eventYear })
   );

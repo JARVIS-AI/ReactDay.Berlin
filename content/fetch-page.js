@@ -18,6 +18,8 @@ const queryPages = /* GraphQL */ `
             hex
           }
           keywords
+          pageNavigation
+          pageSections
         }
       }
     }

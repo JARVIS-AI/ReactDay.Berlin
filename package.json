@@ -4,7 +4,7 @@
   "scripts": {
     "ghpages": "git subtree push --prefix build origin gh-pages",
     "build": "gulp build --production",
-    "start": "CMS_TOKEN=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXJzaW9uIjoxLCJ0b2tlbklkIjoiN2Y5ZTE0YzYtOTUwZi00M2Q1LWI0NmQtZmVlNDAzNGQ1MGU4In0.-ciA-_yc1XybCAo7E7JNax_CkGxmbekjn7guE2moNro CMS_ENDPOINT=https://api-euwest.graphcms.com/v1/ck0qr5av4094801d49206aeqn/master gulp",
+    "start": "gulp",
     "precommit": "lint-staged",
     "lint": "eslint --ignore-pattern 'src/js/lib/' --cache --format=node_modules/eslint-formatter-pretty src/js/",
     "lint-fix": "npm run lint -- --fix"
@@ -22,6 +22,7 @@
     "browser-sync": "^2.10.0",
     "css-mqpacker": "^5.0.1",
     "del": "^2.2.0",
+    "dotenv": "^8.1.0",
     "eslint": "^4.3.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-formatter-pretty": "^1.1.0",
