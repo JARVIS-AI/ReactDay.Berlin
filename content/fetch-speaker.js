@@ -30,7 +30,7 @@ const queryPages = /* GraphQL */ `
 `;
 
 const overlay = str =>
-  `speaker--${str.toLowerCase().replace('lightgreen', 'light-green')}`;
+  str && `speaker--${str.toLowerCase().replace('lightgreen', 'light-green')}`;
 
 const fetchData = async(client, vars) => {
   const data = await client
@@ -41,12 +41,13 @@ const fetchData = async(client, vars) => {
     .map(item => ({
       ...item.speaker,
       ...item,
+      avatar: item.speaker.avatar || {},
       mod: overlay(item.overlayMode),
     }))
-    .map(({ bio, githubUrl, twitterUrl, speaker, overlayMode, ...item }) => ({
+    .map(({ bio, githubUrl, twitterUrl, speaker, overlayMode, avatar, ...item }) => ({
       ...item,
       company: `${item.company}, ${item.country}`,
-      avatar: item.avatar.url,
+      avatar: avatar.url,
       text: bio,
       github: githubUrl,
       twitter: twitterUrl,

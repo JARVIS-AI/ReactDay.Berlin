@@ -21,7 +21,7 @@
       <div class="header__content">
         <div class="header__nav">
           <ul class="nav">
-            {% for item in headerNav %}
+            {% for item in pages[pageKey].pageNavigation.headerNav %}
               <li class="nav__item"><a href="{{item.link}}" class="nav__link {% if item.scroll %} js-scroll-link {% endif %}">{{item.title}}</a></li>
             {% endfor %}
           </ul>
