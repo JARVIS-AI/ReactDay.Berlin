@@ -33,10 +33,10 @@ jobs:
       - run:
           name: build website
           command: |
-            if [ $CIRCLE_BRANCH = ‘master’ ]; then
+            if [ $CIRCLE_BRANCH = "master" ]; then
               CMS_ENDPOINT="$CMS_ENDPOINT/$CIRCLE_BRANCH" CMS_TOKEN=$CMS_TOKEN yarn build
             fi
-            if [ $CIRCLE_BRANCH = ‘develop’ ]; then
+            if [ $CIRCLE_BRANCH = "develop" ]; then
               CMS_ENDPOINT="$CMS_ENDPOINT/$CIRCLE_BRANCH" CMS_TOKEN=$CMS_TOKEN_DEV yarn build
             fi
 
@@ -46,9 +46,9 @@ jobs:
       - run:
           name: deploy to remote
           command: |
-            if [ $CIRCLE_BRANCH = ‘master’ ]; then
+            if [ $CIRCLE_BRANCH = "master" ]; then
               ./node_modules/.bin/gulp deploy --user $FTP_USER --password $FTP_PASSWORD
             fi
-            if [ $CIRCLE_BRANCH = ‘develop’ ]; then
+            if [ $CIRCLE_BRANCH = "develop" ]; then
               ./node_modules/.bin/gulp deploy --user $FTP_USER_DEV --password $FTP_PASSWORD_DEV
             fi
