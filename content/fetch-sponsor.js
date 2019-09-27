@@ -45,8 +45,13 @@ const fetchData = async(client, vars) => {
       width,
     }));
 
-  const sponsors = ['Gold', 'Silver', 'Partners'].map(cat => ({
-    title: cat,
+  const titlesMap = {
+    Gold: 'Gold',
+    Silver: 'Silver',
+    Partner: 'Partners',
+  };
+  const sponsors = ['Gold', 'Silver', 'Partner'].map(cat => ({
+    title: titlesMap[cat],
     list: sponsorsList.filter(({ category }) => category === cat),
   }));
 

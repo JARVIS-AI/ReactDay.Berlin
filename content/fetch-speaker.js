@@ -1,3 +1,5 @@
+const { markdownToHtml } = require('./markdown');
+
 const queryPages = /* GraphQL */ `
   query($conferenceTitle: ConferenceTitle, $eventYear: EventYear) {
     conf: conferenceBrand(where: { title: $conferenceTitle }) {
@@ -44,17 +46,27 @@ const fetchData = async(client, vars) => {
       avatar: item.speaker.avatar || {},
       mod: overlay(item.overlayMode),
     }))
-    .map(({ bio, githubUrl, twitterUrl, speaker, overlayMode, avatar, ...item }) => ({
-      ...item,
-      company: `${item.company}, ${item.country}`,
-      avatar: avatar.url,
-      text: bio,
-      github: githubUrl,
-      twitter: twitterUrl,
-    }));
+    .map(
+      async({
+        bio,
+        githubUrl,
+        twitterUrl,
+        speaker,
+        overlayMode,
+        avatar,
+        ...item
+      }) => ({
+        ...item,
+        company: `${item.company}, ${item.country}`,
+        avatar: avatar.url,
+        text: await markdownToHtml(bio),
+        github: githubUrl,
+        twitter: twitterUrl,
+      })
+    );
 
   return {
-    speakers,
+    speakers: await Promise.all(speakers),
   };
 };
 
