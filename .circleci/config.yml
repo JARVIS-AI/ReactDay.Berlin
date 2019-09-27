@@ -34,10 +34,10 @@ jobs:
           name: build website
           command: |
             if [ $CIRCLE_BRANCH = "master" ]; then
-              CMS_ENDPOINT="$CMS_ENDPOINT/$CIRCLE_BRANCH" CMS_TOKEN=$CMS_TOKEN yarn build
+              CMS_ENDPOINT=$CMS_ENDPOINT/master CMS_TOKEN=$CMS_TOKEN yarn build
             fi
             if [ $CIRCLE_BRANCH = "develop" ]; then
-              CMS_ENDPOINT="$CMS_ENDPOINT/$CIRCLE_BRANCH" CMS_TOKEN=$CMS_TOKEN_DEV yarn build
+              CMS_ENDPOINT=$CMS_ENDPOINT/develop CMS_TOKEN=$CMS_TOKEN_DEV yarn build
             fi
 
       # Uncomment to build last year
