@@ -51,15 +51,6 @@ const fetchData = async(client, vars) => {
   const data = await client
     .request(queryPages, vars)
     .then(res => res.conf.year[0].schedule[0]);
-  // console.log("TCL: fetchData -> data", data.talks)
-
-  // const subContent = data.reduce(
-  //   (obj, item) => ({
-  //     ...obj,
-  //     [item.key]: { ...item, keywords: item.keywords.join(', ') },
-  //   }),
-  //   {}
-  // );
 
   const talks = data.talks
     .map(({ title, description, timeString, track, speaker }) => ({
