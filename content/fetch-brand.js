@@ -1,3 +1,5 @@
+const { markdownToHtml } = require('./markdown');
+
 const queryPages = /* GraphQL */ `
   query($conferenceTitle: ConferenceTitle) {
     conf: conferenceBrand(where: { title: $conferenceTitle }) {
@@ -11,6 +13,8 @@ const queryPages = /* GraphQL */ `
       facebookUrl
       mediumUrl
       youtubeUrl
+      codeOfConductIntro
+      codeOfConductMain
     }
   }
 `;
@@ -18,7 +22,12 @@ const queryPages = /* GraphQL */ `
 const fetchData = async(client, vars) => {
   const conference = await client
     .request(queryPages, vars)
-    .then(res => res.conf);
+    .then(res => res.conf)
+    .then(async conf => ({
+      ...conf,
+      codeOfConductIntro: await markdownToHtml(conf.codeOfConductIntro),
+      codeOfConductMain: await markdownToHtml(conf.codeOfConductMain),
+    }));
 
   return {
     conference,

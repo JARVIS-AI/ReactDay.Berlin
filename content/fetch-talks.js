@@ -92,7 +92,6 @@ const fetchData = async(client, vars) => {
       .filter(event => event.track === track)
       .sort(byTime),
   }));
-  console.log('\n\nTCL: schedule', schedule);
 
   return {
     schedule,

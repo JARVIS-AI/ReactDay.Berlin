@@ -21,6 +21,7 @@
     "babel-runtime": "^5.0.0",
     "browser-sync": "^2.10.0",
     "css-mqpacker": "^5.0.1",
+    "dayjs": "^1.8.16",
     "del": "^2.2.0",
     "dotenv": "^8.1.0",
     "eslint": "^4.3.0",
