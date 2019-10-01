@@ -29,7 +29,7 @@
           </p>
         </div>
 
-		{% for faq in faqs %}
+		{% for faq in pages[pageKey].pageStatistics.faqs %}
 		{{mixins.faq({
 			sectionTitle: faq.sectionTitle,
 			list: faq.items

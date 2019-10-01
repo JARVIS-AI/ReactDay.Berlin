@@ -3,20 +3,20 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>{% if pages.main.titleSeo %}{{ pages.main.titleSeo }}{% else %}Template{% endif %}</title>
+    <title>{% if pages[pageKey].titleSeo %}{{ pages[pageKey].titleSeo }}{% else %}Template{% endif %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="react, javascript, conference, reactjs, react native, graphql, berlin" />
-    <meta name="description" content="{{ pages.main.seoDescription }}" />
+    <meta name="keywords" content="{{ pages[pageKey].keywords }}" />
+    <meta name="description" content="{{ pages[pageKey].seoDescription }}" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" media="all" href="css/app.css">
     <link rel="shortcut icon" href="img/favicon.png" />
     <meta property="og:url" content="https://reactday.berlin"/>
     <meta property="og:title" content="React Day Berlin, December 6, 2019"/>
-    <meta property="og:description" content="{{ pages.main.seoDescription }}"/>
+    <meta property="og:description" content="{{ pages[pageKey].seoDescription }}"/>
     <meta property="og:image" content="https://reactday.berlin/img/og-2019-2.png"/>
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@reactdayberlin">
-    <meta name="theme-color" content="{{ pages.main.themeColor.hex }}" />
+    <meta name="theme-color" content="{{ pages[pageKey].themeColor.hex }}" />
 
     <!-- Global site tag (gtag.js) - AdWords: 805657772 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-805657772"></script>

@@ -1,0 +1,118 @@
+{
+  "faqs": [
+    {
+      "sectionTitle": "Tickets, invoices, refunds",
+      "items": [
+        {
+          "question": "Can you issue an invoice for my order?",
+          "answer": "Yes, it is possible to pay via invoice. Please, send your company details to hi@reactday.berlin and we will issue it for you: Company name, company address, VAT number.<br/>As soon as we receive the payment, we'll send you a promo-code to activate the tickets."
+        },
+        {
+          "question": "If I can’t visit the conference, can I give the ticket to my friend/colleague?",
+          "answer": "Yes, you can. Simply login to your eventbrite account and reassign the ticket to this person. Pay attention that only a ticket buyer account can re-assign tickets."
+        },
+        {
+          "question": "Does my ticket to the conference include workshops also?",
+          "answer": "If your ticket states “Early Bird ticket”/”Regular ticket”/”Late Bird ticket”, it only includes a conference day pass. If your ticket states “Combo: Workshop + Conference Day”, it includes both conference day pass and a workshop."
+        },
+        {
+          "question": "How can I change the name in my ticket?",
+          "answer": "You can easily change the name in the ticket in your Eventbrite account. Just log in and edit the attendee information. Pay attention that only a ticket buyer account can re-assign tickets."
+        },
+        {
+          "question": "Do you provide refunds if my visa is not approved?",
+          "answer": "Yes, we can make a refund if your visa for travel was not approved. Please send us the declining letter from the embassy or any other confirming documents."
+        },
+        {
+          "question": "Do you provide refunds if decided not to travel?",
+          "answer": "No, we do not provide refunds in this case due to our policies. The reason of such non-refund policy is that we calculate and pre-pay for event facilities and catering in advance."
+        },
+        {
+          "question": "How can I add VAT to the eventbrite invoice?",
+          "answer": "Go to your eventbrite account, click “edit”, add the VAT number in the corresponding box, resend confirmation email."
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Discounts, diversity scholarship, etc.",
+      "items": [
+        {
+          "question": "Do you have any discount for students?",
+          "answer": "Yes, we can provide a 50% student discount. Pease, send us a scan or a photo of your relevant students ID."
+        },
+        {
+          "question": "Do you provide any group discounts?",
+          "answer": "Yes, to get a group discount please choose “Team Ticket” on Eventbrite. And some extra discounts are possible when buying more than 10 tickets."
+        },
+        {
+          "question": "Do you provide any special tickets or discount for diversity groups?",
+          "answer": "Yes, we do run a diversity scholarship program. Free diversity tickets are distributed via community channels and also via application form. <b>Follow our <a href='https://medium.com/@reactdayberlin'>medium blog</a> for details.</b>"
+        },
+        {
+          "question": "I was selected for a Diversity scholarship, what does it include?",
+          "answer": "It includes the conference day (not workshops), food at the conference and afterparty."
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Visa",
+      "items": [
+        {
+          "question": "Can you issue an invitation letter to apply for a visa?",
+          "answer": "Yes, we can issue an invitation letter to make the process of getting visa easier. Please, send us the following details according to your travel document, as well as your ticket to the conference:<br/><br/>First name:<br/>Last name:<br/>Date of birth:<br/>Nationality:<br/>Passport number:<br/>Date of issue:<br/>Expiration date:<br/>"
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Organisational questions",
+      "items": [
+        {
+          "question": "Where can I find all logistics and organisational information?",
+          "answer": "You will get an email with all the information you’ll need at the conference about a week before the event. We will also add a link to a page with all organisational details to the website."
+        },
+        {
+          "question": "Is there parking area near the venue?",
+          "answer": "There is a paid parking lot (3 eur per day) close to the venue, it is reachable by Ludwig-Pick-Straße."
+        },
+        {
+          "question": "Do you have a kids corner at the event?",
+          "answer": "Unfortunately we won't have facilities for kids this time."
+        },
+        {
+          "question": "Is there a place to store my luggage during the event?",
+          "answer": "There always is a wardrobe/cloakroom but neither we, nor the venue can be held accountable for attendee belongings. For big pieces of luggage, we suggest to leave them in a hotel luggage room or special luggage lockers."
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Food for conference attendees",
+      "items": [
+        {
+          "question": "Do you serve any food at the events?",
+          "answer": "Yes, we serve hot lunch and coffee/pastries/snacks both at the conference and the workshops."
+        },
+        {
+          "question": "Do you have vegetarian/vegan/gluten free options at the event and workshops?",
+          "answer": "Yes, we have vegetarian, vegan and gluten-free food for lunch at the conference. As for workshops - please let us know in advance if you have any special meal preferences."
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Other questions",
+      "items": [
+        {
+          "question": "Can I join the conference as a volunteer?",
+          "answer": "Yes, you can. Please, send us brief information about yourself: your experience in volunteering <b>(optional)</b> at conferences or any event organizing. Also please be sure that you’re going to be available on the day of the event and the day before it."
+        },
+        {
+          "question": "We are a community/also a tech conference. Could we collaborate with your conference?",
+          "answer": "Yes, of course! We’d be happy if you become our info-partner. Please, drop us a line at hi@reactday.berlin and we’ll get back to you with all the information."
+        },
+        {
+          "question": "What do I need to bring with me to the workshop?",
+          "answer": "Laptop and charger."
+        }
+      ]
+    }
+  ]
+}
