@@ -27,11 +27,11 @@ const queryPages = /* GraphQL */ `
 `;
 
 const fetchData = async(client, vars) => {
-  const pages = await client
+  const data = await client
     .request(queryPages, vars)
     .then(res => res.conf.year[0].pages);
 
-  const subContent = pages.reduce(
+  const pages = data.reduce(
     (obj, item) => ({
       ...obj,
       [item.key]: { ...item, keywords: item.keywords.join(', ') },
@@ -39,7 +39,7 @@ const fetchData = async(client, vars) => {
     {}
   );
   return {
-    pages: subContent,
+    pages,
   };
 };
 
