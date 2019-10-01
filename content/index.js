@@ -30,10 +30,13 @@ const getContent = async() => {
     talksContent,
     workshopContent,
     mcContent,
-  ].map(
-    async content =>
-      await content.fetchData(client, { conferenceTitle, eventYear })
-  );
+  ].map(async content => {
+    try {
+      await content.fetchData(client, { conferenceTitle, eventYear });
+    } catch (err) {
+      console.error(err);
+    }
+  });
 
   const contentArray = await Promise.all(fetchAll);
   const contentMap = contentArray.reduce(
