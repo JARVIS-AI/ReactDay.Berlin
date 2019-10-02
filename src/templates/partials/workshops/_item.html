@@ -6,14 +6,14 @@
       </div>
       <h2 class="js-title" id="{{ workshop.code }}">{{ workshop.title }}</h2>
       {% if workshop.information %}
-      <p class="paragraph">
+      <div class="paragraph">
         {{ workshop.information | safe }}
-      </p>
+      </div>
       {% endif %}
       {% if workshop.description %}
-        <p class="paragraph">
+        <div class="paragraph description">
           {{ workshop.description | safe }}
-        </p>
+        </div>
       {% endif %}
       {% if workshop.content[0] %}
         <h3>What's included</h3>
@@ -25,14 +25,14 @@
       {% endif %}
       {% if workshop.prerequisites %}
         <h3>Prerequisites</h3>
-        <p class="paragraph-sm">
+        <div class="markdown-sm">
           {{ workshop.prerequisites | safe }}
-        </p>
+        </div>
       {% endif %}
       {% if workshop.additionalInfo %}
-        <p class="paragraph-sm">
+        <div class="markdown-sm">
           {{ workshop.additionalInfo | safe }}
-        </p>
+        </div>
       {% endif %}
     </div>
   </div>
