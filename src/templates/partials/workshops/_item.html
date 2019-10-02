@@ -5,25 +5,35 @@
         {{ workshop.slongan | safe }}
       </div>
       <h2 class="js-title" id="{{ workshop.code }}">{{ workshop.title }}</h2>
+      {% if workshop.information %}
       <p class="paragraph">
         {{ workshop.information | safe }}
       </p>
-      <p class="paragraph">
-        {{ workshop.description | safe }}
-      </p>
-      <h3>What's included</h3>
-      <ol>
-        {% for item in workshop.content %}
-          <li>{{ item }}</li>
-        {% endfor %}
-      </ol>
-      <h3>Prerequisites</h3>
-      <p class="paragraph-sm">
-        {{ workshop.prerequisites | safe }}
-      </p>
-      <p class="paragraph-sm">
-        {{ workshop.additionalInfo | safe }}
-      </p>
+      {% endif %}
+      {% if workshop.description %}
+        <p class="paragraph">
+          {{ workshop.description | safe }}
+        </p>
+      {% endif %}
+      {% if workshop.content[0] %}
+        <h3>What's included</h3>
+        <ol>
+          {% for item in workshop.content %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ol>
+      {% endif %}
+      {% if workshop.prerequisites %}
+        <h3>Prerequisites</h3>
+        <p class="paragraph-sm">
+          {{ workshop.prerequisites | safe }}
+        </p>
+      {% endif %}
+      {% if workshop.additionalInfo %}
+        <p class="paragraph-sm">
+          {{ workshop.additionalInfo | safe }}
+        </p>
+      {% endif %}
     </div>
   </div>
 
