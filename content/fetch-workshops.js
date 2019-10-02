@@ -16,6 +16,7 @@ const queryPages = /* GraphQL */ `
             id
             status
             title
+            code
             description
             prerequisites
             content
