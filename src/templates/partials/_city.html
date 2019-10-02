@@ -18,34 +18,7 @@
   </div>
   <div class="container">
     <div class="city__slider js-city-slider">
-      <div class="city__slide">
-        <div class="cslide js-lazy-bg" data-src="img/slide1.jpg">
-          <p class="cslide__desc">
-            Brandenburg gate at the sunset
-          </p>
-        </div>
-      </div>
-      <div class="city__slide">
-        <div class="cslide js-lazy-bg" data-src="img/slide2.jpg">
-          <p class="cslide__desc">
-            Museum island on Spree river in center Berlin
-          </p>
-        </div>
-      </div>
-      <div class="city__slide">
-        <div class="cslide js-lazy-bg" data-src="img/slide3.jpg">
-          <p class="cslide__desc">
-            Berlin skyline with Spree river at sunset
-          </p>
-        </div>
-      </div>
-      <div class="city__slide">
-        <div class="cslide js-lazy-bg" data-src="img/slide4.jpg">
-          <p class="cslide__desc">
-            Oberbaum Bridge
-          </p>
-        </div>
-      </div>
+      {{ pagesPieceOfTexts.city__slides_unsafe | safe }}
     </div>
   </div>
 </section>

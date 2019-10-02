@@ -32,7 +32,7 @@ const getContent = async() => {
     mcContent,
   ].map(async content => {
     try {
-      await content.fetchData(client, { conferenceTitle, eventYear });
+      return await content.fetchData(client, { conferenceTitle, eventYear });
     } catch (err) {
       console.error(err);
     }

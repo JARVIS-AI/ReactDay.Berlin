@@ -4,15 +4,13 @@
     <div class="section__col-2 theme-bg" data-jq-clipthru="clipthru">
       <div class="section__container">
         <div class="section__title sponsors__title">
-          <h2 class="section-title js-clip js-title" id="sponsors">Sponsors</h2>
+          <h2 class="section-title js-clip js-title" id="sponsors">{{ pagesPieceOfTexts.sponsors__title }}</h2>
         </div>
         <div class="text white-color">
-          <p>
-            Would you like to support a growing React community in Berlin and improve the visibility of your tech/employer brand?
-          </p>
+          {{ pagesPieceOfTexts.sponsors__text | safe }}
         </div>
         <div class="sponsors__link">
-          <a href="/sponsors">Check our partnership packages for 2019</a>
+          {{ pagesPieceOfTexts.sponsors__packages | safe }}
         </div>
       </div>
     </div>
