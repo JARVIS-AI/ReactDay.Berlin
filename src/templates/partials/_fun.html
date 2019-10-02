@@ -23,87 +23,37 @@
   </div>
   <div class="container">
     <div class="fun__items">
+    {% for item in pages.main.pageStatistics.fun %}
       <div class="fun__item">
         <div class="speaker speaker--fun">
           <div class="speaker__header">
             <div class="speaker__avatar">
-              <img class="js-lazy-image" data-src="img/speakers/polyop.jpg" alt="POLYOP">
+              <img class="js-lazy-image" data-src="{{ item.avatar.url }}" alt="{{ item.name }}">
             </div>
             <div class="speaker__info">
-              POLYOP
-              <div class="speaker__company">WebGL, React, Web Audio API, and Web MIDI API, UK</div>
+              {{ item.name }}
+              <div class="speaker__company">{{ item.company }}</div>
             </div>
           </div>
           <div class="speaker__text">
-            An electronic music and audiovisual group from London, established by producer Jack Driscoll and visual artist Alex Kempton in 2016. The visuals in their show have been created entirely in Javascript using WebGL. Polyop have developed a spectacular audiovisual show set in an alternate universe. The show follows a mysterious demi-god across the polyhedral-plane, inhabited by strange planets, entities and nomad aliens, to the sound of 90’s techno breakbeat and acid performed live on hardware synthesisers and drum machines.
+            {{ item.bio }}
 					</div>
 
 					<ul class="socials">
 						<li class="socials__item">
-							<a class="socials__link" target="_blank" href="https://twitter.com/polyopuk">
+							<a class="socials__link" target="_blank" href="{{ item.twitterUrl }}">
 							<svg class="icon icon-twitter"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
 							</a>
 						</li>
 						<li class="socials__item">
-							<a class="socials__link" target="_blank" href="http://www.polyop.uk/">
+							<a class="socials__link" target="_blank" href="{{ item.ownSite }}">
 								<svg class="icon icon-site"><use xlink:href="img/sprite.svg#icon-site"></use></svg>
 							</a>
 						</li>
 					</ul>
         </div>
       </div>
-      <div class="fun__item">
-        <div class="speaker speaker--fun">
-          <div class="speaker__header">
-            <div class="speaker__avatar">
-              <img class="js-lazy-image" data-src="img/speakers/orca.jpg" alt="ALICEEFFEKT — ORCA">
-            </div>
-            <div class="speaker__info">
-              ALICEEFFEKT — ORCA
-              <div class="speaker__company">Node.js, Japan</div>
-            </div>
-          </div>
-          <div class="speaker__text">
-            AliceEffekt is formed by Devine Lu Linvega, a true digital nomad and a polymath working on a series of experimental tools and applications. Devine has created a set of live coding tools for rapid iteration and creation of rythms based on Node.js. His latest creation: ORCA is a full blown text based sequencer with impressive cappabilities and distinct aesthetic that engulfs the user in a textual fashion rarely seen in live performance.
-          </div>
-
-					<ul class="socials">
-						<li class="socials__item">
-							<a class="socials__link" target="_blank" href="https://twitter.com/neauoire">
-							<svg class="icon icon-twitter"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
-							</a>
-						</li>
-						<li class="socials__item">
-							<a class="socials__link" target="_blank" href="https://aliceffekt.bandcamp.com/">
-								<svg class="icon icon-site"><use xlink:href="img/sprite.svg#icon-site"></use></svg>
-							</a>
-						</li>
-					</ul>
-        </div>
-      </div>
-      <!--<div class="fun__item">-->
-        <!--<div class="speaker speaker&#45;&#45;fun">-->
-          <!--<div class="speaker__header">-->
-            <!--<div class="speaker__avatar">-->
-              <!--<img class="js-lazy-image" data-src="img/fun3.jpg" alt="Eddie Murphy">-->
-            <!--</div>-->
-            <!--<div class="speaker__info">-->
-              <!--<a href="#" class="speaker__name speaker__name&#45;&#45;link">Eddie Murphy</a>-->
-              <!--<div class="speaker__company">New York, USA</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="speaker__text">-->
-            <!--When Murphy was 15 he listened to Richard Pryor's comedy album That Nigger's Crazy, which inspired his-->
-            <!--decision to become a comedian.[17] Other early influences included Bill Cosby, Redd Foxx, and Robin-->
-            <!--Williams.[11] On July 9, 1976, the date with which Murphy marks the beginning of his career, he-->
-            <!--performed in a talent show at the Roosevelt Youth Center, doing an impersonation of singer Al Green as-->
-            <!--Green's song "Let's Stay Together" played. This led to work at other clubs within walking distance, and-->
-            <!--then late night jobs at locations that required him to commute by train. To do this he secretly skipped-->
-            <!--school, and after his mother discovered this at the end of his senior year, he was required to attend-->
-            <!--summer school.-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
+      {% endfor %}
     </div>
   </div>
 </section>
