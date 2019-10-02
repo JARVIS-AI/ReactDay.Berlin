@@ -1,0 +1,30 @@
+<section class="section section--inner js-section" >
+  <div class="section__content">
+    <div class="article">
+      <div class="article__left">
+        {{ workshop.slongan | safe }}
+      </div>
+      <h2 class="js-title" id="react-advanced">{{ workshop.title }}</h2>
+      <p class="paragraph">
+        {{ workshop.information | safe }}
+      </p>
+      <p class="paragraph">
+        {{ workshop.description | safe }}
+      </p>
+      <h3>What's included</h3>
+      <ol>
+        {% for item in workshop.content %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ol>
+      <h3>Prerequisites</h3>
+      <p class="paragraph-sm">
+        {{ workshop.prerequisites | safe }}
+      </p>
+      <p class="paragraph-sm">
+        {{ workshop.additionalInfo | safe }}
+      </p>
+    </div>
+  </div>
+
+</section>

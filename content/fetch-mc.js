@@ -34,7 +34,6 @@ const fetchData = async(client, vars) => {
 
   const mcs = data.map(m => ({ ...m.speaker }));
 
-  console.log("TCL: fetchData -> mcs", JSON.stringify(mcs, null, 2))
   return {
     mcs,
   };
