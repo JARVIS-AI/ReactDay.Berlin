@@ -23,6 +23,9 @@ pageKey: main
   {% if pages[pageKey].pageSections.sections.speakers %}
     {% include "partials/_speakers.html" %}
   {% endif %}
+  {% if pages[pageKey].pageSections.sections.mcs %}
+    {% include "partials/_mcs.html" %}
+  {% endif %}
   {% if pages[pageKey].pageSections.sections.location %}
     {% include "partials/_location.html" %}
   {% endif %}
