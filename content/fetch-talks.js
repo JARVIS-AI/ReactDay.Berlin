@@ -57,7 +57,7 @@ const fetchData = async(client, vars) => {
       title,
       text: description,
       time: timeString,
-      track: track.name,
+      track: track && track.name,
       name: speaker.name,
       place: `${speaker.company}, ${speaker.country}`,
       pieceOfSpeakerInfoes: speaker.pieceOfSpeakerInfoes[0] || {},
@@ -70,7 +70,7 @@ const fetchData = async(client, vars) => {
       labelColor: (pieceOfSpeakerInfoes.overlayMode || '').toLowerCase(),
     }));
 
-  const tracks = [...new Set(talks.map(({ track }) => track))]
+  const tracks = [...new Set(talks.map(({ track }) => track).filter(Boolean))]
     .map(track => data.talks.find(talk => talk.track.name === track).track)
     .sort((a, b) => {
       return +b.isPrimary - +a.isPrimary;
