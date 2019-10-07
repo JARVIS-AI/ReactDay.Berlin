@@ -53,22 +53,41 @@ const fetchData = async(client, vars) => {
     .then(res => res.conf.year[0].schedule[0]);
 
   const talks = data.talks
-    .map(({ title, description, timeString, track, speaker }) => ({
-      title,
-      text: description,
-      time: timeString,
-      track: track && track.name,
-      name: speaker.name,
-      place: `${speaker.company}, ${speaker.country}`,
-      pieceOfSpeakerInfoes: speaker.pieceOfSpeakerInfoes[0] || {},
-    }))
-    .map(({ pieceOfSpeakerInfoes, ...talk }) => ({
-      ...talk,
-      speaker: talk.name,
-      from: talk.place,
-      label: pieceOfSpeakerInfoes.label,
-      labelColor: (pieceOfSpeakerInfoes.overlayMode || '').toLowerCase(),
-    }));
+    .map(({ title, description, timeString, track, speaker }) => {
+      try {
+        return {
+          title,
+          text: description,
+          time: timeString,
+          track: track && track.name,
+          name: speaker && speaker.name,
+          place: speaker && `${speaker.company}, ${speaker.country}`,
+          pieceOfSpeakerInfoes: speaker && speaker.pieceOfSpeakerInfoes[0] || {},
+        };
+      } catch (err) {
+        console.log('\nError in parsing talks');
+        console.error(err);
+        return {};
+      }
+    })
+    .map(({ pieceOfSpeakerInfoes, ...talk }) => {
+      try {
+        return (
+          talk.title && {
+            ...talk,
+            speaker: talk.name,
+            from: talk.place,
+            label: pieceOfSpeakerInfoes.label,
+            labelColor: (pieceOfSpeakerInfoes.overlayMode || '').toLowerCase(),
+          }
+        );
+      } catch (err) {
+        console.log('\nError in parsing talks', talk);
+        console.error(err);
+        return null;
+      }
+    })
+    .filter(Boolean);
 
   const tracks = [...new Set(talks.map(({ track }) => track).filter(Boolean))]
     .map(track => data.talks.find(talk => talk.track.name === track).track)
@@ -77,11 +96,12 @@ const fetchData = async(client, vars) => {
     })
     .map(({ name }) => name);
 
+  // TODO: Override schedule with additionalEvents
   const schedule = tracks.map(track => ({
     tab: track,
-    list: [...data.additionalEvents, ...talks]
-      .filter(event => event.track === track)
-      .sort(byTime),
+    list: [...talks, ...data.additionalEvents]
+    .filter(event => event.track === track)
+    .sort(byTime),
   }));
 
   return {
