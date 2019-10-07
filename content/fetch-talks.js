@@ -62,7 +62,8 @@ const fetchData = async(client, vars) => {
           track: track && track.name,
           name: speaker && speaker.name,
           place: speaker && `${speaker.company}, ${speaker.country}`,
-          pieceOfSpeakerInfoes: speaker && speaker.pieceOfSpeakerInfoes[0] || {},
+          pieceOfSpeakerInfoes:
+            (speaker && speaker.pieceOfSpeakerInfoes[0]) || {},
         };
       } catch (err) {
         console.log('\nError in parsing talks');
@@ -96,12 +97,16 @@ const fetchData = async(client, vars) => {
     })
     .map(({ name }) => name);
 
-  // TODO: Override schedule with additionalEvents
   const schedule = tracks.map(track => ({
     tab: track,
-    list: [...talks, ...data.additionalEvents]
-    .filter(event => event.track === track)
-    .sort(byTime),
+    list: [...data.additionalEvents, ...talks]
+      .filter(event => event.track === track)
+      .reduce((list, talk) => {
+        const sameTitleTalk = list.find(({ title }) => title === talk.title);
+        if (sameTitleTalk) return list;
+        return [talk, ...list];
+      }, [])
+      .sort(byTime),
   }));
 
   return {
