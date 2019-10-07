@@ -43,7 +43,8 @@ const fetchData = async(client, vars) => {
       img: avatar.url,
       link: site,
       width,
-    }));
+    }))
+    .filter(({ img }) => img);
 
   const titlesMap = {
     Gold: 'Gold',
