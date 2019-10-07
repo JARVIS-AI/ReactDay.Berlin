@@ -97,17 +97,21 @@ const fetchData = async(client, vars) => {
     })
     .map(({ name }) => name);
 
-  const schedule = tracks.map(track => ({
-    tab: track,
-    list: [...data.additionalEvents, ...talks]
-      .filter(event => event.track === track)
-      .reduce((list, talk) => {
-        const sameTitleTalk = list.find(({ title }) => title === talk.title);
-        if (sameTitleTalk) return list;
-        return [talk, ...list];
-      }, [])
-      .sort(byTime),
-  }));
+  const schedule = tracks
+    .map(track => ({
+      tab: track,
+      list: [...data.additionalEvents, ...talks]
+        .filter(event => event.track === track)
+        .reduce((list, talk) => {
+          const sameTitleTalk = list.find(({ title }) => title === talk.title);
+          // we really need Abstract Equality Comparison here because from graph-ql will come null while JSON will have undefined
+          const isRealSame = sameTitleTalk && sameTitleTalk.time == talk.time;
+          if (isRealSame) return list;
+          return [talk, ...list];
+        }, [])
+        .sort(byTime),
+    }))
+    .filter(({ list }) => list.length);
 
   return {
     schedule,
