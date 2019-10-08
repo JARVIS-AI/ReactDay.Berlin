@@ -1,3 +1,4 @@
+/* global $ */
 import inView from 'in-view';
 const header = $('.js-header');
 const scrollLink = $('.js-scroll-link');
@@ -20,7 +21,7 @@ $(window).scroll(function() {
       } else {
         $(`.js-scroll-link[href="#${id}"]`).addClass('is-active');
       }
-      
+
     } else {
       $(`.js-scroll-link[href="#${id}"]`).removeClass('is-active');
     }

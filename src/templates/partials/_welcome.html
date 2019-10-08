@@ -13,23 +13,16 @@
 
       <div class="section__container">
         <div class="welcome__addition">
-          Are you into React, React Native, GraphQL and hungry to learn from the best?
+          {{ pagesPieceOfTexts.welcome__addition | safe }}
         </div>
         <div class="section__title welcome__title">
-          <h2 class="section-title js-clip">Welcome to the Web of tomorrow</h2>
+          <h2 class="section-title js-clip">{{ pagesPieceOfTexts.welcome__title | safe }}</h2>
         </div>
         <div class="text-lg">
-          <p>
-            Take part in the exploration of the React universe! Focusing on in-depth talks, hands-on workshops, and
-            finding new opportunities, React Day Berlin conference provides space for everyone to make friends and
-            develop stellar apps together.
-          </p>
+          {{ pagesPieceOfTexts.welcome__bold | safe }}
         </div>
         <div class="text">
-          <p>
-            Since 2017 we're running <a href="https://www.meetup.com/React-Open-Source/" target="_blank">Berlin based React community</a> of people passioned about Open Source and JavaScript engineering. Since then we have also landed 2 React conferences, with last one uniting 800 engineers from Germany and worldwide.<br>
-            Join or third edition in 2019 to celebrate all things React and meet engineers caring about their craft alike.
-          </p>
+          {{ pagesPieceOfTexts.welcome__text | safe }}
         </div>
       </div>
     </div>

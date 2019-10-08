@@ -1,0 +1,64 @@
+<section class="mc">
+  <div class="container">
+
+    <div class="speakers__title speakers__title&#45;&#45;mc">
+      <h2 class="section-title">Meet your MC's</h2>
+    </div>
+    <div class="speakers__list speakers__list&#45;&#45;mc">
+      {% for mc in mcs %}
+        <div class="speakers__item">
+        <div class="speaker speaker&#45;&#45;mc">
+          <div class="speaker__header">
+            <div class="speaker__avatar">
+              <img class="js-lazy-image" data-src="{{ mc.avatar.url }}" alt="{{ mc.name }}">
+            </div>
+            <div class="speaker__info">
+              <div class="speaker__addition">
+                <ul class="speaker__socials">
+                  <li class="speaker__social"><a href="{{ mc.twitterUrl }}" target="_blank">{{mixins.icon('twitter')}}</a></li>
+                  <li class="speaker__social"><a href="{{ mc.githubUrl }}" target="_blank">{{mixins.icon('github')}}</a></li>
+                </ul>
+              </div>
+              <div class="speaker__name">{{ mc.name }}</div>
+              <div class="speaker__company">{{ mc.company }}, {{ mc.country }}</div>
+            </div>
+          </div>
+          <div class="speaker__text">
+            {{ mc.bio }}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+      {# <div class="speakers__item">
+        <div class="speaker speaker&#45;&#45;mc">
+          <div class="speaker__header">
+            <div class="speaker__avatar">
+              <img class="js-lazy-image" data-src="img/mc2.jpg" alt="Carolyn Stransky">
+            </div>
+            <div class="speaker__info">
+              <div class="speaker__addition">
+                <ul class="speaker__socials">
+                  <li class="speaker__social"><a href="https://twitter.com/carolstran" target="_blank">{{mixins.icon('twitter')}}</a></li>
+                  <li class="speaker__social"><a href="https://github.com/carolstran" target="_blank">{{mixins.icon('github')}}</a></li>
+                </ul>
+              </div>
+              <div class="speaker__name">Carolyn Stransky</div>
+              <div class="speaker__company">Blacklane, Germany</div>
+            </div>
+          </div>
+          <div class="speaker__text">
+            Carolyn Stransky is a frontend developer and former technical writer based in Berlin. She currently works
+            at
+            Blacklane and teaches at ReDI School of Digital Integration. You’ll usually find her looking at memes or
+            taking selfies in the nearest restroom.
+          </div>
+        </div>
+      </div> #}
+
+
+
+
+    </div>
+  </div>
+</section>

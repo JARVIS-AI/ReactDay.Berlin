@@ -1,3 +1,4 @@
+/* global $ */
 import './lib/jquery-ui-1.10.4.custom.min';
 import './lib/jq-clipthru.min';
 import './components/header';

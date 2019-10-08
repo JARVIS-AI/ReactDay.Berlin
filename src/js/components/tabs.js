@@ -1,3 +1,4 @@
+/* global $ */
 const tabLink = $('.js-tab-link');
 
 tabLink.on('click', function(e) {

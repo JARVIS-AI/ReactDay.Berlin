@@ -223,42 +223,39 @@
       </div>
       <div class="section__container">
         <div class="section__title location__title">
-          <h2 class="section-title js-clip js-title" id="location">Location</h2>
+          <h2 class="section-title js-clip js-title" id="location">{{ pagesPieceOfTexts.location__title | safe }}</h2>
         </div>
         <div class="text-lg">
           <p>
-            Visit a monument to the future
+            {{ pagesPieceOfTexts.location__bold | safe }}
           </p>
         </div>
         <div class="text location__text">
           <p>
-            With the ever-growing JS ecosystem, it’s only appropriate that we are hosting React Day Berlin in Kosmos,
-            the amazing Space Age theatre from the 1960s. It is situated in the hip neighborhood of Friedrichshain full
-            of great restaurants, bars, clubs and little shops, and the building was built with unconventional
-            visionaries in mind.
+            {{ pagesPieceOfTexts.location__text | safe }}
           </p>
         </div>
       </div>
     </div>
   </div>
   <div class="location__info">
-    <div class="location__visual js-lazy-bg" data-src="img/kosmos.jpg">
+    <div class="location__visual js-lazy-bg" data-src="{{ pagesPieceOfTexts.llabel__url }}">
       <div class="location__label">
         <div class="llabel">
-          <div class="llabel__title">KOSMOS</div>
-          <div class="llabel__text"><a href="https://goo.gl/maps/qDn5vDcgr1D2" target="_blank">Karl-Marx-Allee 131A, 10243 Berlin</a></div>
+          <div class="llabel__title">{{ pagesPieceOfTexts.llabel__title | safe }}</div>
+          <div class="llabel__text">{{ pagesPieceOfTexts.llabel__text | safe }}</div>
         </div>
       </div>
     </div>
     <div class="location__form">
       <div class="sform">
-        <div class="sform__title">Follow Us</div>
+        <div class="sform__title">{{ pagesPieceOfTexts.sform__title | safe }}</div>
         <div class="sform__social">
           <ul class="ssocial">
-            <li class="ssocial__item"><a href="https://medium.com/@reactdayberlin" target="_blank" class="ssocial__link"><span class="ssocial__icon">{{mixins.icon('medium')}}</span>Medium</a></li>
-            <li class="ssocial__item"><a href="https://www.twitter.com/reactdayberlin/" target="_blank" class="ssocial__link"><span class="ssocial__icon">{{mixins.icon('twitter')}}</span>Twitter</a></li>
-            <li class="ssocial__item"><a href="https://www.facebook.com/reactdayberlin/" target="_blank" class="ssocial__link"><span class="ssocial__icon">{{mixins.icon('facebook')}}</span>Facebook</a></li>
-            <li class="ssocial__item"><a href="https://www.youtube.com/reactdayberlin" target="_blank" class="ssocial__link"><span class="ssocial__icon">{{mixins.icon('youtube')}}</span>Youtube</a></li>
+            <li class="ssocial__item"><a href="{{ conference.mediumUrl }}" target="_blank" class="ssocial__link"><span class="ssocial__icon">{{mixins.icon('medium')}}</span>Medium</a></li>
+            <li class="ssocial__item"><a href="{{ conference.twitterUrl }}" target="_blank" class="ssocial__link"><span class="ssocial__icon">{{mixins.icon('twitter')}}</span>Twitter</a></li>
+            <li class="ssocial__item"><a href="{{ conference.facebookUrl }}" target="_blank" class="ssocial__link"><span class="ssocial__icon">{{mixins.icon('facebook')}}</span>Facebook</a></li>
+            <li class="ssocial__item"><a href="{{ conference.youtubeUrl }}" target="_blank" class="ssocial__link"><span class="ssocial__icon">{{mixins.icon('youtube')}}</span>Youtube</a></li>
           </ul>
         </div>
         <form

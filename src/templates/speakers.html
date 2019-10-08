@@ -1,41 +1,16 @@
 ---
 title: 'Speakers'
 
-cards: [
-  {
-    image: 'speaker1.png',
-    theme: 'Test1',
-    name: 'Mike Carter',
-    position: 'Evolution Engineering, <br>Senior Developer'
-  },{
-    image: 'speaker2.png',
-    theme: 'Test2',
-    name: 'Mike Carter',
-    position: 'Evolution Engineering, <br>Senior Developer'
-  },{
-    image: 'speaker1.png',
-    theme: 'Test3',
-    name: 'Mike Carter',
-    position: 'Evolution Engineering, <br>Senior Developer'
-  },{
-    image: 'speaker1.png',
-    theme: 'Test4',
-    name: 'Mike Carter',
-    position: 'Evolution Engineering, <br>Senior Developer'
-  },{
-    image: 'speaker1.png',
-    theme: 'Test5',
-    name: 'Mike Carter',
-    position: 'Evolution Engineering, <br>Senior Developer'
-  }
-]
+pageKey: speakers
+
+
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
   <div class="cards js-cards" style="background-image: url(img/card-bg.svg)">
     <div class="cards__slider js-slider-cards">
-      {% for item in cards %}
+      {% for item in pages[pageKey].pageStatistics.cards %}
         <div class="cards__item">
           <div class="card">
             <div class="card__speaker-photo js-speaker-photo">

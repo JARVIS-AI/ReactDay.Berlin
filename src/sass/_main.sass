@@ -38,6 +38,45 @@
 	+sm
 		font-size: 10px
 
+.coc
+	line-height: 1.68
+	font-size: 18px
+	p + p
+		margin-top: 20px
+		+sm
+			margin-top: 10px
+	a
+		color: $linkColor
+		text-decoration: underline
+		transition: .2s ease
+		&:hover
+			color: #023753
+	+sm
+		font-size: 10px
+	& b
+		font-size: 20px
+		+medium
+		line-height: 2
+		+md
+			font-size: 14px
+			line-height: 1.79
+		a
+			text-decoration: underline
+		p + p
+			margin-top: 40px
+			+md
+				margin-top: 29px
+		& + .text
+			margin-top: 40px
+			+md
+				margin-top: 25px
+			+xs
+				margin-top: 19px
+		& + .text-l
+			margin-top: 30px
+			+sm
+				margin-top: 20px
+
 .text
 	p + p
 		margin-top: 20px
@@ -121,7 +160,21 @@
 				top: -20px
 				height: 32px
 				width: 32px
-
+	.markdown-sm
+		p
+			font-size: 16px !important
+	div
+		.paragraph-sm
+			p
+				font-size: 16px
+		.paragraph
+			p
+				font-size: 20px
+				margin-bottom: 40px
+				line-height: 2
+				+medium
+				+sm
+					margin-bottom: 20px
 	p
 		font-size: 20px
 		margin-bottom: 40px

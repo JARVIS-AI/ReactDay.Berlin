@@ -1,3 +1,4 @@
+/* global $ */
 import 'slick-carousel';
 import {TimelineMax} from 'gsap';
 
