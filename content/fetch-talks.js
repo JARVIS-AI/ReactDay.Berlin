@@ -1,3 +1,4 @@
+const { markdownToHtml } = require('./markdown');
 const { labelTag } = require('./utils');
 
 const queryPages = /* GraphQL */ `
@@ -56,7 +57,7 @@ const fetchData = async(client, vars) => {
     .request(queryPages, vars)
     .then(res => res.conf.year[0].schedule[0]);
 
-  const talks = data.talks
+  const talksRaw = data.talks
     .map(({ title, description, timeString, track, speaker }) => {
       try {
         return {
@@ -92,7 +93,13 @@ const fetchData = async(client, vars) => {
         return null;
       }
     })
-    .filter(Boolean);
+    .filter(Boolean)
+    .map(async item => ({
+      ...item,
+      text: await markdownToHtml(item.text),
+    }));
+
+  const talks = await Promise.all(talksRaw);
 
   const tracks = [...new Set(talks.map(({ track }) => track).filter(Boolean))]
     .map(track => data.talks.find(talk => talk.track.name === track).track)
