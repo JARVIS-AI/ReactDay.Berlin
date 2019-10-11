@@ -18,8 +18,8 @@
   <div class="container">
     <div class="speakers__list">
       {% for item in speakers %}
-      <div class="speakers__item">
-        <div class="speaker {{item.mod}}">
+      <div class="speakers__item {{item.tag}}">
+        <div class="speaker">
           <div class="speaker__header">
             <div class="speaker__avatar">
               <img data-src="{{item.avatar}}" alt="{{item.name}}" class="js-lazy-image">

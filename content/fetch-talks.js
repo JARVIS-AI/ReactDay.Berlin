@@ -1,3 +1,5 @@
+const { labelTag } = require('./utils');
+
 const queryPages = /* GraphQL */ `
   query($conferenceTitle: ConferenceTitle, $eventYear: EventYear) {
     conf: conferenceBrand(where: { title: $conferenceTitle }) {
@@ -31,7 +33,6 @@ const queryPages = /* GraphQL */ `
                 where: { conferenceEvent: { year: $eventYear } }
               ) {
                 label
-                overlayMode
               }
             }
           }
@@ -41,11 +42,14 @@ const queryPages = /* GraphQL */ `
   }
 `;
 
+const overlay = labelTag('talk');
+
 const byTime = (a, b) => {
   const aTime = new Date(`1970/01/01 ${a.time}`);
   const bTime = new Date(`1970/01/01 ${b.time}`);
   return aTime - bTime;
 };
+
 
 const fetchData = async(client, vars) => {
   const data = await client
@@ -79,7 +83,7 @@ const fetchData = async(client, vars) => {
             speaker: talk.name,
             from: talk.place,
             label: pieceOfSpeakerInfoes.label,
-            labelColor: (pieceOfSpeakerInfoes.overlayMode || '').toLowerCase(),
+            tag: overlay(pieceOfSpeakerInfoes.label),
           }
         );
       } catch (err) {

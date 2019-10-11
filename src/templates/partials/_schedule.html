@@ -44,6 +44,9 @@
                       <div class="sitem__text">
                         {{time.text | safe}}
                       </div>
+                      {% if time.label %}
+                        <div class="titem__label schedule__label {{time.tag}}">{{time.label}}</div>
+                      {% endif %}
                     </div>
                     {% endif %}
                     {% if time.lightningTalsList %}

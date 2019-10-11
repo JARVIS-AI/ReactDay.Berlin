@@ -1,4 +1,6 @@
 const { markdownToHtml } = require('./markdown');
+const { labelColors } = require('./config');
+const { labelTag } = require('./utils');
 
 const queryPages = /* GraphQL */ `
   query($conferenceTitle: ConferenceTitle, $eventYear: EventYear) {
@@ -11,7 +13,6 @@ const queryPages = /* GraphQL */ `
         speakers: pieceOfSpeakerInfoes {
           status
           id
-          overlayMode
           label
           speaker {
             id
@@ -31,8 +32,7 @@ const queryPages = /* GraphQL */ `
   }
 `;
 
-const overlay = str =>
-  str && `speaker--${str.toLowerCase().replace('lightgreen', 'light-green')}`;
+const overlay = labelTag('speaker');
 
 const fetchData = async(client, vars) => {
   const data = await client
@@ -44,29 +44,20 @@ const fetchData = async(client, vars) => {
       ...item.speaker,
       ...item,
       avatar: item.speaker.avatar || {},
-      mod: overlay(item.overlayMode),
+      tag: overlay(item.label),
     }))
-    .map(
-      async({
-        bio,
-        githubUrl,
-        twitterUrl,
-        speaker,
-        overlayMode,
-        avatar,
-        ...item
-      }) => ({
-        ...item,
-        company: `${item.company}, ${item.country}`,
-        avatar: avatar.url,
-        text: await markdownToHtml(bio),
-        github: githubUrl,
-        twitter: twitterUrl,
-      })
-    );
+    .map(async({ bio, githubUrl, twitterUrl, speaker, avatar, ...item }) => ({
+      ...item,
+      company: `${item.company}, ${item.country}`,
+      avatar: avatar.url,
+      text: await markdownToHtml(bio),
+      github: githubUrl,
+      twitter: twitterUrl,
+    }));
 
   return {
     speakers: await Promise.all(speakers),
+    labelColors,
   };
 };
 
