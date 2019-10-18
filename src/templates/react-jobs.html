@@ -4,16 +4,6 @@ pageKey: jobs
 
 innerPage: true
 
-jobs: [{
-  slogan: "<p>#React</p><p>#Blockchain</p><p>#JavaScript</p>",
-  title: "Frontend Developer at Lisk, Berlin",
-  link: "https://angel.co/lisk/jobs/180316-frontend-developer",
-  image: "img/jobs/lisk.png",
-  subtitle: "This is your chance to become an integral part of a game changing project. Join a passionate team with the mission to change the world by disrupting whole industries through decentralization.",
-  description: "Lisk is becoming a go-to blockchain platform for decentralized application development. We create tools that allow"
-}]
-
-
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -26,18 +16,6 @@ jobs: [{
       {% for job in jobs %}
         {% include "partials/jobs/_item.html" %}
       {% endfor %}
-	    {% include "partials/jobs/_lisk.html" %}
-	    {% include "partials/jobs/_evo-gaming.html" %}
-	    {% include "partials/jobs/_unicorn.html" %}
-	    {% include "partials/jobs/_futurice.html" %}
-	    {% include "partials/jobs/_message-bird.html" %}
-	    {% include "partials/jobs/_formidable.html" %}
-	    {% include "partials/jobs/_honeypot.html" %}
-	    {% include "partials/jobs/_ebay.html" %}
-	    {% include "partials/jobs/_wayfair.html" %}
-	    {% include "partials/jobs/_bonify.html" %}
-	    {% include "partials/jobs/_takeaway.html" %}
-	    {% include "partials/jobs/_jobsens.html" %}
     </div>
   </section>
 	{% include "partials/_sponsors-jobs.html" %}
