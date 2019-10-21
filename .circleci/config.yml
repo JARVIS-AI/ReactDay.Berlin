@@ -23,7 +23,12 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn install
+      - run:
+          name: install dependencies
+          command: |
+            if [ ! -d "frontend/node_modules" ]; then
+              cd frontend && yarn install
+            fi
 
       - save_cache:
           paths:
