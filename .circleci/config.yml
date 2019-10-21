@@ -26,8 +26,8 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            if [ ! -d "frontend/node_modules" ]; then
-              cd frontend && yarn install
+            if [ ! -d "node_modules" ]; then
+              yarn install
             fi
 
       - save_cache:
