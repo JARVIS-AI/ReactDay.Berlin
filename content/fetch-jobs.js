@@ -15,7 +15,12 @@ const queryPages = /* GraphQL */ `
           subtitle
           description
           image {
-            url
+            url(
+              transformation: {
+                image: { resize: { width: 700 } },
+                document: { output: { format: jpg } } 
+              }
+            )
           }
           link
         }

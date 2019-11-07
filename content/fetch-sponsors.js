@@ -16,7 +16,12 @@ const queryPages = /* GraphQL */ `
             title
             site
             avatar {
-              url
+              url(
+                transformation: {
+                  image: { resize: { width: 600 } },
+                  document: { output: { format: jpg } } 
+                }
+              )
             }
           }
           width
