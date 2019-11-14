@@ -1,6 +1,5 @@
 var gulp           = require('gulp');
 var nunjucksRender = require('gulp-nunjucks-render');
-var nunjucks = require('nunjucks');
 var plumber        = require('gulp-plumber');
 var gulpif         = require('gulp-if');
 var changed        = require('gulp-changed');
@@ -8,17 +7,21 @@ var prettify       = require('gulp-prettify');
 var frontMatter    = require('gulp-front-matter');
 var config         = require('../config');
 var data           = require('gulp-data');
-var markdown       = require('nunjucks-markdown');
-var marked         = require('marked');
-
 var { getContent } = require('../../content');
+const fs = require('fs');
+const path = require('path');
 
-var templates = 'src/templates'; //Set this as the folder that contains your nunjuck files
+let cmsContent;
 
-var env = new nunjucks.Environment(new nunjucks.FileSystemLoader(templates));
-
-// The second argument can be any function that renders markdown
-markdown.register(env, marked);
+const fetchContent = async () => {
+  const getAndLogContent = async () => {
+    const content = await getContent();
+    fs.writeFileSync(path.resolve(__dirname, '../../content-log.json'), JSON.stringify(content, null, 2));
+    return content;
+  };
+  cmsContent = cmsContent || await getAndLogContent();
+  return cmsContent;
+}
 
 function renderHtml(onlyChanged) {
     nunjucksRender.nunjucks.configure({
@@ -34,7 +37,7 @@ function renderHtml(onlyChanged) {
         }))
         .pipe(gulpif(onlyChanged, changed(config.dest.html)))
         .pipe(frontMatter({ property: 'data' }))
-        .pipe(data(() => getContent()))
+        .pipe(data(() => fetchContent()))
         .pipe(nunjucksRender({
             PRODUCTION: config.production,
             path: [config.src.templates]
