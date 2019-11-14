@@ -35,6 +35,7 @@
 		+xs
 			margin-left: -10px
 	&__content
+		position: relative
 		display: flex
 		align-items: center
 		flex-grow: 1
@@ -80,6 +81,7 @@
 			&__text
 				color: $white
 		.header__content
+			position: relative !important
 			top: 61px
 			bottom: 0
 			transform: translateY(0)
@@ -114,6 +116,8 @@
 					fill: $white
 		.header__btn
 			display: block
+			position: absolute
+			right: -150px
 			+md
 				display: none
 		.burger
