@@ -9,6 +9,7 @@ const queryPages = /* GraphQL */ `
         sponsors: pieceOfSponsorInfoes {
           status
           id
+          order
           category
           sponsor {
             id
@@ -31,6 +32,12 @@ const queryPages = /* GraphQL */ `
   }
 `;
 
+const sortByOrder = (a, b) => {
+  const aInd = a.order || 0;
+  const bInd = b.order || 0;
+  return aInd - bInd;
+};
+
 const fetchData = async(client, vars) => {
   const data = await client
     .request(queryPages, vars)
@@ -42,12 +49,13 @@ const fetchData = async(client, vars) => {
       ...item,
       avatar: item.sponsor.avatar || {},
     }))
-    .map(({ site, avatar, title, width, category }) => ({
+    .map(({ site, avatar, title, width, category, order }) => ({
       category,
       alt: title,
       img: avatar.url,
       link: site,
       width,
+      order,
     }))
     .filter(({ img }) => img);
 
@@ -58,7 +66,7 @@ const fetchData = async(client, vars) => {
   };
   const sponsors = ['Gold', 'Silver', 'Partner'].map(cat => ({
     title: titlesMap[cat],
-    list: sponsorsList.filter(({ category }) => category === cat),
+    list: sponsorsList.filter(({ category }) => category === cat).sort(sortByOrder),
   }));
 
   return {
