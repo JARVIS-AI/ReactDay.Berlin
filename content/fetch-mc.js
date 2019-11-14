@@ -34,8 +34,9 @@ const fetchData = async(client, vars) => {
     .request(queryPages, vars)
     .then(res => res.conf.year[0].mcs);
 
-  const mcs = data.map(async m => ({ ...m.speaker, bio: await markdownToHtml(m.speaker.bio) }));
+  const mcsAsync =  data.map(async m => ({ ...m.speaker, bio: await markdownToHtml(m.speaker.bio) }));
 
+  const mcs = await Promise.all(mcsAsync);
   return {
     mcs,
   };
