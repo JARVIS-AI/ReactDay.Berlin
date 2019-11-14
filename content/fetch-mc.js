@@ -1,5 +1,3 @@
-const { markdownToHtml } = require('./markdown');
-
 const queryPages = /* GraphQL */ `
   query($conferenceTitle: ConferenceTitle, $eventYear: EventYear) {
     conf: conferenceBrand(where: { title: $conferenceTitle }) {
@@ -20,7 +18,12 @@ const queryPages = /* GraphQL */ `
             githubUrl
             twitterUrl
             avatar {
-              url
+              url(
+                transformation: {
+                  image: { resize: { width: 500, height: 500, fit: crop } },
+                  document: { output: { format: jpg } } 
+                }
+              )
             }
           }
         }
