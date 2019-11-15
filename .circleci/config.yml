@@ -53,7 +53,7 @@ jobs:
           command: |
             if [ $CIRCLE_BRANCH = "master" ]; then
               ./node_modules/.bin/gulp deploy --user $FTP_USER --password $FTP_PASSWORD
-              curl -X POST -H 'Content-type: application/json' --data '{"text":"React Day Berlin production website is deployed $CIRCLE_BUILD_URL"}' $SLACK_CMS_UPDATE
+              curl -X POST -H 'Content-type: application/json' --data '{"text":"React Day Berlin production website is deployed ${CIRCLE_BUILD_URL}"}' $SLACK_CMS_UPDATE
             fi
             if [ $CIRCLE_BRANCH = "develop" ]; then
               ./node_modules/.bin/gulp deploy --user $FTP_USER_DEV --password $FTP_PASSWORD_DEV
