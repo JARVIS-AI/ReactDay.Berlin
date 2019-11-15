@@ -49,10 +49,10 @@
                       {% endif %}
                     </div>
                     {% endif %}
-                    {% if time.lightningTalsList %}
+                    {% if time.lightningTalks %}
                     <div class="sitem__about js-schedule-content">
 
-                      {% for talk in time.lightningTalsList %}
+                      {% for talk in time.lightningTalks %}
                       <div class="sitem__child">
                         <div class="sitem__subtitle">{{talk.title | safe}}</div>
                         <div class="sitem__speaker">{{talk.speaker}}</div>
