@@ -20,6 +20,7 @@ const queryPages = /* GraphQL */ `
             timeString
             title
             description
+            isLightning
             track {
               id
               status
@@ -58,9 +59,10 @@ const fetchData = async(client, vars) => {
     .then(res => res.conf.year[0].schedule[0]);
 
   const talksRaw = data.talks
-    .map(({ title, description, timeString, track, speaker }) => {
+    .map(({ title, description, timeString, track, speaker, isLightning }) => {
       try {
         return {
+          isLightning,
           title,
           text: description,
           time: timeString,
@@ -99,27 +101,53 @@ const fetchData = async(client, vars) => {
       text: await markdownToHtml(item.text),
     }));
 
-  const talks = await Promise.all(talksRaw);
+  const allTalks = await Promise.all(talksRaw);
 
-  const tracks = [...new Set(talks.map(({ track }) => track).filter(Boolean))]
+  const talks = allTalks.filter(t => !t.isLightning);
+  const ltTalks = allTalks.filter(t => t.isLightning);
+
+  const tracks = [...new Set(allTalks.map(({ track }) => track).filter(Boolean))]
     .map(track => data.talks.find(talk => talk.track.name === track).track)
     .sort((a, b) => {
       return +b.isPrimary - +a.isPrimary;
     })
     .map(({ name }) => name);
 
+  const ltTalksScheduleItems = tracks.map(track => {
+    const lightningTalks = ltTalks.filter(lt => lt.track === track);
+    if (!lightningTalks.length) return null;
+    return {
+      title: 'Lightning talks',
+      track,
+      lightningTalks,
+    }
+  }).filter(Boolean);
+
   const schedule = tracks
     .map(track => ({
       tab: track,
-      list: [...data.additionalEvents, ...talks]
+      list: [...data.additionalEvents, ...talks, ...ltTalksScheduleItems]
         .filter(event => event.track === track)
         .reduce((list, talk) => {
           const sameTitleTalk = list.find(({ title }) => title === talk.title);
           // we really need Abstract Equality Comparison here because from graph-ql will come null while JSON will have undefined
-          const isRealSame = sameTitleTalk && sameTitleTalk.time == talk.time;
-          if (isRealSame) return list;
-          return [talk, ...list];
+          // const isRealSame = sameTitleTalk && sameTitleTalk.time == talk.time;
+          // if (isRealSame) return list;
+          if (talk.title === 'Lightning talks' && talk.lightningTalks) {
+            const updatedTalk = {
+              ...talk,
+              ...sameTitleTalk,
+              realLt: true,
+            };
+            return [updatedTalk, ...list];
+          }
+          const updatedTalk = {
+            ...talk,
+            ...sameTitleTalk,
+          };
+          return [updatedTalk, ...list];
         }, [])
+        .filter(talk => talk.title !== 'Lightning talks' || talk.realLt)
         .sort(byTime),
     }))
     .filter(({ list }) => list.length);
@@ -127,7 +155,9 @@ const fetchData = async(client, vars) => {
   return {
     schedule,
     tracks,
-    talks,
+    talks: allTalks,
+    ltTalks,
+    fullTalks: talks,
   };
 };
 
