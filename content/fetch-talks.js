@@ -1,3 +1,13 @@
+/*
+  Note: schedule is creating from talks linked to tracks and daySchedules
+  additionally you can override schedule via providing data inside `additionalEvents`
+  to override existing talk follow the rules:
+  1. If talk has unfalsy `time` field you should add entry with the same `title` and `time`
+  2. if talk doesn't have `time` field you may add entry with the same `title`
+  3. if no one exist before the new entry will be created
+  all fields from additionalEvents will be merged to original talk entry
+*/
+
 const { markdownToHtml } = require('./markdown');
 const { labelTag } = require('./utils');
 
@@ -53,7 +63,7 @@ const byTime = (a, b) => {
 };
 
 
-const fetchData = async(client, vars) => {
+const fetchData = async (client, vars) => {
   const data = await client
     .request(queryPages, vars)
     .then(res => res.conf.year[0].schedule[0]);
@@ -126,28 +136,35 @@ const fetchData = async(client, vars) => {
   const schedule = tracks
     .map(track => ({
       tab: track,
-      list: [...data.additionalEvents, ...talks, ...ltTalksScheduleItems]
+      list: [...talks, ...ltTalksScheduleItems, ...data.additionalEvents]
         .filter(event => event.track === track)
         .reduce((list, talk) => {
-          const sameTitleTalk = list.find(({ title }) => title === talk.title);
-          // we really need Abstract Equality Comparison here because from graph-ql will come null while JSON will have undefined
-          // const isRealSame = sameTitleTalk && sameTitleTalk.time == talk.time;
-          // if (isRealSame) return list;
-          if (talk.title === 'Lightning talks' && talk.lightningTalks) {
-            const updatedTalk = {
-              ...talk,
-              ...sameTitleTalk,
-              realLt: true,
-            };
-            return [updatedTalk, ...list];
+
+          const findSameTalk = (list, talk) => {
+            const sameTalkInd = list.findIndex(({ title }) => title === talk.title);
+            const sameTalk = list[sameTalkInd];
+            if (!sameTalk) return {};
+
+            if (!sameTalk.time) {
+              return { sameTalk, sameTalkInd };
+            }
+            return talk.time === sameTalk.time ? { sameTalk, sameTalkInd } : {};
           }
-          const updatedTalk = {
-            ...talk,
-            ...sameTitleTalk,
-          };
-          return [updatedTalk, ...list];
+
+          const { sameTalk, sameTalkInd } = findSameTalk(list, talk);
+
+          if (sameTalk) {
+            console.log("\n\nTCL: sameTalk\n\n", sameTalk, '\n\nnewTalk\n\n',talk);
+            const newList = [...list];
+            newList[sameTalkInd] = {
+              ...sameTalk,
+              ...talk,
+            };
+            return newList;
+          }
+          return [...list, talk];
+
         }, [])
-        .filter(talk => talk.title !== 'Lightning talks' || talk.realLt)
         .sort(byTime),
     }))
     .filter(({ list }) => list.length);
