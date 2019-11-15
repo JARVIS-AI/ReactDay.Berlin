@@ -154,7 +154,6 @@ const fetchData = async (client, vars) => {
           const { sameTalk, sameTalkInd } = findSameTalk(list, talk);
 
           if (sameTalk) {
-            console.log("\n\nTCL: sameTalk\n\n", sameTalk, '\n\nnewTalk\n\n',talk);
             const newList = [...list];
             newList[sameTalkInd] = {
               ...sameTalk,
