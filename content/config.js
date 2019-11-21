@@ -17,11 +17,16 @@ const labelColors = [
   { label: 'Navigation', color: '#FF823B', tag: 'navigation' },
   { label: 'Visualization', color: '#D00AE1', tag: 'visualization' },
   { label: 'Deep Dive', color: '#bc0063', tag: 'deep-dive' },
-  { label: 'Diversity', color: '#bc0063', tag: 'diversity' },
-  { label: 'Animations', color: '#810cea', tag: 'animations' },
-  { label: 'Architecture', color: '#810cea', tag: 'architecture' },
-  { label: 'Blockchain', color: '#810cea', tag: 'blockchain' },
-  { label: 'WebGL', color: '#810cea', tag: 'webgl' },
+  { label: 'Diversity', color: '#804aea', tag: 'diversity' },
+  { label: 'Animations', color: '#9a8700', tag: 'animations' },
+  { label: 'Architecture', color: '#004c9a', tag: 'architecture' },
+  { label: 'Blockchain', color: '#007e9a', tag: 'blockchain' },
+  { label: 'Career', color: '#009a1a', tag: 'сareer' },
+  { label: 'Design System', color: '#d8bd00', tag: 'design-system' },
+  { label: 'PWA', color: '#d85900', tag: 'PWA' },
+  { label: 'Static Types', color: '#ec60b4', tag: 'static-types' },
+  { label: 'CLI', color: '#6098ec', tag: 'CLI' },
+  { label: 'Prototyping', color: '#2a9c97', tag: 'prototyping' },
 ];
 
 if (!process.env.CMS_ENDPOINT || !process.env.CMS_TOKEN) {
