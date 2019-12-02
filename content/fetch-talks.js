@@ -5,6 +5,7 @@
   1. If talk has unfalsy `time` field you should add entry with the same `title` and `time`
   2. if talk doesn't have `time` field you may add entry with the same `title`
   3. if no one exist before the new entry will be created
+  4. if talk isLightning and have the same time - all such talks will be collapsed to the single item with sublist of these talks
   all fields from additionalEvents will be merged to original talk entry
 */
 
@@ -116,40 +117,59 @@ const fetchData = async (client, vars) => {
   const talks = allTalks.filter(t => !t.isLightning);
   const ltTalks = allTalks.filter(t => t.isLightning);
 
-  const tracks = [...new Set(allTalks.map(({ track }) => track).filter(Boolean))]
+  const tracks = [
+    ...new Set(allTalks.map(({ track }) => track).filter(Boolean)),
+  ]
     .map(track => data.talks.find(talk => talk.track.name === track).track)
     .sort((a, b) => {
       return +b.isPrimary - +a.isPrimary;
     })
     .map(({ name }) => name);
 
-  const ltTalksScheduleItems = tracks.map(track => {
-    const lightningTalks = ltTalks.filter(lt => lt.track === track);
-    if (!lightningTalks.length) return null;
-    return {
-      title: 'Lightning talks',
-      track,
-      lightningTalks,
-    }
-  }).filter(Boolean);
+  const ltTalksScheduleItems = tracks
+    .map(track => {
+      const lightningTalks = ltTalks.filter(lt => lt.track === track);
+      if (!lightningTalks.length) return null;
+
+      const timeGroups = new Set(lightningTalks.map(({ time }) => time));
+      const lightningTalksGroups = [...timeGroups].map(time =>
+        lightningTalks.filter(lt => lt.time === time)
+      );
+
+      return lightningTalksGroups.map(ltGroup => ({
+        title: 'tbd',
+        time: ltGroup[0].time,
+        isLightning: true,
+        track,
+        lightningTalks: ltGroup,
+      }));
+    })
+    .filter(Boolean);
+
+  const ltTalksScheduleItemsFlatMap = ltTalksScheduleItems.reduce(
+    (array, subArray) => [...array, ...subArray],
+    []
+  );
 
   const schedule = tracks
     .map(track => ({
       tab: track,
-      list: [...talks, ...ltTalksScheduleItems, ...data.additionalEvents]
+      list: [...talks, ...ltTalksScheduleItemsFlatMap, ...data.additionalEvents]
         .filter(event => event.track === track)
         .reduce((list, talk) => {
-
           const findSameTalk = (list, talk) => {
-            const sameTalkInd = list.findIndex(({ title }) => title === talk.title);
+            const sameTalkInd = list.findIndex(
+              ({ title, time, isLightning }) => (title === talk.title) || (time === talk.time && isLightning && talk.isLightning)
+            );
             const sameTalk = list[sameTalkInd];
             if (!sameTalk) return {};
 
             if (!sameTalk.time) {
               return { sameTalk, sameTalkInd };
             }
+
             return talk.time === sameTalk.time ? { sameTalk, sameTalkInd } : {};
-          }
+          };
 
           const { sameTalk, sameTalkInd } = findSameTalk(list, talk);
 
@@ -162,7 +182,6 @@ const fetchData = async (client, vars) => {
             return newList;
           }
           return [...list, talk];
-
         }, [])
         .sort(byTime),
     }))
