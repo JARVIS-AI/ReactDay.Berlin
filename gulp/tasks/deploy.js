@@ -15,7 +15,17 @@ gulp.task('deploy', function() {
   });
 
   gulp.src([
-    './build/**/*.*'
+    './build/*.*',
+    './build/css/**/*.*',
+    './build/js/**/*.*'
+  ])
+    .pipe(conn.dest(remotePath));
+
+  gulp.src([
+    './build/**/*.*',
+    '!./build/*.*',
+    '!./build/css/**/*.*',
+    '!./build/js/**/*.*'
   ])
     .pipe(conn.differentSize(remotePath))
     .pipe(conn.dest(remotePath));
