@@ -10,13 +10,14 @@
         <div class="speaker speaker&#45;&#45;mc">
           <div class="speaker__header">
             <div class="speaker__avatar">
-              <img class="js-lazy-image" data-src="{{ mc.avatar.url }}" alt="{{ mc.name }}">
+              <img class="js-lazy-image" data-src="{{ mc.avatar }}" alt="{{ mc.name }}">
             </div>
             <div class="speaker__info">
               <div class="speaker__addition">
                 <ul class="speaker__socials">
-                  <li class="speaker__social"><a href="{{ mc.twitterUrl }}" target="_blank">{{mixins.icon('twitter')}}</a></li>
-                  <li class="speaker__social"><a href="{{ mc.githubUrl }}" target="_blank">{{mixins.icon('github')}}</a></li>
+                  {% for item in mc.socials %}
+                    <li class="speaker__social"><a href="{{item.link}}" target="_blank">{{mixins.icon(item.icon)}}</a></li>
+                  {% endfor %}
                 </ul>
               </div>
               <div class="speaker__name">{{ mc.name }}</div>
