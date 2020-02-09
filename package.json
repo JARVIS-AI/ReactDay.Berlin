@@ -2,14 +2,20 @@
   "name": "react-berlin-day",
   "version": "0.1.1",
   "scripts": {
-    "ghpages": "git subtree push --prefix build origin gh-pages",
     "build": "gulp build --production",
     "start": "gulp",
-    "test:build": "gulp test",
-    "test:build-update": "gulp test --updateSnapshot",
     "precommit": "lint-staged",
     "lint": "eslint --ignore-pattern 'src/js/lib/' --cache --format=node_modules/eslint-formatter-pretty src/js/",
-    "lint-fix": "npm run lint -- --fix"
+    "lint-fix": "npm run lint -- --fix",
+    "test:migration": "yarn jest --watch",
+    "test:smoke": "jest __tests__/smoke.test.js",
+    "test:build": "gulp test",
+    "test:build-update": "gulp test -u",
+    "storybook": "start-storybook -p 6006 --ci",
+    "build-storybook": "build-storybook",
+    "deploy:storybook": "storybook-to-ghpages",
+    "prestorybook": "relative-deps",
+    "prestart": "relative-deps"
   },
   "lint-staged": {},
   "devDependencies": {
@@ -76,6 +82,7 @@
     "lost": "^8.3.1",
     "map-stream": "^0.0.7",
     "regenerator-runtime": "^0.13.3",
+    "relative-deps": "^0.2.0",
     "minimist": "^1.2.0",
     "postcss-csso": "^2.0.0",
     "require-dir": "^0.3.2",
@@ -90,5 +97,8 @@
   },
   "dependencies": {
     "masonry-layout": "^4.2.2"
+  },
+  "relativeDependencies": {
+    "@focus-reactive/graphql-content-layer": "../graphql-content-layer/"
   }
 }
