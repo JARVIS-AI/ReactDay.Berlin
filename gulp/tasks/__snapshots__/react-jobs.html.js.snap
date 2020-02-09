@@ -3,7 +3,6 @@
 exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/react-jobs.html 1`] = `
 "<!doctype html>
 <html>
-
   <head>
     <meta charset=\\"utf-8\\" />
     <title>Top React Jobs</title>
@@ -11,7 +10,7 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/react-jobs.htm
     <meta name=\\"keywords\\" content=\\"react, javascript, conference, reactjs, react native, graphql, berlin\\" />
     <meta name=\\"description\\" content=\\"Fully packed day of your favorite React content, covering most up-to-date insights from the community.\\" />
     <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\">
-    <link rel=\\"stylesheet\\" media=\\"all\\" href=\\"css/app.css\\">
+    <link rel=\\"stylesheet\\" media=\\"all\\" href=\\"css/app.css?0021bb\\">
     <link rel=\\"shortcut icon\\" href=\\"img/favicon.png\\" />
     <meta property=\\"og:url\\" content=\\"https://reactday.berlin\\" />
     <meta property=\\"og:title\\" content=\\"React Day Berlin, December 6, 2019\\" />
@@ -59,205 +58,177 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/react-jobs.htm
     </script>
     <noscript><img height=\\"1\\" width=\\"1\\" style=\\"display:none\\" src=\\"https://www.facebook.com/tr?id=1374905195888955&ev=PageView&noscript=1\\" /></noscript>
     <!-- End Facebook Pixel Code -->
-    <style> .speakers__item.speaker--keynote .speaker__label,
-    .speakers__item.speaker--keynote .speaker__avatar:after,
-    .titem__label.talk--keynote
-    {
-      background-color: #36a901;
-    }
-  
-    .speakers__item.speaker--react-advanced .speaker__label,
-    .speakers__item.speaker--react-advanced .speaker__avatar:after,
-    .titem__label.talk--react-advanced
-    {
-      background-color: #36a901;
-    }
-  
-    .speakers__item.speaker--graphics .speaker__label,
-    .speakers__item.speaker--graphics .speaker__avatar:after,
-    .titem__label.talk--graphics
-    {
-      background-color: #d00000;
-    }
-  
-    .speakers__item.speaker--react-native .speaker__label,
-    .speakers__item.speaker--react-native .speaker__avatar:after,
-    .titem__label.talk--react-native
-    {
-      background-color: #230cea;
-    }
-  
-    .speakers__item.speaker--graphql .speaker__label,
-    .speakers__item.speaker--graphql .speaker__avatar:after,
-    .titem__label.talk--graphql
-    {
-      background-color: #bc0063;
-    }
-  
-    .speakers__item.speaker--performance .speaker__label,
-    .speakers__item.speaker--performance .speaker__avatar:after,
-    .titem__label.talk--performance
-    {
-      background-color: #810cea;
-    }
-  
-    .speakers__item.speaker--hooks .speaker__label,
-    .speakers__item.speaker--hooks .speaker__avatar:after,
-    .titem__label.talk--hooks
-    {
-      background-color: #edb403;
-    }
-  
-    .speakers__item.speaker--serverless .speaker__label,
-    .speakers__item.speaker--serverless .speaker__avatar:after,
-    .titem__label.talk--serverless
-    {
-      background-color: #00a27a;
-    }
-  
-    .speakers__item.speaker--testing .speaker__label,
-    .speakers__item.speaker--testing .speaker__avatar:after,
-    .titem__label.talk--testing
-    {
-      background-color: #edb403;
-    }
-  
-    .speakers__item.speaker--a11y .speaker__label,
-    .speakers__item.speaker--a11y .speaker__avatar:after,
-    .titem__label.talk--a11y
-    {
-      background-color: #d00000;
-    }
-  
-    .speakers__item.speaker--null .speaker__label,
-    .speakers__item.speaker--null .speaker__avatar:after,
-    .titem__label.talk--null
-    {
-      background-color: #666666;
-    }
-  
-    .speakers__item.speaker--inspiration .speaker__label,
-    .speakers__item.speaker--inspiration .speaker__avatar:after,
-    .titem__label.talk--inspiration
-    {
-      background-color: #36CDC4;
-    }
-  
-    .speakers__item.speaker--state .speaker__label,
-    .speakers__item.speaker--state .speaker__avatar:after,
-    .titem__label.talk--state
-    {
-      background-color: #36a901;
-    }
-  
-    .speakers__item.speaker--hardware .speaker__label,
-    .speakers__item.speaker--hardware .speaker__avatar:after,
-    .titem__label.talk--hardware
-    {
-      background-color: #03B5ED;
-    }
-  
-    .speakers__item.speaker--reasonml .speaker__label,
-    .speakers__item.speaker--reasonml .speaker__avatar:after,
-    .titem__label.talk--reasonml
-    {
-      background-color: #d00000;
-    }
-  
-    .speakers__item.speaker--navigation .speaker__label,
-    .speakers__item.speaker--navigation .speaker__avatar:after,
-    .titem__label.talk--navigation
-    {
-      background-color: #FF823B;
-    }
-  
-    .speakers__item.speaker--visualization .speaker__label,
-    .speakers__item.speaker--visualization .speaker__avatar:after,
-    .titem__label.talk--visualization
-    {
-      background-color: #D00AE1;
-    }
-  
-    .speakers__item.speaker--deep-dive .speaker__label,
-    .speakers__item.speaker--deep-dive .speaker__avatar:after,
-    .titem__label.talk--deep-dive
-    {
-      background-color: #bc0063;
-    }
-  
-    .speakers__item.speaker--diversity .speaker__label,
-    .speakers__item.speaker--diversity .speaker__avatar:after,
-    .titem__label.talk--diversity
-    {
-      background-color: #804aea;
-    }
-  
-    .speakers__item.speaker--animations .speaker__label,
-    .speakers__item.speaker--animations .speaker__avatar:after,
-    .titem__label.talk--animations
-    {
-      background-color: #9a8700;
-    }
-  
-    .speakers__item.speaker--architecture .speaker__label,
-    .speakers__item.speaker--architecture .speaker__avatar:after,
-    .titem__label.talk--architecture
-    {
-      background-color: #004c9a;
-    }
-  
-    .speakers__item.speaker--blockchain .speaker__label,
-    .speakers__item.speaker--blockchain .speaker__avatar:after,
-    .titem__label.talk--blockchain
-    {
-      background-color: #007e9a;
-    }
-  
-    .speakers__item.speaker--сareer .speaker__label,
-    .speakers__item.speaker--сareer .speaker__avatar:after,
-    .titem__label.talk--сareer
-    {
-      background-color: #009a1a;
-    }
-  
-    .speakers__item.speaker--design-system .speaker__label,
-    .speakers__item.speaker--design-system .speaker__avatar:after,
-    .titem__label.talk--design-system
-    {
-      background-color: #d8bd00;
-    }
-  
-    .speakers__item.speaker--PWA .speaker__label,
-    .speakers__item.speaker--PWA .speaker__avatar:after,
-    .titem__label.talk--PWA
-    {
-      background-color: #d85900;
-    }
-  
-    .speakers__item.speaker--static-types .speaker__label,
-    .speakers__item.speaker--static-types .speaker__avatar:after,
-    .titem__label.talk--static-types
-    {
-      background-color: #ec60b4;
-    }
-  
-    .speakers__item.speaker--CLI .speaker__label,
-    .speakers__item.speaker--CLI .speaker__avatar:after,
-    .titem__label.talk--CLI
-    {
-      background-color: #6098ec;
-    }
-  
-    .speakers__item.speaker--prototyping .speaker__label,
-    .speakers__item.speaker--prototyping .speaker__avatar:after,
-    .titem__label.talk--prototyping
-    {
-      background-color: #2a9c97;
-    }
-  
-</style>
-  </head>
+    <style>
+      .speakers__item.speaker--keynote .speaker__label,
+      .speakers__item.speaker--keynote .speaker__avatar:after,
+      .titem__label.talk--keynote {
+        background-color: #36a901;
+      }
 
+      .speakers__item.speaker--react-advanced .speaker__label,
+      .speakers__item.speaker--react-advanced .speaker__avatar:after,
+      .titem__label.talk--react-advanced {
+        background-color: #36a901;
+      }
+
+      .speakers__item.speaker--graphics .speaker__label,
+      .speakers__item.speaker--graphics .speaker__avatar:after,
+      .titem__label.talk--graphics {
+        background-color: #d00000;
+      }
+
+      .speakers__item.speaker--react-native .speaker__label,
+      .speakers__item.speaker--react-native .speaker__avatar:after,
+      .titem__label.talk--react-native {
+        background-color: #230cea;
+      }
+
+      .speakers__item.speaker--graphql .speaker__label,
+      .speakers__item.speaker--graphql .speaker__avatar:after,
+      .titem__label.talk--graphql {
+        background-color: #bc0063;
+      }
+
+      .speakers__item.speaker--performance .speaker__label,
+      .speakers__item.speaker--performance .speaker__avatar:after,
+      .titem__label.talk--performance {
+        background-color: #810cea;
+      }
+
+      .speakers__item.speaker--hooks .speaker__label,
+      .speakers__item.speaker--hooks .speaker__avatar:after,
+      .titem__label.talk--hooks {
+        background-color: #edb403;
+      }
+
+      .speakers__item.speaker--serverless .speaker__label,
+      .speakers__item.speaker--serverless .speaker__avatar:after,
+      .titem__label.talk--serverless {
+        background-color: #00a27a;
+      }
+
+      .speakers__item.speaker--testing .speaker__label,
+      .speakers__item.speaker--testing .speaker__avatar:after,
+      .titem__label.talk--testing {
+        background-color: #edb403;
+      }
+
+      .speakers__item.speaker--a11y .speaker__label,
+      .speakers__item.speaker--a11y .speaker__avatar:after,
+      .titem__label.talk--a11y {
+        background-color: #d00000;
+      }
+
+      .speakers__item.speaker--null .speaker__label,
+      .speakers__item.speaker--null .speaker__avatar:after,
+      .titem__label.talk--null {
+        background-color: #666666;
+      }
+
+      .speakers__item.speaker--inspiration .speaker__label,
+      .speakers__item.speaker--inspiration .speaker__avatar:after,
+      .titem__label.talk--inspiration {
+        background-color: #36CDC4;
+      }
+
+      .speakers__item.speaker--state .speaker__label,
+      .speakers__item.speaker--state .speaker__avatar:after,
+      .titem__label.talk--state {
+        background-color: #36a901;
+      }
+
+      .speakers__item.speaker--hardware .speaker__label,
+      .speakers__item.speaker--hardware .speaker__avatar:after,
+      .titem__label.talk--hardware {
+        background-color: #03B5ED;
+      }
+
+      .speakers__item.speaker--reasonml .speaker__label,
+      .speakers__item.speaker--reasonml .speaker__avatar:after,
+      .titem__label.talk--reasonml {
+        background-color: #d00000;
+      }
+
+      .speakers__item.speaker--navigation .speaker__label,
+      .speakers__item.speaker--navigation .speaker__avatar:after,
+      .titem__label.talk--navigation {
+        background-color: #FF823B;
+      }
+
+      .speakers__item.speaker--visualization .speaker__label,
+      .speakers__item.speaker--visualization .speaker__avatar:after,
+      .titem__label.talk--visualization {
+        background-color: #D00AE1;
+      }
+
+      .speakers__item.speaker--deep-dive .speaker__label,
+      .speakers__item.speaker--deep-dive .speaker__avatar:after,
+      .titem__label.talk--deep-dive {
+        background-color: #bc0063;
+      }
+
+      .speakers__item.speaker--diversity .speaker__label,
+      .speakers__item.speaker--diversity .speaker__avatar:after,
+      .titem__label.talk--diversity {
+        background-color: #804aea;
+      }
+
+      .speakers__item.speaker--animations .speaker__label,
+      .speakers__item.speaker--animations .speaker__avatar:after,
+      .titem__label.talk--animations {
+        background-color: #9a8700;
+      }
+
+      .speakers__item.speaker--architecture .speaker__label,
+      .speakers__item.speaker--architecture .speaker__avatar:after,
+      .titem__label.talk--architecture {
+        background-color: #004c9a;
+      }
+
+      .speakers__item.speaker--blockchain .speaker__label,
+      .speakers__item.speaker--blockchain .speaker__avatar:after,
+      .titem__label.talk--blockchain {
+        background-color: #007e9a;
+      }
+
+      .speakers__item.speaker--сareer .speaker__label,
+      .speakers__item.speaker--сareer .speaker__avatar:after,
+      .titem__label.talk--сareer {
+        background-color: #009a1a;
+      }
+
+      .speakers__item.speaker--design-system .speaker__label,
+      .speakers__item.speaker--design-system .speaker__avatar:after,
+      .titem__label.talk--design-system {
+        background-color: #d8bd00;
+      }
+
+      .speakers__item.speaker--PWA .speaker__label,
+      .speakers__item.speaker--PWA .speaker__avatar:after,
+      .titem__label.talk--PWA {
+        background-color: #d85900;
+      }
+
+      .speakers__item.speaker--static-types .speaker__label,
+      .speakers__item.speaker--static-types .speaker__avatar:after,
+      .titem__label.talk--static-types {
+        background-color: #ec60b4;
+      }
+
+      .speakers__item.speaker--CLI .speaker__label,
+      .speakers__item.speaker--CLI .speaker__avatar:after,
+      .titem__label.talk--CLI {
+        background-color: #6098ec;
+      }
+
+      .speakers__item.speaker--prototyping .speaker__label,
+      .speakers__item.speaker--prototyping .speaker__avatar:after,
+      .titem__label.talk--prototyping {
+        background-color: #2a9c97;
+      }
+
+    </style>
+  </head>
   <body>
     <!-- BEGIN content -->
     <div id=\\"out\\" class=\\"out\\">
@@ -909,7 +880,7 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/react-jobs.htm
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
-    <script type=\\"text/javascript\\" src=\\"js/app.js\\"></script>
+    <script type=\\"text/javascript\\" src=\\"js/app.js?ed0b09\\"></script>
     <!-- END scripts -->
     <script type=\\"text/javascript\\">
       var _gauges = _gauges || [];
@@ -949,7 +920,6 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/react-jobs.htm
     </script>
     <!-- End Twitter universal website tag code -->
   </body>
-
 </html>
 "
 `;
