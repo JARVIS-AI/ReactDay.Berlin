@@ -7,7 +7,9 @@ var prettify       = require('gulp-prettify');
 var frontMatter    = require('gulp-front-matter');
 var config         = require('../config');
 var data           = require('gulp-data');
-var { getContent } = require('../../content');
+const { getContent } = require('@focus-reactive/graphql-content-layer');
+// var { getContent } = require('../../content');
+const conferenceSettings = require('../conference-settings');
 const fs = require('fs');
 const path = require('path');
 
@@ -15,7 +17,7 @@ let cmsContent;
 
 const fetchContent = async () => {
   const getAndLogContent = async () => {
-    const content = await getContent();
+    const content = await getContent(conferenceSettings);
     fs.writeFileSync(path.resolve(__dirname, '../../content-log.json'), JSON.stringify(content, null, 2));
     return content;
   };
