@@ -3,7 +3,6 @@
 exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/workshops.html 1`] = `
 "<!doctype html>
 <html>
-
   <head>
     <meta charset=\\"utf-8\\" />
     <title>Workshops at React Day Berlin</title>
@@ -59,205 +58,177 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/workshops.html
     </script>
     <noscript><img height=\\"1\\" width=\\"1\\" style=\\"display:none\\" src=\\"https://www.facebook.com/tr?id=1374905195888955&ev=PageView&noscript=1\\" /></noscript>
     <!-- End Facebook Pixel Code -->
-    <style> .speakers__item.speaker--keynote .speaker__label,
-    .speakers__item.speaker--keynote .speaker__avatar:after,
-    .titem__label.talk--keynote
-    {
-      background-color: #36a901;
-    }
-  
-    .speakers__item.speaker--react-advanced .speaker__label,
-    .speakers__item.speaker--react-advanced .speaker__avatar:after,
-    .titem__label.talk--react-advanced
-    {
-      background-color: #36a901;
-    }
-  
-    .speakers__item.speaker--graphics .speaker__label,
-    .speakers__item.speaker--graphics .speaker__avatar:after,
-    .titem__label.talk--graphics
-    {
-      background-color: #d00000;
-    }
-  
-    .speakers__item.speaker--react-native .speaker__label,
-    .speakers__item.speaker--react-native .speaker__avatar:after,
-    .titem__label.talk--react-native
-    {
-      background-color: #230cea;
-    }
-  
-    .speakers__item.speaker--graphql .speaker__label,
-    .speakers__item.speaker--graphql .speaker__avatar:after,
-    .titem__label.talk--graphql
-    {
-      background-color: #bc0063;
-    }
-  
-    .speakers__item.speaker--performance .speaker__label,
-    .speakers__item.speaker--performance .speaker__avatar:after,
-    .titem__label.talk--performance
-    {
-      background-color: #810cea;
-    }
-  
-    .speakers__item.speaker--hooks .speaker__label,
-    .speakers__item.speaker--hooks .speaker__avatar:after,
-    .titem__label.talk--hooks
-    {
-      background-color: #edb403;
-    }
-  
-    .speakers__item.speaker--serverless .speaker__label,
-    .speakers__item.speaker--serverless .speaker__avatar:after,
-    .titem__label.talk--serverless
-    {
-      background-color: #00a27a;
-    }
-  
-    .speakers__item.speaker--testing .speaker__label,
-    .speakers__item.speaker--testing .speaker__avatar:after,
-    .titem__label.talk--testing
-    {
-      background-color: #edb403;
-    }
-  
-    .speakers__item.speaker--a11y .speaker__label,
-    .speakers__item.speaker--a11y .speaker__avatar:after,
-    .titem__label.talk--a11y
-    {
-      background-color: #d00000;
-    }
-  
-    .speakers__item.speaker--null .speaker__label,
-    .speakers__item.speaker--null .speaker__avatar:after,
-    .titem__label.talk--null
-    {
-      background-color: #666666;
-    }
-  
-    .speakers__item.speaker--inspiration .speaker__label,
-    .speakers__item.speaker--inspiration .speaker__avatar:after,
-    .titem__label.talk--inspiration
-    {
-      background-color: #36CDC4;
-    }
-  
-    .speakers__item.speaker--state .speaker__label,
-    .speakers__item.speaker--state .speaker__avatar:after,
-    .titem__label.talk--state
-    {
-      background-color: #36a901;
-    }
-  
-    .speakers__item.speaker--hardware .speaker__label,
-    .speakers__item.speaker--hardware .speaker__avatar:after,
-    .titem__label.talk--hardware
-    {
-      background-color: #03B5ED;
-    }
-  
-    .speakers__item.speaker--reasonml .speaker__label,
-    .speakers__item.speaker--reasonml .speaker__avatar:after,
-    .titem__label.talk--reasonml
-    {
-      background-color: #d00000;
-    }
-  
-    .speakers__item.speaker--navigation .speaker__label,
-    .speakers__item.speaker--navigation .speaker__avatar:after,
-    .titem__label.talk--navigation
-    {
-      background-color: #FF823B;
-    }
-  
-    .speakers__item.speaker--visualization .speaker__label,
-    .speakers__item.speaker--visualization .speaker__avatar:after,
-    .titem__label.talk--visualization
-    {
-      background-color: #D00AE1;
-    }
-  
-    .speakers__item.speaker--deep-dive .speaker__label,
-    .speakers__item.speaker--deep-dive .speaker__avatar:after,
-    .titem__label.talk--deep-dive
-    {
-      background-color: #bc0063;
-    }
-  
-    .speakers__item.speaker--diversity .speaker__label,
-    .speakers__item.speaker--diversity .speaker__avatar:after,
-    .titem__label.talk--diversity
-    {
-      background-color: #804aea;
-    }
-  
-    .speakers__item.speaker--animations .speaker__label,
-    .speakers__item.speaker--animations .speaker__avatar:after,
-    .titem__label.talk--animations
-    {
-      background-color: #9a8700;
-    }
-  
-    .speakers__item.speaker--architecture .speaker__label,
-    .speakers__item.speaker--architecture .speaker__avatar:after,
-    .titem__label.talk--architecture
-    {
-      background-color: #004c9a;
-    }
-  
-    .speakers__item.speaker--blockchain .speaker__label,
-    .speakers__item.speaker--blockchain .speaker__avatar:after,
-    .titem__label.talk--blockchain
-    {
-      background-color: #007e9a;
-    }
-  
-    .speakers__item.speaker--сareer .speaker__label,
-    .speakers__item.speaker--сareer .speaker__avatar:after,
-    .titem__label.talk--сareer
-    {
-      background-color: #009a1a;
-    }
-  
-    .speakers__item.speaker--design-system .speaker__label,
-    .speakers__item.speaker--design-system .speaker__avatar:after,
-    .titem__label.talk--design-system
-    {
-      background-color: #d8bd00;
-    }
-  
-    .speakers__item.speaker--PWA .speaker__label,
-    .speakers__item.speaker--PWA .speaker__avatar:after,
-    .titem__label.talk--PWA
-    {
-      background-color: #d85900;
-    }
-  
-    .speakers__item.speaker--static-types .speaker__label,
-    .speakers__item.speaker--static-types .speaker__avatar:after,
-    .titem__label.talk--static-types
-    {
-      background-color: #ec60b4;
-    }
-  
-    .speakers__item.speaker--CLI .speaker__label,
-    .speakers__item.speaker--CLI .speaker__avatar:after,
-    .titem__label.talk--CLI
-    {
-      background-color: #6098ec;
-    }
-  
-    .speakers__item.speaker--prototyping .speaker__label,
-    .speakers__item.speaker--prototyping .speaker__avatar:after,
-    .titem__label.talk--prototyping
-    {
-      background-color: #2a9c97;
-    }
-  
-</style>
-  </head>
+    <style>
+      .speakers__item.speaker--keynote .speaker__label,
+      .speakers__item.speaker--keynote .speaker__avatar:after,
+      .titem__label.talk--keynote {
+        background-color: #36a901;
+      }
 
+      .speakers__item.speaker--react-advanced .speaker__label,
+      .speakers__item.speaker--react-advanced .speaker__avatar:after,
+      .titem__label.talk--react-advanced {
+        background-color: #36a901;
+      }
+
+      .speakers__item.speaker--graphics .speaker__label,
+      .speakers__item.speaker--graphics .speaker__avatar:after,
+      .titem__label.talk--graphics {
+        background-color: #d00000;
+      }
+
+      .speakers__item.speaker--react-native .speaker__label,
+      .speakers__item.speaker--react-native .speaker__avatar:after,
+      .titem__label.talk--react-native {
+        background-color: #230cea;
+      }
+
+      .speakers__item.speaker--graphql .speaker__label,
+      .speakers__item.speaker--graphql .speaker__avatar:after,
+      .titem__label.talk--graphql {
+        background-color: #bc0063;
+      }
+
+      .speakers__item.speaker--performance .speaker__label,
+      .speakers__item.speaker--performance .speaker__avatar:after,
+      .titem__label.talk--performance {
+        background-color: #810cea;
+      }
+
+      .speakers__item.speaker--hooks .speaker__label,
+      .speakers__item.speaker--hooks .speaker__avatar:after,
+      .titem__label.talk--hooks {
+        background-color: #edb403;
+      }
+
+      .speakers__item.speaker--serverless .speaker__label,
+      .speakers__item.speaker--serverless .speaker__avatar:after,
+      .titem__label.talk--serverless {
+        background-color: #00a27a;
+      }
+
+      .speakers__item.speaker--testing .speaker__label,
+      .speakers__item.speaker--testing .speaker__avatar:after,
+      .titem__label.talk--testing {
+        background-color: #edb403;
+      }
+
+      .speakers__item.speaker--a11y .speaker__label,
+      .speakers__item.speaker--a11y .speaker__avatar:after,
+      .titem__label.talk--a11y {
+        background-color: #d00000;
+      }
+
+      .speakers__item.speaker--null .speaker__label,
+      .speakers__item.speaker--null .speaker__avatar:after,
+      .titem__label.talk--null {
+        background-color: #666666;
+      }
+
+      .speakers__item.speaker--inspiration .speaker__label,
+      .speakers__item.speaker--inspiration .speaker__avatar:after,
+      .titem__label.talk--inspiration {
+        background-color: #36CDC4;
+      }
+
+      .speakers__item.speaker--state .speaker__label,
+      .speakers__item.speaker--state .speaker__avatar:after,
+      .titem__label.talk--state {
+        background-color: #36a901;
+      }
+
+      .speakers__item.speaker--hardware .speaker__label,
+      .speakers__item.speaker--hardware .speaker__avatar:after,
+      .titem__label.talk--hardware {
+        background-color: #03B5ED;
+      }
+
+      .speakers__item.speaker--reasonml .speaker__label,
+      .speakers__item.speaker--reasonml .speaker__avatar:after,
+      .titem__label.talk--reasonml {
+        background-color: #d00000;
+      }
+
+      .speakers__item.speaker--navigation .speaker__label,
+      .speakers__item.speaker--navigation .speaker__avatar:after,
+      .titem__label.talk--navigation {
+        background-color: #FF823B;
+      }
+
+      .speakers__item.speaker--visualization .speaker__label,
+      .speakers__item.speaker--visualization .speaker__avatar:after,
+      .titem__label.talk--visualization {
+        background-color: #D00AE1;
+      }
+
+      .speakers__item.speaker--deep-dive .speaker__label,
+      .speakers__item.speaker--deep-dive .speaker__avatar:after,
+      .titem__label.talk--deep-dive {
+        background-color: #bc0063;
+      }
+
+      .speakers__item.speaker--diversity .speaker__label,
+      .speakers__item.speaker--diversity .speaker__avatar:after,
+      .titem__label.talk--diversity {
+        background-color: #804aea;
+      }
+
+      .speakers__item.speaker--animations .speaker__label,
+      .speakers__item.speaker--animations .speaker__avatar:after,
+      .titem__label.talk--animations {
+        background-color: #9a8700;
+      }
+
+      .speakers__item.speaker--architecture .speaker__label,
+      .speakers__item.speaker--architecture .speaker__avatar:after,
+      .titem__label.talk--architecture {
+        background-color: #004c9a;
+      }
+
+      .speakers__item.speaker--blockchain .speaker__label,
+      .speakers__item.speaker--blockchain .speaker__avatar:after,
+      .titem__label.talk--blockchain {
+        background-color: #007e9a;
+      }
+
+      .speakers__item.speaker--сareer .speaker__label,
+      .speakers__item.speaker--сareer .speaker__avatar:after,
+      .titem__label.talk--сareer {
+        background-color: #009a1a;
+      }
+
+      .speakers__item.speaker--design-system .speaker__label,
+      .speakers__item.speaker--design-system .speaker__avatar:after,
+      .titem__label.talk--design-system {
+        background-color: #d8bd00;
+      }
+
+      .speakers__item.speaker--PWA .speaker__label,
+      .speakers__item.speaker--PWA .speaker__avatar:after,
+      .titem__label.talk--PWA {
+        background-color: #d85900;
+      }
+
+      .speakers__item.speaker--static-types .speaker__label,
+      .speakers__item.speaker--static-types .speaker__avatar:after,
+      .titem__label.talk--static-types {
+        background-color: #ec60b4;
+      }
+
+      .speakers__item.speaker--CLI .speaker__label,
+      .speakers__item.speaker--CLI .speaker__avatar:after,
+      .titem__label.talk--CLI {
+        background-color: #6098ec;
+      }
+
+      .speakers__item.speaker--prototyping .speaker__label,
+      .speakers__item.speaker--prototyping .speaker__avatar:after,
+      .titem__label.talk--prototyping {
+        background-color: #2a9c97;
+      }
+
+    </style>
+  </head>
   <body>
     <!-- BEGIN content -->
     <div id=\\"out\\" class=\\"out\\">
@@ -360,9 +331,7 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/workshops.html
               <div class=\\"article__left\\">
               </div>
               <h2 class=\\"js-title\\" id=\\"modern-react\\">Modern React</h2>
-              <div class=\\"paragraph\\">
-                <p>by Max Stoiber. December 4 and 5.</p>
-              </div>
+              <div class=\\"paragraph\\"> by Max Stoiber. December 4 and 5. </div>
               <div class=\\"paragraph description\\">
                 <p>One of the most popular workshops from React Amsterdam 2019.</p>
                 <p>After some years of silence, React team had recently landed a number of new additions to it's library enabling application developers to optimize their code both for better performance and maintainability. Max will guide your through emerging patterns and show you by example how you can start applying the new best practices in your production apps.</p>
@@ -393,9 +362,7 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/workshops.html
               <div class=\\"article__left\\">
               </div>
               <h2 class=\\"js-title\\" id=\\"graph-ql\\">GraphQL Workshop</h2>
-              <div class=\\"paragraph\\">
-                <p>by Kitze, React Academy. December 4 and 5.</p>
-              </div>
+              <div class=\\"paragraph\\"> by Kitze, React Academy. December 4 and 5. </div>
               <div class=\\"paragraph description\\">
                 <p>This one-day workshop will teach you everything you need to know to incorporate GraphQL into your application. During the first half of the workshop, we'll explain the basics of a GraphQL and we’re gonna build a GraphQL server, covering best practices for architecting your schema, error handling, authentication, and permission layers. In the second half of the workshop, we’ll connect our GraphQL server to a React application with Apollo Client. We’ll break down the modular architecture of the client and teach you how to set everything up and use queries and mutations. We’ll show a few different approaches for working with Apollo: Higher Order Components, Render Props, and hooks. Throughout the course of the workshop, you’ll learn practical tips for using GraphQL in production.</p>
               </div>
@@ -428,8 +395,6 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/workshops.html
               <div class=\\"article__left\\">
               </div>
               <h2 class=\\"js-title\\" id=\\"whatsapp\\">Building WhatsApp in a Day with React Native</h2>
-              <div class=\\"paragraph\\">
-              </div>
               <div class=\\"paragraph description\\">
                 <p>In this full day workshop we will go through the process of creating Whatsapp app in React Native from scratch. We will talk about how to get started, structure our app and create proper navigation workflow, style our screens and create compelling animations. But we will not stop there. Not only React Native is changing mobile ecosystem nowadays, GraphQL is also an important part of how we connect to our backend.</p>
                 <p>We will go through GraphQL basics and use it in our Whatsapp app to connect to GraphQL endpoint which we will also define and create during workshop by using free and open source Hasura GraphQL engine. Workshop will give you the ultimate experience of creating React Native app from scratch with GraphQL API.</p>
@@ -437,8 +402,6 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/workshops.html
               <h3>Prerequisites</h3>
               <div class=\\"markdown-sm\\">
                 <p>Configured and running React Native Hello World application.</p>
-              </div>
-              <div class=\\"markdown-sm\\">
               </div>
             </div>
           </div>
@@ -449,9 +412,7 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/workshops.html
               <div class=\\"article__left\\">
               </div>
               <h2 class=\\"js-title\\" id=\\"testing-react\\">Testing in React</h2>
-              <div class=\\"paragraph\\">
-                <p>by Alex Lobera. December 4.</p>
-              </div>
+              <div class=\\"paragraph\\"> by Alex Lobera. December 4. </div>
               <div class=\\"paragraph description\\">
                 <p>Many developers struggle to write tests 1) quickly and 2) that increase their degree of confidence. Writing good tests requires writing good code. Writing good code that is easy to test requires a good understanding of programming principles and how they apply to the libraries of choice.</p>
                 <p>In this workshop, you'll learn testing principles &#x26; good practices and how to apply them to your React projects with two goals in mind: 1) Tests should help us refactor our code without having to change its corresponding tests 2) Tests should increase our degree of confidence that our React app works as expected without increasing complexity.</p>
@@ -481,9 +442,7 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/workshops.html
               <div class=\\"article__left\\">
               </div>
               <h2 class=\\"js-title\\" id=\\"type-script\\">TypeScript Workshop</h2>
-              <div class=\\"paragraph\\">
-                <p>by Tejas Kumar, your local React hero. December 5.</p>
-              </div>
+              <div class=\\"paragraph\\"> by Tejas Kumar, your local React hero. December 5. </div>
               <div class=\\"paragraph description\\">
                 <p>TypeScript is taking the web platform by storm, mainly because it is so syntactically similar to JavaScript, but comes with powerful scalability features that create more robust products. In this workshop, we will examine an existing JavaScript codebase, port it over to TypeScript, and refactor parts of it to see the value TypeScript can provide.</p>
               </div>
@@ -500,8 +459,6 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/workshops.html
               <div class=\\"markdown-sm\\">
                 <p>Familiarity with React, JavaScript and modern syntax features (ES2015).</p>
               </div>
-              <div class=\\"markdown-sm\\">
-              </div>
             </div>
           </div>
         </section>
@@ -511,9 +468,7 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/workshops.html
               <div class=\\"article__left\\">
               </div>
               <h2 class=\\"js-title\\" id=\\"design-systems\\">Design Systems for React Developers</h2>
-              <div class=\\"paragraph\\">
-                <p>by Andrey Okonetchnikov &#x26; Artem Sapegin. December 5.</p>
-              </div>
+              <div class=\\"paragraph\\"> by Andrey Okonetchnikov & Artem Sapegin. December 5. </div>
               <div class=\\"paragraph description\\">
                 <p>Development of digital products is a complex process that involves multiple stakeholders and roles: managers, designers, engineers, QA, and customers. This increases the communication overhead, slows down the process, and oftentimes results and less than ideal user experience.</p>
                 <ul>
@@ -536,8 +491,6 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/workshops.html
               <h3>Prerequisites</h3>
               <div class=\\"markdown-sm\\">
                 <p>To attend this workshop you need to be familiar with the basics of React, as well as most of the new features in ES2015.</p>
-              </div>
-              <div class=\\"markdown-sm\\">
               </div>
             </div>
           </div>
@@ -593,7 +546,11 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/workshops.html
                       </svg>
                     </a></li>
                   <!--<li class=\\"bsocial__item\\"><a href=\\"#\\" class=\\"bsocial__link\\" target=\\"_blank\\">
-<svg class=\\"icon icon-instagram\\"><use xlink:href=\\"img/sprite.svg#icon-instagram\\"></use></svg>
+  
+    
+  
+
+  <svg class=\\"icon icon-instagram\\"><use xlink:href=\\"img/sprite.svg#icon-instagram\\"></use></svg>
 </a></li>-->
                 </ul>
               </div>
@@ -644,7 +601,6 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/workshops.html
     </script>
     <!-- End Twitter universal website tag code -->
   </body>
-
 </html>
 "
 `;
