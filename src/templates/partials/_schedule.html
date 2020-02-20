@@ -36,7 +36,7 @@
                     {% if time.speaker %}
                       <div class="sitem__speaker">{{time.speaker}}</div>
                     {% endif %}
-                    {% if time.text %}
+                    {% if time.text or time.label %}
                     <div class="sitem__about js-schedule-content">
                       <div class="sitem__from">
                         {{time.from}}

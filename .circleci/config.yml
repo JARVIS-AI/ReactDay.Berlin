@@ -8,11 +8,6 @@ jobs:
     docker:
       - image: circleci/node:10
 
-    branches:
-      only:
-        - master
-        - develop
-
     steps:
       - checkout
 
@@ -23,12 +18,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run:
-          name: install dependencies
-          command: |
-            if [ ! -d "node_modules" ]; then
-              yarn install
-            fi
+      - run: yarn install
 
       - save_cache:
           paths:
@@ -41,7 +31,7 @@ jobs:
             if [ $CIRCLE_BRANCH = "master" ]; then
               CMS_ENDPOINT=$CMS_ENDPOINT/master CMS_TOKEN=$CMS_TOKEN yarn build
             fi
-            if [ $CIRCLE_BRANCH = "develop" ]; then
+            if [ $CIRCLE_BRANCH != "master" ]; then
               CMS_ENDPOINT=$CMS_ENDPOINT/master CMS_TOKEN=$CMS_TOKEN_DEV yarn build
             fi
 
@@ -58,3 +48,13 @@ jobs:
             if [ $CIRCLE_BRANCH = "develop" ]; then
               ./node_modules/.bin/gulp deploy --user $FTP_USER_DEV --password $FTP_PASSWORD_DEV
             fi
+
+      - run:
+          name: deploy Storybook
+          command: |
+            if [ $CIRCLE_BRANCH = "master" ]; then
+              CMS_ENDPOINT=$CMS_ENDPOINT/master CMS_TOKEN=$CMS_TOKEN yarn deploy:storybook
+              curl -X POST -H 'Content-type: application/json' --data '{"text":"Storybook for JSNation is deployed to https://gitnation.github.io/JSNation.com"}' $SLACK_CMS_UPDATE
+            fi
+
+

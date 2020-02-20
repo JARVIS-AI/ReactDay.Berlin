@@ -1,3 +1,13 @@
+const conferenceTitle = 'React_Day_Berlin';
+const eventYear = 'Y2019';
+
+const tagColors = {
+  default: {
+    tagBG: 'black',
+    color: 'white',
+  },
+};
+
 const labelColors = [
   { label: 'Keynote', color: '#36a901', tag: 'keynote' },
   { label: 'React Advanced', color: '#36a901', tag: 'react-advanced' },
@@ -29,27 +39,17 @@ const labelColors = [
   { label: 'Prototyping', color: '#2a9c97', tag: 'prototyping' },
 ];
 
-if (!process.env.CMS_ENDPOINT || !process.env.CMS_TOKEN) {
-  require('dotenv').config();
-}
-
-if (!process.env.CMS_ENDPOINT || !process.env.CMS_TOKEN) {
-  throw new Error(`Can't find environment variables: 'CMS_ENDPOINT' and 'CMS_TOKEN'.
-  Set them in .env file for local development or pass to env when running on CI.
-  `);
-}
-
-const conferenceTitle = 'React_Day_Berlin';
-const eventYear = 'Y2019';
-
-const credentials = {
-  endpoint: process.env.CMS_ENDPOINT,
-  token: process.env.CMS_TOKEN,
+const speakerAvatar = {
+  dimensions: {
+    avatarWidth: 500,
+    avatarHeight: 500,
+  },
 };
 
 module.exports = {
+  labelColors,
+  tagColors,
+  speakerAvatar,
   conferenceTitle,
   eventYear,
-  credentials,
-  labelColors,
 };
