@@ -10,7 +10,7 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/faq.html 1`] =
     <meta name=\\"keywords\\" content=\\"react, javascript, conference, reactjs, react native, graphql, berlin\\" />
     <meta name=\\"description\\" content=\\"Fully packed day of your favorite React content, covering most up-to-date insights from the community.\\" />
     <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\">
-    <link rel=\\"stylesheet\\" media=\\"all\\" href=\\"css/app.css\\">
+    <link rel=\\"stylesheet\\" media=\\"all\\" href=\\"css/app.css?0021bb\\">
     <link rel=\\"shortcut icon\\" href=\\"img/favicon.png\\" />
     <meta property=\\"og:url\\" content=\\"https://reactday.berlin\\" />
     <meta property=\\"og:title\\" content=\\"React Day Berlin, December 6, 2019\\" />
@@ -537,7 +537,7 @@ exports[`/home/usul/FocusReactive/GitNation/ReactDay.Berlin/build/faq.html 1`] =
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
-    <script type=\\"text/javascript\\" src=\\"js/app.js\\"></script>
+    <script type=\\"text/javascript\\" src=\\"js/app.js?7d7e56\\"></script>
     <!-- END scripts -->
     <script type=\\"text/javascript\\">
       var _gauges = _gauges || [];
